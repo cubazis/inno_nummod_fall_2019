@@ -1,2 +1,2 @@
-# inno_nummod_fall_2019
+# Numerical Modeling
 Численное моделирование. Осенний семестр. 2019/2020
