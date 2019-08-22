@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/just_to_test.dir/main.c.o  -o just_to_test /usr/local/lib/libunum.a 

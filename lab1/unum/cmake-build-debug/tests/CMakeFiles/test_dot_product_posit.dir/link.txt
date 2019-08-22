@@ -1,0 +1,1 @@
+/usr/bin/cc  -std=c99 -Wall -Wextra -Wshadow -std=c99 -g -O0 -g -Wall -Wshadow -Wpointer-arith -Wcast-qual -Winline -Werror -Wextra -Wfatal-errors -Wstrict-prototypes  -pthread  -rdynamic CMakeFiles/test_dot_product_posit.dir/test_dot_product_posit.c.o  -o test_dot_product_posit ../libunum.a -lcheck_pic -lrt -lm -lsubunit -lm -lsubunit 

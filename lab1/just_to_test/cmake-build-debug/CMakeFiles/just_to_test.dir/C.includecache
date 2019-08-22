@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/cubazis/Projects/inno_nummod_fall_2019/lab1/just_to_test/main.c
+stdio.h
+-
+unum/posit.h
+/home/cubazis/Projects/inno_nummod_fall_2019/lab1/just_to_test/unum/posit.h
+
