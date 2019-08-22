@@ -11,6 +11,7 @@
  - поиск минимума функции простым итеррационным методом бисекции
 
 ### Критерии оценки
+- Пул реквест + tar архив в moodle
 - Тест 1: Check тесты C - 10 points, Assert тесты python - 15 points (25 points)
 - Тест 2: Check тесты C - 10 points, Assert тесты python - 25 points (35 points)
 - Тест 3: Check тесты C - 10 points, Assert тесты python - 30 points (40 points)
