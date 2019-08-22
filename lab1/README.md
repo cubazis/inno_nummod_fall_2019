@@ -12,9 +12,9 @@
 
 ### Критерии оценки
 - Пул реквест + tar архив в moodle
-- Тест 1: Check тесты C - 10 points, Assert тесты python - 15 points (25 points)
-- Тест 2: Check тесты C - 10 points, Assert тесты python - 25 points (35 points)
-- Тест 3: Check тесты C - 10 points, Assert тесты python - 30 points (40 points)
+- Тест 1:  `test_dot_product_posit.c` - 10 points, `Потеря значимости` - 15 points (25 points)
+- Тест 2: `test_sum_posit.c` - 10 points, `Закон ассоциативности` - 25 points (35 points)
+- Тест 3: `test_minima_posit.c` - 10 points, `Half divide method` - 30 points (40 points)
 
 *При условии что имплементация честная*
 
