@@ -5,10 +5,15 @@
 #ifndef UNUM_POSIT_H
 #define UNUM_POSIT_H
 
-typedef struct _posit32 {
-	/** implement your code **/
+#include <stdint.h>
+#include <stdio.h>
 
+typedef struct _posit32
+{
+    uint32_t value;
 } posit;
+
+double getValueInPosit32(posit posit32);
 
 int test_function(void);
 

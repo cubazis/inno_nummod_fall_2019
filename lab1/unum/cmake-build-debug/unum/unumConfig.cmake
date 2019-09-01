@@ -28,7 +28,7 @@ if(NOT TARGET unum)
   include("${CMAKE_CURRENT_LIST_DIR}/unumTargets.cmake")
 endif()
 
-check_required_components(unum)
+check_required_components(unum_exec)
 
 get_filename_component(UNUM_CMAKE_DIR "${CMAKE_CURRENT_LIST_FILE}" PATH)
 
