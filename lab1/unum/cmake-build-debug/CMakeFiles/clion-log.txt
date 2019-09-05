@@ -1,4 +1,0 @@
-F:\Users\Timur\.CLion2018.2\system\cygwin_cmake\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /cygdrive/f/Users/Timur/PycharmProjects/NM/inno_nummod_fall_2019/lab1/unum
--- Configuring done
--- Generating done
--- Build files have been written to: /cygdrive/f/Users/Timur/PycharmProjects/NM/inno_nummod_fall_2019/lab1/unum/cmake-build-debug

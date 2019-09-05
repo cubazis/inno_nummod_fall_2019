@@ -1,8 +1,0 @@
-/cygdrive/f/Users/Timur/PycharmProjects/NM/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles/install/local.dir
-/cygdrive/f/Users/Timur/PycharmProjects/NM/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles/edit_cache.dir
-/cygdrive/f/Users/Timur/PycharmProjects/NM/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles/install/strip.dir
-/cygdrive/f/Users/Timur/PycharmProjects/NM/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles/unum.dir
-/cygdrive/f/Users/Timur/PycharmProjects/NM/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/cygdrive/f/Users/Timur/PycharmProjects/NM/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles/unum_exec.dir
-/cygdrive/f/Users/Timur/PycharmProjects/NM/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles/list_install_components.dir
-/cygdrive/f/Users/Timur/PycharmProjects/NM/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles/install.dir
