@@ -1,0 +1,3 @@
+C:/Users/ansat/CLionProjects/posit32/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/ansat/CLionProjects/posit32/cmake-build-debug/CMakeFiles/posit32.dir
+C:/Users/ansat/CLionProjects/posit32/cmake-build-debug/CMakeFiles/edit_cache.dir
