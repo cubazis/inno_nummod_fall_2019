@@ -33,6 +33,14 @@ set_target_properties(unum PROPERTIES PUBLIC_HEADER "${UNUM_HEADERS}")
 
 include(CMakePackageConfigHelpers)
 
+
+INCLUDE_DIRECTORIES(  /usr/local/Cellar/check/0.12.0/include )
+LINK_DIRECTORIES(  /usr/local/Cellar/check/0.12.0/lib )
+
+file(GLOB LIBRARIES "/usr/local/Cellar/check/0.12.0/lib/*.dylib")
+message("LIBRARIES = ${LIBRARIES}")
+
+
 configure_package_config_file(cmake/unumConfig.cmake.in
         ${CMAKE_CURRENT_BINARY_DIR}/unum/unumConfig.cmake
         INSTALL_DESTINATION "${CONFIG_INSTALL_DIR}")

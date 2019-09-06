@@ -4,13 +4,14 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/src/posit.c" "/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles/unum.dir/src/posit.c.o"
+  "/Users/katya/CLionProjects/inno_nummod_fall_2019/lab1/unum/src/posit.c" "/Users/katya/CLionProjects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles/unum.dir/src/posit.c.o"
   )
-set(CMAKE_C_COMPILER_ID "GNU")
+set(CMAKE_C_COMPILER_ID "AppleClang")
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
   "../src"
+  "/usr/local/Cellar/check/0.12.0/include"
   )
 
 # Targets to which this target links.

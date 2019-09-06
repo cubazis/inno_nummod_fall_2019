@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/tests/test_sum.c
+/Users/katya/CLionProjects/inno_nummod_fall_2019/lab1/unum/tests/test_sum.c
 check.h
 -
 stdio.h
@@ -14,5 +14,23 @@ stdio.h
 stdlib.h
 -
 math.h
+-
+
+/usr/local/Cellar/check/0.12.0/include/check.h
+stddef.h
+-
+string.h
+-
+math.h
+-
+float.h
+-
+check_stdint.h
+-
+sys/types.h
+-
+
+/usr/local/Cellar/check/0.12.0/include/check_stdint.h
+stdint.h
 -
 

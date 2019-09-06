@@ -3,4 +3,6 @@
 
 tests/CMakeFiles/test_dot_product_posit.dir/test_dot_product_posit.c.o
  ../src/posit.h
- /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/tests/test_dot_product_posit.c
+ /Users/katya/CLionProjects/inno_nummod_fall_2019/lab1/unum/tests/test_dot_product_posit.c
+ /usr/local/Cellar/check/0.12.0/include/check.h
+ /usr/local/Cellar/check/0.12.0/include/check_stdint.h

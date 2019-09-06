@@ -1,13 +1,8 @@
-/home/cubazis/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.5728.100/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_BUILD_TYPE=Debug -DBUILD_TESTS=YES -G "CodeBlocks - Unix Makefiles" /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum
--- The C compiler identification is GNU 7.4.0
--- Check for working C compiler: /usr/bin/cc
--- Check for working C compiler: /usr/bin/cc -- works
--- Detecting C compiler ABI info
--- Detecting C compiler ABI info - done
--- Detecting C compile features
--- Detecting C compile features - done
--- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.1") 
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_BUILD_TYPE=Debug -DBUILD_TESTS=YES -G "CodeBlocks - Unix Makefiles" /Users/katya/CLionProjects/inno_nummod_fall_2019/lab1/unum
+LIBRARIES = /usr/local/Cellar/check/0.12.0/lib/libcheck.0.dylib;/usr/local/Cellar/check/0.12.0/lib/libcheck.dylib
+-- Could NOT find PkgConfig (missing: PKG_CONFIG_EXECUTABLE) 
 -- Checking for one of the modules 'check'
+-- Found CHECK: /usr/local/lib/libcheck.dylib
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug
+-- Build files have been written to: /Users/katya/CLionProjects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug
