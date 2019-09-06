@@ -129,7 +129,7 @@ void set_array(int *posit, string s) {
     }
 }
 
-unsigned int get_bit(int *p, int pos) {
+int get_bit(int *p, int pos) {
     return p[pos];
 }
 
@@ -138,15 +138,44 @@ int get_sign(int *p) {
 }
 
 int get_regime(int *p) {
-    int cnt = 1;
     for (int i = 2; i < 32; i++) {
-        
+        if (get_bit(p, i) != get_bit(p, 1)) {
+            int m = i - 1;
+            return get_bit(p, 1) == 0 ? -m : (m - 1);
+        }
     }
+    return get_bit(p, 1) == 0 ? -31 : 30;
+}
+
+int get_exp(int *p) {
+    int exp = 0;
+    for (int i = 2; i < 32; i++) {
+        if (get_bit(p, i) != get_bit(p, 1)) {
+            for (int j = i + 1; j < min(i + 5, 32); j++) {
+                exp = (exp << 1) + p[j];
+            }
+            break;
+        }
+    }
+    return exp;
+}
+
+int get_frac(int *p) {
+    int frac = 0;
+    for (int i = 2; i < 32; i++) {
+        if (get_bit(p, i) != get_bit(p, 1)) {
+            for (int j = i + 5; j < 32; j++) {
+                frac = (frac << 1) + p[j];
+            }
+            break;
+        }
+    }
+    return frac;
 }
 
 int* multiply(int *a, int *b) {
     int *result = new int[32];
-
+    return result;
 }
 
 int main() {
@@ -160,22 +189,27 @@ int main() {
 
     print_p(posit);
 
-    set_bit(posit, 2);
-
-    print_p(posit);
+    // set_bit(posit, 2);
+    //
+    // print_p(posit);
 
     set_array(posit, "+0111011011100000010000011000101");
 
     print_p(posit);
 
-    float tmp;
-    posit2float(posit, tmp);
+    cout << get_sign(posit) << endl;
+    cout << get_regime(posit) << endl;
+    cout << get_exp(posit) << endl;
+    cout << get_frac(posit) << endl;
 
-    cout << tmp << endl;
-
-    float2posit(tmp, posit);
-
-    print_p(posit);
+    // float tmp;
+    // posit2float(posit, tmp);
+    //
+    // cout << tmp << endl;
+    //
+    // float2posit(tmp, posit);
+    //
+    // print_p(posit);
 
     return 0;
 }
