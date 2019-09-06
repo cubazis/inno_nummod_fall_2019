@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/alec/CLionProjects/NumModelingHW1/tmp/inno_nummod_fall_2019/lab1/unum/src/posit.c
+posit.h
+/home/alec/CLionProjects/NumModelingHW1/tmp/inno_nummod_fall_2019/lab1/unum/src/posit.h
+stdio.h
+-
+stdlib.h
+-
+math.h
+-
+stdint.h
+-
+
+/home/alec/CLionProjects/NumModelingHW1/tmp/inno_nummod_fall_2019/lab1/unum/src/posit.h
+stdbool.h
+-
+stdio.h
+-
+stdlib.h
+-
+math.h
+-
+stdint.h
+-
+

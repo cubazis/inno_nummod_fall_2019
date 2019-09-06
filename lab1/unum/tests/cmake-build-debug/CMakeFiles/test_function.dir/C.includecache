@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/alec/CLionProjects/NumModelingHW1/tmp/inno_nummod_fall_2019/lab1/unum/tests/test_function.c
+check.h
+-
+stdlib.h
+-
+posit.h
+/home/alec/CLionProjects/NumModelingHW1/tmp/inno_nummod_fall_2019/lab1/unum/tests/posit.h
+

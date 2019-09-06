@@ -1,0 +1,1 @@
+/usr/bin/cc -g    -rdynamic CMakeFiles/test_function.dir/test_function.o  -o test_function -lunum -lm 
