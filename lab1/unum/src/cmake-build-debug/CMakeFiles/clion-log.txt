@@ -1,4 +1,0 @@
-/snap/clion/82/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/alec/CLionProjects/NumModelingHW1/tmp/inno_nummod_fall_2019/lab1/unum/src
--- Configuring done
--- Generating done
--- Build files have been written to: /home/alec/CLionProjects/NumModelingHW1/tmp/inno_nummod_fall_2019/lab1/unum/src/cmake-build-debug

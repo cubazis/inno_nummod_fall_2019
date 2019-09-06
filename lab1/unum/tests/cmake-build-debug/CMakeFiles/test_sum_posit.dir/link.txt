@@ -1,1 +1,0 @@
-/usr/bin/cc -g    -rdynamic CMakeFiles/test_sum_posit.dir/test_sum_posit.o  -o test_sum_posit -lunum -lm 

@@ -1,1 +1,0 @@
-/usr/bin/cc -g    -rdynamic CMakeFiles/test_minima_posit.dir/test_minima_posit.o  -o test_minima_posit -lunum -lm 

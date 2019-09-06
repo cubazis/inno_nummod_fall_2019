@@ -1,9 +1,0 @@
-/home/alec/CLionProjects/NumModelingHW1/tmp/inno_nummod_fall_2019/lab1/unum/tests/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/alec/CLionProjects/NumModelingHW1/tmp/inno_nummod_fall_2019/lab1/unum/tests/cmake-build-debug/CMakeFiles/test_function.dir
-/home/alec/CLionProjects/NumModelingHW1/tmp/inno_nummod_fall_2019/lab1/unum/tests/cmake-build-debug/CMakeFiles/test_dot_product_posit.dir
-/home/alec/CLionProjects/NumModelingHW1/tmp/inno_nummod_fall_2019/lab1/unum/tests/cmake-build-debug/CMakeFiles/test_dot_product.dir
-/home/alec/CLionProjects/NumModelingHW1/tmp/inno_nummod_fall_2019/lab1/unum/tests/cmake-build-debug/CMakeFiles/test_sum.dir
-/home/alec/CLionProjects/NumModelingHW1/tmp/inno_nummod_fall_2019/lab1/unum/tests/cmake-build-debug/CMakeFiles/test_sum_posit.dir
-/home/alec/CLionProjects/NumModelingHW1/tmp/inno_nummod_fall_2019/lab1/unum/tests/cmake-build-debug/CMakeFiles/test_minima.dir
-/home/alec/CLionProjects/NumModelingHW1/tmp/inno_nummod_fall_2019/lab1/unum/tests/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/alec/CLionProjects/NumModelingHW1/tmp/inno_nummod_fall_2019/lab1/unum/tests/cmake-build-debug/CMakeFiles/test_minima_posit.dir

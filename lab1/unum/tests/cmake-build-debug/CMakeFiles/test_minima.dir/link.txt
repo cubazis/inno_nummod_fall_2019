@@ -1,1 +1,0 @@
-/usr/bin/cc -g    -rdynamic CMakeFiles/test_minima.dir/test_minima.o  -o test_minima -lunum -lm 
