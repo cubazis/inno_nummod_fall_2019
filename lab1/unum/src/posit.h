@@ -65,7 +65,13 @@ typedef struct _posit32 {
 
 } posit32;
 
-
+//Struct for keeping large posits
+//1E10 fits without rounding errors into posit32,
+//so we can divide large posits into the multiplication
+//of 1E10 posit representations (or less).
+//This implementation keeps 3 posits to store numbers >1E10.
+//To convert back, convertion to double and multiplication is produced.
+//The idea is based on quires, described in Gustafson's papers
 typedef struct simple_quire{
 
     posit32 pos[q_size];
