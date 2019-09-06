@@ -129,6 +129,26 @@ void set_array(int *posit, string s) {
     }
 }
 
+unsigned int get_bit(int *p, int pos) {
+    return p[pos];
+}
+
+int get_sign(int *p) {
+    return get_bit(p, 0);
+}
+
+int get_regime(int *p) {
+    int cnt = 1;
+    for (int i = 2; i < 32; i++) {
+        
+    }
+}
+
+int* multiply(int *a, int *b) {
+    int *result = new int[32];
+
+}
+
 int main() {
     /*
     std::cout << "Hello, World!" << std::endl;
