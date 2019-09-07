@@ -74,7 +74,7 @@ float posit2float(int *posit) {
         ++index;
     }
 
-    long long useed = pow(2, pow(2, max_es));
+    long long useed = pow(2, pow(2, ES));
 
     return sign * pow(useed, k) *  pow(2, e) * (1 + f * 1.0 / pow(2, fs)); // TODO: overflow problems with pow()
     //return (sign * (1ll << (16 * k + e)) * ((1ll << fs) + f) * 1.0 / (1ll << fs));
@@ -321,6 +321,10 @@ int* multiply(int *a, int *b) {
     return collect_posit(sign, regime, exp, frac, fs1 + fs2);
 }
 
+int* subtraction(int *a, int *b) {
+    return posit_zero();
+}
+
 int* sum(int *a, int *b) {
     if (is_zero(a)) {
         return b;
@@ -361,11 +365,38 @@ bool posit_less(int *a, int *b) {
         return false;
     }
 
+    // Check negative posits
     if (sign_a && sign_b) {
         reverse_bit(a, 0);
         reverse_bit(b, 0);
-
+        bool ret = posit_less(a, b);
+        reverse_bit(a, 0);
+        reverse_bit(b, 0);
+        return !ret;
     }
+
+    if (get_regime(a) < get_regime(b)) {
+        return true;
+    }
+
+    if (get_regime(a) > get_regime(b)) {
+        return false;
+    }
+
+    if (get_exp(a) < get_exp(b)) {
+        return true;
+    }
+
+    if (get_exp(a) > get_exp(b)) {
+        return false;
+    }
+
+    if (get_frac(a) < get_frac(b)) {
+        return true;
+    }
+
+    return false;
+
 }
 
 int main() {
@@ -378,6 +409,11 @@ int main() {
     print_p(posit);
     printf(" %.30f\n", posit2float(posit));
 
+    float a = 0.44445, b = 0.44444999999999999;
+
+    int *p1 = float2posit(a), *p2 = float2posit(b);
+
+    cout << posit_less(p1, p2) << endl;
 
     return 0;
 }
