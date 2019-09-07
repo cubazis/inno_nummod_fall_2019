@@ -1,4 +1,4 @@
-/home/cubazis/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.5728.100/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_BUILD_TYPE=Debug -DBUILD_TESTS=YES -G "CodeBlocks - Unix Makefiles" /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum
+/home/nariman/clion-2019.2.1/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_BUILD_TYPE=Debug -DBUILD_TESTS=YES -G "CodeBlocks - Unix Makefiles" /home/nariman/Desktop/NumMod/fol/inno_nummod_fall_2019/lab1/unum
 -- The C compiler identification is GNU 7.4.0
 -- Check for working C compiler: /usr/bin/cc
 -- Check for working C compiler: /usr/bin/cc -- works
@@ -10,4 +10,4 @@
 -- Checking for one of the modules 'check'
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug
+-- Build files have been written to: /home/nariman/Desktop/NumMod/fol/inno_nummod_fall_2019/lab1/unum/cmake-build-debug

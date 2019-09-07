@@ -50,19 +50,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/cubazis/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.5728.100/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/nariman/clion-2019.2.1/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/cubazis/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.5728.100/bin/cmake/linux/bin/cmake -E remove -f
+RM = /home/nariman/clion-2019.2.1/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum
+CMAKE_SOURCE_DIR = /home/nariman/Desktop/NumMod/fol/inno_nummod_fall_2019/lab1/unum
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug
+CMAKE_BINARY_DIR = /home/nariman/Desktop/NumMod/fol/inno_nummod_fall_2019/lab1/unum/cmake-build-debug
 
 #=============================================================================
 # Target rules for target CMakeFiles/unum.dir
@@ -71,7 +71,7 @@ CMAKE_BINARY_DIR = /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-
 CMakeFiles/unum.dir/all:
 	$(MAKE) -f CMakeFiles/unum.dir/build.make CMakeFiles/unum.dir/depend
 	$(MAKE) -f CMakeFiles/unum.dir/build.make CMakeFiles/unum.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles --progress-num=15,16 "Built target unum"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nariman/Desktop/NumMod/fol/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles --progress-num=15,16 "Built target unum"
 .PHONY : CMakeFiles/unum.dir/all
 
 # Include target in all.
@@ -81,9 +81,9 @@ all: CMakeFiles/unum.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/unum.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nariman/Desktop/NumMod/fol/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/unum.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nariman/Desktop/NumMod/fol/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/unum.dir/rule
 
 # Convenience name for target.
@@ -138,7 +138,7 @@ tests/preinstall:
 tests/CMakeFiles/test_function.dir/all: CMakeFiles/unum.dir/all
 	$(MAKE) -f tests/CMakeFiles/test_function.dir/build.make tests/CMakeFiles/test_function.dir/depend
 	$(MAKE) -f tests/CMakeFiles/test_function.dir/build.make tests/CMakeFiles/test_function.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles --progress-num=5,6 "Built target test_function"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nariman/Desktop/NumMod/fol/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles --progress-num=5,6 "Built target test_function"
 .PHONY : tests/CMakeFiles/test_function.dir/all
 
 # Include target in all.
@@ -148,9 +148,9 @@ all: tests/CMakeFiles/test_function.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/test_function.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nariman/Desktop/NumMod/fol/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_function.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nariman/Desktop/NumMod/fol/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles 0
 .PHONY : tests/CMakeFiles/test_function.dir/rule
 
 # Convenience name for target.
@@ -175,7 +175,7 @@ clean: tests/CMakeFiles/test_function.dir/clean
 tests/CMakeFiles/test_dot_product_posit.dir/all: CMakeFiles/unum.dir/all
 	$(MAKE) -f tests/CMakeFiles/test_dot_product_posit.dir/build.make tests/CMakeFiles/test_dot_product_posit.dir/depend
 	$(MAKE) -f tests/CMakeFiles/test_dot_product_posit.dir/build.make tests/CMakeFiles/test_dot_product_posit.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target test_dot_product_posit"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nariman/Desktop/NumMod/fol/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target test_dot_product_posit"
 .PHONY : tests/CMakeFiles/test_dot_product_posit.dir/all
 
 # Include target in all.
@@ -185,9 +185,9 @@ all: tests/CMakeFiles/test_dot_product_posit.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/test_dot_product_posit.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nariman/Desktop/NumMod/fol/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_dot_product_posit.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nariman/Desktop/NumMod/fol/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles 0
 .PHONY : tests/CMakeFiles/test_dot_product_posit.dir/rule
 
 # Convenience name for target.
@@ -212,7 +212,7 @@ clean: tests/CMakeFiles/test_dot_product_posit.dir/clean
 tests/CMakeFiles/test_dot_product.dir/all: CMakeFiles/unum.dir/all
 	$(MAKE) -f tests/CMakeFiles/test_dot_product.dir/build.make tests/CMakeFiles/test_dot_product.dir/depend
 	$(MAKE) -f tests/CMakeFiles/test_dot_product.dir/build.make tests/CMakeFiles/test_dot_product.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target test_dot_product"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nariman/Desktop/NumMod/fol/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target test_dot_product"
 .PHONY : tests/CMakeFiles/test_dot_product.dir/all
 
 # Include target in all.
@@ -222,9 +222,9 @@ all: tests/CMakeFiles/test_dot_product.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/test_dot_product.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nariman/Desktop/NumMod/fol/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_dot_product.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nariman/Desktop/NumMod/fol/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles 0
 .PHONY : tests/CMakeFiles/test_dot_product.dir/rule
 
 # Convenience name for target.
@@ -249,7 +249,7 @@ clean: tests/CMakeFiles/test_dot_product.dir/clean
 tests/CMakeFiles/test_sum.dir/all: CMakeFiles/unum.dir/all
 	$(MAKE) -f tests/CMakeFiles/test_sum.dir/build.make tests/CMakeFiles/test_sum.dir/depend
 	$(MAKE) -f tests/CMakeFiles/test_sum.dir/build.make tests/CMakeFiles/test_sum.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles --progress-num=11,12 "Built target test_sum"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nariman/Desktop/NumMod/fol/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles --progress-num=11,12 "Built target test_sum"
 .PHONY : tests/CMakeFiles/test_sum.dir/all
 
 # Include target in all.
@@ -259,9 +259,9 @@ all: tests/CMakeFiles/test_sum.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/test_sum.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nariman/Desktop/NumMod/fol/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_sum.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nariman/Desktop/NumMod/fol/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles 0
 .PHONY : tests/CMakeFiles/test_sum.dir/rule
 
 # Convenience name for target.
@@ -286,7 +286,7 @@ clean: tests/CMakeFiles/test_sum.dir/clean
 tests/CMakeFiles/test_sum_posit.dir/all: CMakeFiles/unum.dir/all
 	$(MAKE) -f tests/CMakeFiles/test_sum_posit.dir/build.make tests/CMakeFiles/test_sum_posit.dir/depend
 	$(MAKE) -f tests/CMakeFiles/test_sum_posit.dir/build.make tests/CMakeFiles/test_sum_posit.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles --progress-num=13,14 "Built target test_sum_posit"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nariman/Desktop/NumMod/fol/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles --progress-num=13,14 "Built target test_sum_posit"
 .PHONY : tests/CMakeFiles/test_sum_posit.dir/all
 
 # Include target in all.
@@ -296,9 +296,9 @@ all: tests/CMakeFiles/test_sum_posit.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/test_sum_posit.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nariman/Desktop/NumMod/fol/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_sum_posit.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nariman/Desktop/NumMod/fol/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles 0
 .PHONY : tests/CMakeFiles/test_sum_posit.dir/rule
 
 # Convenience name for target.
@@ -323,7 +323,7 @@ clean: tests/CMakeFiles/test_sum_posit.dir/clean
 tests/CMakeFiles/test_minima.dir/all: CMakeFiles/unum.dir/all
 	$(MAKE) -f tests/CMakeFiles/test_minima.dir/build.make tests/CMakeFiles/test_minima.dir/depend
 	$(MAKE) -f tests/CMakeFiles/test_minima.dir/build.make tests/CMakeFiles/test_minima.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles --progress-num=7,8 "Built target test_minima"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nariman/Desktop/NumMod/fol/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles --progress-num=7,8 "Built target test_minima"
 .PHONY : tests/CMakeFiles/test_minima.dir/all
 
 # Include target in all.
@@ -333,9 +333,9 @@ all: tests/CMakeFiles/test_minima.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/test_minima.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nariman/Desktop/NumMod/fol/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_minima.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nariman/Desktop/NumMod/fol/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles 0
 .PHONY : tests/CMakeFiles/test_minima.dir/rule
 
 # Convenience name for target.
@@ -360,7 +360,7 @@ clean: tests/CMakeFiles/test_minima.dir/clean
 tests/CMakeFiles/test_minima_posit.dir/all: CMakeFiles/unum.dir/all
 	$(MAKE) -f tests/CMakeFiles/test_minima_posit.dir/build.make tests/CMakeFiles/test_minima_posit.dir/depend
 	$(MAKE) -f tests/CMakeFiles/test_minima_posit.dir/build.make tests/CMakeFiles/test_minima_posit.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles --progress-num=9,10 "Built target test_minima_posit"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nariman/Desktop/NumMod/fol/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles --progress-num=9,10 "Built target test_minima_posit"
 .PHONY : tests/CMakeFiles/test_minima_posit.dir/all
 
 # Include target in all.
@@ -370,9 +370,9 @@ all: tests/CMakeFiles/test_minima_posit.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/test_minima_posit.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nariman/Desktop/NumMod/fol/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_minima_posit.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nariman/Desktop/NumMod/fol/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles 0
 .PHONY : tests/CMakeFiles/test_minima_posit.dir/rule
 
 # Convenience name for target.

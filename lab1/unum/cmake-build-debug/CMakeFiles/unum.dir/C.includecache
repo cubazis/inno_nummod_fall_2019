@@ -6,9 +6,17 @@
 
 #IncludeRegexTransform: 
 
-/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/src/posit.c
+/home/nariman/Desktop/NumMod/fol/inno_nummod_fall_2019/lab1/unum/src/posit.c
 posit.h
-/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/src/posit.h
+/home/nariman/Desktop/NumMod/fol/inno_nummod_fall_2019/lab1/unum/src/posit.h
+stddef.h
+-
+stdio.h
+-
 
-/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/src/posit.h
+/home/nariman/Desktop/NumMod/fol/inno_nummod_fall_2019/lab1/unum/src/posit.h
+stdint.h
+-
+stdbool.h
+-
 
