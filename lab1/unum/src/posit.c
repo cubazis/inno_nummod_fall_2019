@@ -6,7 +6,7 @@
 #include <stddef.h>
 #include <stdio.h>
 
-uint32_t get_posit_from_bits(bool neg, int32_t exp, uint32_t frac) {
+uint32_t from_bits(bool neg, int32_t exp, uint32_t frac) {
     uint32_t p;
     uint32_t regbits;
     uint32_t expbits;
@@ -55,7 +55,7 @@ posit from_double(double d) {
         uint64_t u;
     } un;
 
-    un.d = f;
+    un.d = d;
     p.neg = (bool) (un.u >> 63);
     p.exp = (int32_t) ((un.u >> 52) & 0x7FF) - bias;
     p.frac = (uint32_t) ((un.u << 12) >> (64 - NBITS));
@@ -64,7 +64,7 @@ posit from_double(double d) {
         p.exp -= CLZ(p.frac);
         p.frac = p.frac << (CLZ(p.frac) + 1);
     }
-    p.v = get_posit_from_bits(p.neg, p.exp, p.frac);
+    p.v = from_bits(p.neg, p.exp, p.frac);
 
     return p;
 }
@@ -75,8 +75,8 @@ posit add(posit rhs, posit lhs) {
 
     posit result;
     if (rhs.neg == lhs.neg) result = add_(rhs, lhs, rhs.neg);
-    else result = sub_(rhs, lhs, rhs.neg);
-    result.v = get_posit_from_bits(result.neg, result.exp, result.frac);
+    else result = subtract_(rhs, lhs, rhs.neg);
+    result.v = from_bits(result.neg, result.exp, result.frac);
     return result;
 }
 
@@ -84,9 +84,9 @@ posit subtract(posit rhs, posit lhs) {
     if (same_opposite(rhs, lhs, 0)) return (posit) {.v = ZERO};
 
     posit result;
-    if (rhs.neg == lhs.neg) result = sub_(rhs, lhs, rhs.neg);
+    if (rhs.neg == lhs.neg) result = subtract_(rhs, lhs, rhs.neg);
     else result = add_(rhs, lhs, rhs.neg);
-    result.v = get_posit_from_bits(result.neg, result.exp, result.frac);
+    result.v = from_bits(result.neg, result.exp, result.frac);
     return result;
 }
 
@@ -113,12 +113,12 @@ posit add_(posit a, posit b, bool neg) {
 
     result.neg = neg;
     result.frac = frac << 1;
-    result.v = get_posit_from_bits(result.neg, result.exp, result.frac);
+    result.v = from_bits(result.neg, result.exp, result.frac);
 
     return result;
 }
 
-posit sub_(posit a, posit b, bool neg) {
+posit subtract_(posit a, posit b, bool neg) {
     posit result;
 
     uint32_t afrac = HIDDEN_BIT(a.frac);
@@ -139,7 +139,7 @@ posit sub_(posit a, posit b, bool neg) {
     result.neg = neg;
     result.exp -= CLZ(frac);
     result.frac = frac << (CLZ(frac) + 1);
-    result.v = get_posit_from_bits(result.neg, result.exp, result.frac);
+    result.v = from_bits(result.neg, result.exp, result.frac);
 
     return result;
 }
@@ -161,7 +161,7 @@ posit multiply(posit rhs, posit lhs) {
     result.neg = rhs.neg ^ lhs.neg;
     result.exp = exp;
     result.frac = frac << 1;
-    result.v = get_posit_from_bits(result.neg, result.exp, result.frac);
+    result.v = from_bits(result.neg, result.exp, result.frac);
     return result;
 }
 

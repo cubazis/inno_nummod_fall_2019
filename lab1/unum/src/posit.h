@@ -31,7 +31,7 @@ posit from_double(double f);
 
 double get_double(posit);
 
-uint32_t get_posit_from_bits(bool neg, int32_t exp, uint32_t frac);
+uint32_t from_bits(bool neg, int32_t exp, uint32_t frac);
 
 posit add(posit lhs, posit rhs);
 
@@ -45,7 +45,7 @@ posit posit_abs(posit p);
 
 posit add_(posit lhs, posit rhs, bool);
 
-posit sub_(posit lhs, posit rhs, bool);
+posit subtract_(posit a, posit b, bool neg);
 
 posit get_neg_p(posit);
 
@@ -57,7 +57,6 @@ bool is_zero(posit p);
 
 int get_sign_size(void);
 
-int test_function(void);
 
 uint32_t get_neg(int32_t);
 
