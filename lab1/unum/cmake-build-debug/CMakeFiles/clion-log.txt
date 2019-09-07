@@ -1,13 +1,21 @@
-/home/cubazis/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.5728.100/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_BUILD_TYPE=Debug -DBUILD_TESTS=YES -G "CodeBlocks - Unix Makefiles" /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum
--- The C compiler identification is GNU 7.4.0
--- Check for working C compiler: /usr/bin/cc
--- Check for working C compiler: /usr/bin/cc -- works
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/Users/denisrangulov/Обучение/Numerical Modeling/inno_nummod_fall_2019/lab1/unum"
+-- The C compiler identification is AppleClang 10.0.1.10010046
+-- The CXX compiler identification is AppleClang 10.0.1.10010046
+-- Check for working C compiler: /Library/Developer/CommandLineTools/usr/bin/cc
+-- Check for working C compiler: /Library/Developer/CommandLineTools/usr/bin/cc -- works
 -- Detecting C compiler ABI info
 -- Detecting C compiler ABI info - done
 -- Detecting C compile features
 -- Detecting C compile features - done
--- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.1") 
--- Checking for one of the modules 'check'
+-- Check for working CXX compiler: /Library/Developer/CommandLineTools/usr/bin/c++
+-- Check for working CXX compiler: /Library/Developer/CommandLineTools/usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Boost  found.
+-- Found Boost components:
+   unit_test_framework
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug
+-- Build files have been written to: /Users/denisrangulov/Обучение/Numerical Modeling/inno_nummod_fall_2019/lab1/unum/cmake-build-debug

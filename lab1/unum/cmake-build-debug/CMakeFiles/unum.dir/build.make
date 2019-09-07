@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/cubazis/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.5728.100/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /home/cubazis/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.5728.100/bin/cmake/linux/bin/cmake -E remove -f
+RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum
+CMAKE_SOURCE_DIR = "/Users/denisrangulov/Обучение/Numerical Modeling/inno_nummod_fall_2019/lab1/unum"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug
+CMAKE_BINARY_DIR = "/Users/denisrangulov/Обучение/Numerical Modeling/inno_nummod_fall_2019/lab1/unum/cmake-build-debug"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/unum.dir/depend.make
@@ -57,30 +57,90 @@ include CMakeFiles/unum.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/unum.dir/flags.make
 
-CMakeFiles/unum.dir/src/posit.c.o: CMakeFiles/unum.dir/flags.make
-CMakeFiles/unum.dir/src/posit.c.o: ../src/posit.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/unum.dir/src/posit.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/unum.dir/src/posit.c.o   -c /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/src/posit.c
+CMakeFiles/unum.dir/src/op1.c.o: CMakeFiles/unum.dir/flags.make
+CMakeFiles/unum.dir/src/op1.c.o: ../src/op1.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/denisrangulov/Обучение/Numerical Modeling/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/unum.dir/src/op1.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/unum.dir/src/op1.c.o   -c "/Users/denisrangulov/Обучение/Numerical Modeling/inno_nummod_fall_2019/lab1/unum/src/op1.c"
 
-CMakeFiles/unum.dir/src/posit.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/unum.dir/src/posit.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/src/posit.c > CMakeFiles/unum.dir/src/posit.c.i
+CMakeFiles/unum.dir/src/op1.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/unum.dir/src/op1.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/denisrangulov/Обучение/Numerical Modeling/inno_nummod_fall_2019/lab1/unum/src/op1.c" > CMakeFiles/unum.dir/src/op1.c.i
 
-CMakeFiles/unum.dir/src/posit.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/unum.dir/src/posit.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/src/posit.c -o CMakeFiles/unum.dir/src/posit.c.s
+CMakeFiles/unum.dir/src/op1.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/unum.dir/src/op1.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/denisrangulov/Обучение/Numerical Modeling/inno_nummod_fall_2019/lab1/unum/src/op1.c" -o CMakeFiles/unum.dir/src/op1.c.s
+
+CMakeFiles/unum.dir/src/op2.c.o: CMakeFiles/unum.dir/flags.make
+CMakeFiles/unum.dir/src/op2.c.o: ../src/op2.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/denisrangulov/Обучение/Numerical Modeling/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/unum.dir/src/op2.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/unum.dir/src/op2.c.o   -c "/Users/denisrangulov/Обучение/Numerical Modeling/inno_nummod_fall_2019/lab1/unum/src/op2.c"
+
+CMakeFiles/unum.dir/src/op2.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/unum.dir/src/op2.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/denisrangulov/Обучение/Numerical Modeling/inno_nummod_fall_2019/lab1/unum/src/op2.c" > CMakeFiles/unum.dir/src/op2.c.i
+
+CMakeFiles/unum.dir/src/op2.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/unum.dir/src/op2.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/denisrangulov/Обучение/Numerical Modeling/inno_nummod_fall_2019/lab1/unum/src/op2.c" -o CMakeFiles/unum.dir/src/op2.c.s
+
+CMakeFiles/unum.dir/src/pack.c.o: CMakeFiles/unum.dir/flags.make
+CMakeFiles/unum.dir/src/pack.c.o: ../src/pack.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/denisrangulov/Обучение/Numerical Modeling/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/unum.dir/src/pack.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/unum.dir/src/pack.c.o   -c "/Users/denisrangulov/Обучение/Numerical Modeling/inno_nummod_fall_2019/lab1/unum/src/pack.c"
+
+CMakeFiles/unum.dir/src/pack.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/unum.dir/src/pack.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/denisrangulov/Обучение/Numerical Modeling/inno_nummod_fall_2019/lab1/unum/src/pack.c" > CMakeFiles/unum.dir/src/pack.c.i
+
+CMakeFiles/unum.dir/src/pack.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/unum.dir/src/pack.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/denisrangulov/Обучение/Numerical Modeling/inno_nummod_fall_2019/lab1/unum/src/pack.c" -o CMakeFiles/unum.dir/src/pack.c.s
+
+CMakeFiles/unum.dir/src/posit.cpp.o: CMakeFiles/unum.dir/flags.make
+CMakeFiles/unum.dir/src/posit.cpp.o: ../src/posit.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/denisrangulov/Обучение/Numerical Modeling/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/unum.dir/src/posit.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/unum.dir/src/posit.cpp.o -c "/Users/denisrangulov/Обучение/Numerical Modeling/inno_nummod_fall_2019/lab1/unum/src/posit.cpp"
+
+CMakeFiles/unum.dir/src/posit.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/unum.dir/src/posit.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/denisrangulov/Обучение/Numerical Modeling/inno_nummod_fall_2019/lab1/unum/src/posit.cpp" > CMakeFiles/unum.dir/src/posit.cpp.i
+
+CMakeFiles/unum.dir/src/posit.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/unum.dir/src/posit.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/denisrangulov/Обучение/Numerical Modeling/inno_nummod_fall_2019/lab1/unum/src/posit.cpp" -o CMakeFiles/unum.dir/src/posit.cpp.s
+
+CMakeFiles/unum.dir/src/util.c.o: CMakeFiles/unum.dir/flags.make
+CMakeFiles/unum.dir/src/util.c.o: ../src/util.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/denisrangulov/Обучение/Numerical Modeling/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/unum.dir/src/util.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/unum.dir/src/util.c.o   -c "/Users/denisrangulov/Обучение/Numerical Modeling/inno_nummod_fall_2019/lab1/unum/src/util.c"
+
+CMakeFiles/unum.dir/src/util.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/unum.dir/src/util.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/denisrangulov/Обучение/Numerical Modeling/inno_nummod_fall_2019/lab1/unum/src/util.c" > CMakeFiles/unum.dir/src/util.c.i
+
+CMakeFiles/unum.dir/src/util.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/unum.dir/src/util.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/denisrangulov/Обучение/Numerical Modeling/inno_nummod_fall_2019/lab1/unum/src/util.c" -o CMakeFiles/unum.dir/src/util.c.s
 
 # Object files for target unum
 unum_OBJECTS = \
-"CMakeFiles/unum.dir/src/posit.c.o"
+"CMakeFiles/unum.dir/src/op1.c.o" \
+"CMakeFiles/unum.dir/src/op2.c.o" \
+"CMakeFiles/unum.dir/src/pack.c.o" \
+"CMakeFiles/unum.dir/src/posit.cpp.o" \
+"CMakeFiles/unum.dir/src/util.c.o"
 
 # External object files for target unum
 unum_EXTERNAL_OBJECTS =
 
-libunum.a: CMakeFiles/unum.dir/src/posit.c.o
+libunum.a: CMakeFiles/unum.dir/src/op1.c.o
+libunum.a: CMakeFiles/unum.dir/src/op2.c.o
+libunum.a: CMakeFiles/unum.dir/src/pack.c.o
+libunum.a: CMakeFiles/unum.dir/src/posit.cpp.o
+libunum.a: CMakeFiles/unum.dir/src/util.c.o
 libunum.a: CMakeFiles/unum.dir/build.make
 libunum.a: CMakeFiles/unum.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library libunum.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/denisrangulov/Обучение/Numerical Modeling/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX static library libunum.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/unum.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/unum.dir/link.txt --verbose=$(VERBOSE)
 
@@ -94,6 +154,6 @@ CMakeFiles/unum.dir/clean:
 .PHONY : CMakeFiles/unum.dir/clean
 
 CMakeFiles/unum.dir/depend:
-	cd /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles/unum.dir/DependInfo.cmake --color=$(COLOR)
+	cd "/Users/denisrangulov/Обучение/Numerical Modeling/inno_nummod_fall_2019/lab1/unum/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/Users/denisrangulov/Обучение/Numerical Modeling/inno_nummod_fall_2019/lab1/unum" "/Users/denisrangulov/Обучение/Numerical Modeling/inno_nummod_fall_2019/lab1/unum" "/Users/denisrangulov/Обучение/Numerical Modeling/inno_nummod_fall_2019/lab1/unum/cmake-build-debug" "/Users/denisrangulov/Обучение/Numerical Modeling/inno_nummod_fall_2019/lab1/unum/cmake-build-debug" "/Users/denisrangulov/Обучение/Numerical Modeling/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles/unum.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/unum.dir/depend
 
