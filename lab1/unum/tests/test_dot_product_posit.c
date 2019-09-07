@@ -16,40 +16,71 @@ struct vector {
 struct vector* x;
 struct vector* y;
 
-posit bs[5];
-posit res;
-posit eps;
-
 void init_v1(struct vector *v, posit a)
 {
-
+    v->x1 = power(fromDouble(10), a);
+    v->x2 = fromDouble(1223);
+    v->x3 = power(fromDouble(10), sub(a, fromDouble(1)));
+    v->x4 = power(fromDouble(10), sub(a, fromDouble(2)));
+    v->x5 = fromDouble(3);
+    v->x6 = negate(power(fromDouble(10), sub(a, fromDouble(5))));
 }
 
 void init_v2(struct vector *v, posit b)
 {
-
+    v->x1 = power(fromDouble(10), b);
+    v->x2 = fromDouble(2);
+    v->x3 = negate(power(fromDouble(10), add(b, fromDouble(1))));
+    v->x4 = power(fromDouble(10), b);
+    v->x5 = fromDouble(2111);
+    v->x6 = power(fromDouble(10), add(b, fromDouble(3)));
 }
 
 posit dot(struct vector *v1, struct vector *v2)
 {
-
+    posit arr[6] = {mul(v1->x1, v2->x1), mul(v1->x2, v2->x2), mul(v1->x3, v2->x3),
+                    mul(v1->x4, v2->x4), mul(v1->x5, v2->x5), mul(v1->x6, v2->x6)};
+    posit a = add(arr[0], arr[2]);
+    posit b = add(arr[3], arr[5]);
+    posit c = add(arr[1], arr[4]);
+    return add(add(a, b), c);
 }
 
 void print_vec(struct vector *v)
 {
-
+    printf("{%lf, %lf, %lf, %lf, %lf, %lf}\n", toDouble(v->x1), toDouble(v->x2), toDouble(v->x3),
+           toDouble(v->x4), toDouble(v->x5), toDouble(v->x6));
 }
 
 START_TEST(test_a5)
 {
-	printf("test_double_a5\n");
+    posit bs[5] = {fromDouble(5), fromDouble(8), fromDouble(12), fromDouble(15), fromDouble(20)};
+    posit res = fromDouble(8779);
+    posit eps = fromDouble(10e-8);
+    printf("test_posit_a5\n");
+    init_v1(x, fromDouble(5));
+    for (int i = 0; i < 5; ++i) {
+        init_v2(y, bs[i]);
+        printf("%lf\n", toDouble(dot(x, y)));
+        ck_assert(fabs(toDouble(sub(res, dot(x, y)))) < toDouble(eps));
+    }
 }
+
 END_TEST
 
 START_TEST(test_a10)
 {
-	printf("test_double_a10\n");
-}
+    posit bs[5] = {fromDouble(5), fromDouble(8), fromDouble(12), fromDouble(15), fromDouble(20)};
+    posit res = fromDouble(8779);
+    posit eps = fromDouble(10e-8);
+    printf("test_posit_a10\n");
+    init_v1(x, fromDouble(10));
+    for (int i = 0; i < 5; ++i) {
+        init_v2(y, bs[i]);
+        printf("%lf\n", toDouble(dot(x, y)));
+        ck_assert(fabs(toDouble(sub(res, dot(x, y)))) < toDouble(eps));
+    }}
+
 END_TEST
 
 void setup(void)
@@ -64,7 +95,7 @@ void teardown(void)
 	free(y);
 }
 
-Suite* str_suite (void)
+Suite *str_suite (void)
 {
 	Suite *suite = suite_create("posit");
 	TCase *tcase = tcase_create("test_dot_product_posit");
