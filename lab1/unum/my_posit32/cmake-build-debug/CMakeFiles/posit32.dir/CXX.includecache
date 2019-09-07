@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/ansat/CLionProjects/posit32/main.cpp
+iostream
+-
+posit.h
+C:/Users/ansat/CLionProjects/posit32/posit.h
+
+C:/Users/ansat/CLionProjects/posit32/posit.h
+cmath
+-
+string
+-
+
