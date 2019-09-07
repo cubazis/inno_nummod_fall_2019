@@ -5,477 +5,132 @@
 		<Option title="unum"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\cmake\;CMake Files\tests\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\cmake\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug"/>
+				<Option working_dir="/Users/alsuvakhitova/Documents/Education/BS4/NM/inno_nummod_fall_2019/lab1/unum/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/alsuvakhitova/Documents/Education/BS4/NM/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/alsuvakhitova/Documents/Education/BS4/NM/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/alsuvakhitova/Documents/Education/BS4/NM/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/alsuvakhitova/Documents/Education/BS4/NM/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="install/local">
-				<Option working_dir="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug"/>
+				<Option working_dir="/Users/alsuvakhitova/Documents/Education/BS4/NM/inno_nummod_fall_2019/lab1/unum/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/local"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="test">
-				<Option working_dir="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 test"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="list_install_components">
-				<Option working_dir="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 list_install_components"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/alsuvakhitova/Documents/Education/BS4/NM/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/local"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/alsuvakhitova/Documents/Education/BS4/NM/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/alsuvakhitova/Documents/Education/BS4/NM/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/alsuvakhitova/Documents/Education/BS4/NM/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="install/strip">
-				<Option working_dir="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug"/>
+				<Option working_dir="/Users/alsuvakhitova/Documents/Education/BS4/NM/inno_nummod_fall_2019/lab1/unum/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/strip"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="unum">
-				<Option output="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/libunum.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="2"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/src"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 unum"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="unum/fast">
-				<Option output="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/libunum.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="2"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/src"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 unum/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="edit_cache">
-				<Option working_dir="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="rebuild_cache">
-				<Option working_dir="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/alsuvakhitova/Documents/Education/BS4/NM/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/strip"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/alsuvakhitova/Documents/Education/BS4/NM/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/alsuvakhitova/Documents/Education/BS4/NM/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/alsuvakhitova/Documents/Education/BS4/NM/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="install">
-				<Option working_dir="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug"/>
+				<Option working_dir="/Users/alsuvakhitova/Documents/Education/BS4/NM/inno_nummod_fall_2019/lab1/unum/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 install"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/alsuvakhitova/Documents/Education/BS4/NM/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 install"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/alsuvakhitova/Documents/Education/BS4/NM/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/alsuvakhitova/Documents/Education/BS4/NM/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/alsuvakhitova/Documents/Education/BS4/NM/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="test_function">
-				<Option output="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/test_function" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/tests/.."/>
-					<Add directory="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/src"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
+			<Target title="list_install_components">
+				<Option working_dir="/Users/alsuvakhitova/Documents/Education/BS4/NM/inno_nummod_fall_2019/lab1/unum/cmake-build-debug"/>
+				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 test_function"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/alsuvakhitova/Documents/Education/BS4/NM/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 list_install_components"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/alsuvakhitova/Documents/Education/BS4/NM/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/alsuvakhitova/Documents/Education/BS4/NM/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/alsuvakhitova/Documents/Education/BS4/NM/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="test_function/fast">
-				<Option output="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/test_function" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/tests/.."/>
-					<Add directory="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/src"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/alsuvakhitova/Documents/Education/BS4/NM/inno_nummod_fall_2019/lab1/unum/cmake-build-debug"/>
+				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 test_function/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/alsuvakhitova/Documents/Education/BS4/NM/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/alsuvakhitova/Documents/Education/BS4/NM/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/alsuvakhitova/Documents/Education/BS4/NM/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/alsuvakhitova/Documents/Education/BS4/NM/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="test_dot_product_posit">
-				<Option output="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/test_dot_product_posit" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/tests/.."/>
-					<Add directory="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/src"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/alsuvakhitova/Documents/Education/BS4/NM/inno_nummod_fall_2019/lab1/unum/cmake-build-debug"/>
+				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 test_dot_product_posit"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/alsuvakhitova/Documents/Education/BS4/NM/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/alsuvakhitova/Documents/Education/BS4/NM/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/alsuvakhitova/Documents/Education/BS4/NM/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/alsuvakhitova/Documents/Education/BS4/NM/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="test_dot_product_posit/fast">
-				<Option output="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/test_dot_product_posit" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests"/>
+			<Target title="unum">
+				<Option output="/Users/alsuvakhitova/Documents/Education/BS4/NM/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/libunum.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/alsuvakhitova/Documents/Education/BS4/NM/inno_nummod_fall_2019/lab1/unum/cmake-build-debug"/>
 				<Option object_output="./"/>
-				<Option type="1"/>
+				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/tests/.."/>
-					<Add directory="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/src"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/Users/alsuvakhitova/Documents/Education/BS4/NM/inno_nummod_fall_2019/lab1/unum/src"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 test_dot_product_posit/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/alsuvakhitova/Documents/Education/BS4/NM/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 unum"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/alsuvakhitova/Documents/Education/BS4/NM/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/alsuvakhitova/Documents/Education/BS4/NM/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/alsuvakhitova/Documents/Education/BS4/NM/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="test_dot_product">
-				<Option output="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/test_dot_product" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests"/>
+			<Target title="unum/fast">
+				<Option output="/Users/alsuvakhitova/Documents/Education/BS4/NM/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/libunum.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/alsuvakhitova/Documents/Education/BS4/NM/inno_nummod_fall_2019/lab1/unum/cmake-build-debug"/>
 				<Option object_output="./"/>
-				<Option type="1"/>
+				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/tests/.."/>
-					<Add directory="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/src"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/Users/alsuvakhitova/Documents/Education/BS4/NM/inno_nummod_fall_2019/lab1/unum/src"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 test_dot_product"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="test_dot_product/fast">
-				<Option output="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/test_dot_product" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/tests/.."/>
-					<Add directory="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/src"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 test_dot_product/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="test_sum">
-				<Option output="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/test_sum" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/tests/.."/>
-					<Add directory="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/src"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 test_sum"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="test_sum/fast">
-				<Option output="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/test_sum" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/tests/.."/>
-					<Add directory="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/src"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 test_sum/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="test_sum_posit">
-				<Option output="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/test_sum_posit" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/tests/.."/>
-					<Add directory="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/src"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 test_sum_posit"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="test_sum_posit/fast">
-				<Option output="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/test_sum_posit" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/tests/.."/>
-					<Add directory="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/src"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 test_sum_posit/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="test_minima">
-				<Option output="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/test_minima" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/tests/.."/>
-					<Add directory="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/src"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 test_minima"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="test_minima/fast">
-				<Option output="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/test_minima" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/tests/.."/>
-					<Add directory="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/src"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 test_minima/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="test_minima_posit">
-				<Option output="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/test_minima_posit" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/tests/.."/>
-					<Add directory="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/src"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 test_minima_posit"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="test_minima_posit/fast">
-				<Option output="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/test_minima_posit" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/tests/.."/>
-					<Add directory="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/src"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 test_minima_posit/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/alsuvakhitova/Documents/Education/BS4/NM/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 unum/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/alsuvakhitova/Documents/Education/BS4/NM/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/alsuvakhitova/Documents/Education/BS4/NM/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/alsuvakhitova/Documents/Education/BS4/NM/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/src/posit.c">
+		<Unit filename="/Users/alsuvakhitova/Documents/Education/BS4/NM/inno_nummod_fall_2019/lab1/unum/src/posit.c">
 			<Option target="unum"/>
 		</Unit>
-		<Unit filename="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/src/posit.h">
+		<Unit filename="/Users/alsuvakhitova/Documents/Education/BS4/NM/inno_nummod_fall_2019/lab1/unum/src/posit.h">
 			<Option target="unum"/>
 		</Unit>
-		<Unit filename="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/tests/test_dot_product.c">
-			<Option target="test_dot_product"/>
-		</Unit>
-		<Unit filename="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/tests/test_dot_product_posit.c">
-			<Option target="test_dot_product_posit"/>
-		</Unit>
-		<Unit filename="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/tests/test_function.c">
-			<Option target="test_function"/>
-		</Unit>
-		<Unit filename="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/tests/test_minima.c">
-			<Option target="test_minima"/>
-		</Unit>
-		<Unit filename="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/tests/test_minima_posit.c">
-			<Option target="test_minima_posit"/>
-		</Unit>
-		<Unit filename="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/tests/test_sum.c">
-			<Option target="test_sum"/>
-		</Unit>
-		<Unit filename="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/tests/test_sum_posit.c">
-			<Option target="test_sum_posit"/>
-		</Unit>
-		<Unit filename="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/CMakeLists.txt">
+		<Unit filename="/Users/alsuvakhitova/Documents/Education/BS4/NM/inno_nummod_fall_2019/lab1/unum/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake/FindCheck.cmake">
+		<Unit filename="/Users/alsuvakhitova/Documents/Education/BS4/NM/inno_nummod_fall_2019/lab1/unum/cmake/unumConfig.cmake.in">
 			<Option virtualFolder="CMake Files\cmake\"/>
-		</Unit>
-		<Unit filename="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake/unumConfig.cmake.in">
-			<Option virtualFolder="CMake Files\cmake\"/>
-		</Unit>
-		<Unit filename="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/tests/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\tests\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>
