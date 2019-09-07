@@ -5,86 +5,113 @@
 #include <math.h>
 
 struct vector {
-	posit x1;
-	posit x2;
-	posit x3;
-	posit x4;
-	posit x5;
-	posit x6;
+    posit x1;
+    posit x2;
+    posit x3;
+    posit x4;
+    posit x5;
+    posit x6;
 };
 
-struct vector* x;
-struct vector* y;
+struct vector *x;
+struct vector *y;
 
-posit bs[5];
-posit res;
-posit eps;
+double bs[5] = {5, 8, 12, 15, 20};
+double res = 8779;
+double eps = 10e-1;
 
-void init_v1(struct vector *v, posit a)
-{
-
+void init_v1(struct vector *v, double a) {
+    v->x1 = p32_from_double(pow(10, a));
+    v->x2 = p32_from_double(1223);
+    v->x3 = p32_from_double(pow(10, a - 1));
+    v->x4 = p32_from_double(pow(10, a - 2));
+    v->x5 = p32_from_double(3);
+    v->x6 = p32_from_double(-pow(10, a - 5));
 }
 
-void init_v2(struct vector *v, posit b)
-{
-
+void init_v2(struct vector *v, double b) {
+    v->x1 = p32_from_double(pow(10, b));
+    v->x2 = p32_from_double(2);
+    v->x3 = p32_from_double(-pow(10, b + 1));
+    v->x4 = p32_from_double(pow(10, b));
+    v->x5 = p32_from_double(2111);
+    v->x6 = p32_from_double(pow(10, b + 3));
 }
 
-posit dot(struct vector *v1, struct vector *v2)
-{
-
+double dot(struct vector *v1, struct vector *v2) {
+    return p32_to_double(p32_add(p32_mul(v1->x1, v2->x1),
+                                 p32_add(p32_mul(v1->x2, v2->x2),
+                                         p32_add(p32_mul(v1->x3, v2->x3),
+                                                 p32_add(p32_mul(v1->x4, v2->x4),
+                                                         p32_add(p32_mul(v1->x5, v2->x5),
+                                                                 p32_mul(v1->x6, v2->x6)))))));
 }
 
-void print_vec(struct vector *v)
-{
+void print_vec(struct vector *v) {
+    printf("{%lf, %lf, %lf, %lf, %lf, %lf}\n",
+           p32_to_double(v->x1),
+           p32_to_double(v->x2),
+           p32_to_double(v->x3),
+           p32_to_double(v->x4),
+           p32_to_double(v->x5),
+           p32_to_double(v->x6));
 
 }
 
 START_TEST(test_a5)
-{
-	printf("test_double_a5\n");
-}
+    {
+        printf("test_posit_a5\n");
+        init_v1(x, 5);
+        for (int i = 0; i < 5; ++i) {
+            init_v2(y, bs[i]);
+            printf("%lf\n", dot(x, y));
+            ck_assert(fabs(res - dot(x, y)) < eps);
+        }
+    }
 END_TEST
 
 START_TEST(test_a10)
-{
-	printf("test_double_a10\n");
-}
+    {
+        printf("test_posit_a10\n");
+        init_v1(x, 10);
+        for (int i = 0; i < 5; ++i) {
+            init_v2(y, bs[i]);
+            printf("%lf\n", dot(x, y));
+            ck_assert(fabs(res - dot(x, y)) < eps);
+        }
+    }
 END_TEST
 
-void setup(void)
-{
-	x = calloc(1, sizeof(struct vector));
-	y = calloc(1, sizeof(struct vector));
+void setup(void) {
+    x = calloc(1, sizeof(struct vector));
+    y = calloc(1, sizeof(struct vector));
 }
 
-void teardown(void)
-{
-	free(x);
-	free(y);
+void teardown(void) {
+    free(x);
+    free(y);
 }
 
-Suite* str_suite (void)
-{
-	Suite *suite = suite_create("posit");
-	TCase *tcase = tcase_create("test_dot_product_posit");
-	tcase_add_checked_fixture(tcase, setup, teardown);
-	tcase_set_timeout(tcase, 60);
+Suite *str_suite(void) {
+    Suite *suite = suite_create("posit");
+    TCase *tcase = tcase_create("test_dot_product_posit");
+    tcase_add_checked_fixture(tcase, setup, teardown);
+    tcase_set_timeout(tcase, 60);
 
-	tcase_add_test(tcase, test_a5);
-	tcase_add_test(tcase, test_a10);
+    tcase_add_test(tcase, test_a5);
+    tcase_add_test(tcase, test_a10);
 
 
-	suite_add_tcase(suite, tcase);
-	return suite;
+    suite_add_tcase(suite, tcase);
+    return suite;
 }
 
-int main (void) {
-	int number_failed;
-	Suite *suite = str_suite();
-	SRunner *runner = srunner_create(suite);
-	srunner_run_all(runner, CK_NORMAL);
-	number_failed = srunner_ntests_failed(runner);
-	srunner_free(runner);
-	return number_failed;
+int main(void) {
+    int number_failed;
+    Suite *suite = str_suite();
+    SRunner *runner = srunner_create(suite);
+    srunner_run_all(runner, CK_NORMAL);
+    number_failed = srunner_ntests_failed(runner);
+    srunner_free(runner);
+    return number_failed;
 }

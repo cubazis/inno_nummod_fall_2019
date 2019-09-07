@@ -5,11 +5,14 @@
 #ifndef UNUM_POSIT_H
 #define UNUM_POSIT_H
 
-typedef struct _posit32 {
-	/** implement your code **/
+typedef unsigned int posit;
 
-} posit;
+posit p32_from_double(double a);
 
-int test_function(void);
+double p32_to_double(posit a);
+
+posit p32_add(posit a, posit b);
+
+posit p32_mul(posit a, posit b);
 
 #endif //UNUM_POSIT_H
