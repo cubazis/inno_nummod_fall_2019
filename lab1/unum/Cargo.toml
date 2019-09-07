@@ -1,0 +1,16 @@
+[package]
+name = "unum"
+version = "0.1.0"
+authors = ["Nikita Vilunov <nikita@vilunov.me>"]
+edition = "2018"
+build = "build.rs"
+
+[lib]
+crate-type = ["lib", "dylib", "staticlib"]
+
+[dependencies]
+bitvec = "0.15.0"
+nalgebra = "0.18.0"
+
+[build-dependencies]
+cbindgen = "0.9.0"
