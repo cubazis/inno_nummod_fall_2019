@@ -7,7 +7,7 @@ set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake/")
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -std=c99 -Wall -Wextra -Wshadow")
 set(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG} -O0 -g")
 
-option( BUILD_TESTS			  "Build tests"							OFF )
+option(BUILD_TESTS "Build tests" OFF)
 
 set(CMAKE_C_FLAGS
         "${CMAKE_C_FLAGS} -std=c99")
@@ -54,12 +54,12 @@ install(
         DESTINATION ${CONFIG_INSTALL_DIR})
 
 # Testing
-if(BUILD_TESTS)
+if (BUILD_TESTS)
     find_package(Check)
-    if(CHECK_FOUND)
+    if (CHECK_FOUND)
         enable_testing()
         add_subdirectory(tests)
-    else()
+    else ()
         message("Could not find Check for testing")
-    endif()
-endif()
+    endif ()
+endif ()
