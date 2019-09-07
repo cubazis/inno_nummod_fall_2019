@@ -1,14 +1,9 @@
 include_directories(..)
-include_directories(${CHECK_INCLUDE_DIRS})
+include_directories(/usr/local/include/)
 
 set(tests
   test_dot_product
   test_dot_product_posit
-  test_sum
-  test_sum_posit
-  test_minima
-  test_minima_posit
-  test_function
 )
 
 set(CMAKE_EXE_LINKER_FLAGS "${CHECK_LDFLAGS_OTHER} ${CMAKE_EXE_LINKER_FLAGS}")
