@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/cubazis/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.5728.100/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /cygdrive/c/Users/Timkabor/.CLion2019.2/system/cygwin_cmake/bin/cmake.exe
 
 # The command to remove a file.
-RM = /home/cubazis/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.5728.100/bin/cmake/linux/bin/cmake -E remove -f
+RM = /cygdrive/c/Users/Timkabor/.CLion2019.2/system/cygwin_cmake/bin/cmake.exe -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum
+CMAKE_SOURCE_DIR = "/cygdrive/d/Study/Innopolis/fourth course/numerical modelling/inno_nummod_fall_2019/lab1/unum"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug
+CMAKE_BINARY_DIR = "/cygdrive/d/Study/Innopolis/fourth course/numerical modelling/inno_nummod_fall_2019/lab1/unum/cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,19 +59,19 @@ CMAKE_BINARY_DIR = /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/home/cubazis/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.5728.100/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+	/cygdrive/c/Users/Timkabor/.CLion2019.2/system/cygwin_cmake/bin/cmake.exe -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local
 
 # Special rule for the target install/local
 install/local/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/home/cubazis/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.5728.100/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+	/cygdrive/c/Users/Timkabor/.CLion2019.2/system/cygwin_cmake/bin/cmake.exe -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
 # Special rule for the target test
 test:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/home/cubazis/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.5728.100/bin/cmake/linux/bin/ctest --force-new-ctest-process $(ARGS)
+	/cygdrive/c/Users/Timkabor/.CLion2019.2/system/cygwin_cmake/bin/ctest.exe --force-new-ctest-process $(ARGS)
 .PHONY : test
 
 # Special rule for the target test
@@ -92,19 +92,19 @@ list_install_components/fast: list_install_components
 # Special rule for the target install/strip
 install/strip: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/home/cubazis/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.5728.100/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+	/cygdrive/c/Users/Timkabor/.CLion2019.2/system/cygwin_cmake/bin/cmake.exe -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip
 
 # Special rule for the target install/strip
 install/strip/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/home/cubazis/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.5728.100/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+	/cygdrive/c/Users/Timkabor/.CLion2019.2/system/cygwin_cmake/bin/cmake.exe -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/cubazis/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.5728.100/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/cygdrive/c/Users/Timkabor/.CLion2019.2/system/cygwin_cmake/bin/cmake.exe -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -115,7 +115,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/cubazis/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.5728.100/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/cygdrive/c/Users/Timkabor/.CLion2019.2/system/cygwin_cmake/bin/cmake.exe -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -126,20 +126,20 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/home/cubazis/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.5728.100/bin/cmake/linux/bin/cmake -P cmake_install.cmake
+	/cygdrive/c/Users/Timkabor/.CLion2019.2/system/cygwin_cmake/bin/cmake.exe -P cmake_install.cmake
 .PHONY : install
 
 # Special rule for the target install
 install/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/home/cubazis/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.5728.100/bin/cmake/linux/bin/cmake -P cmake_install.cmake
+	/cygdrive/c/Users/Timkabor/.CLion2019.2/system/cygwin_cmake/bin/cmake.exe -P cmake_install.cmake
 .PHONY : install/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start "/cygdrive/d/Study/Innopolis/fourth course/numerical modelling/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles" "/cygdrive/d/Study/Innopolis/fourth course/numerical modelling/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles/progress.marks"
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/cygdrive/d/Study/Innopolis/fourth course/numerical modelling/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -181,19 +181,6 @@ unum/fast:
 .PHONY : unum/fast
 
 #=============================================================================
-# Target rules for targets named test_function
-
-# Build rule for target.
-test_function: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_function
-.PHONY : test_function
-
-# fast build rule for target.
-test_function/fast:
-	$(MAKE) -f tests/CMakeFiles/test_function.dir/build.make tests/CMakeFiles/test_function.dir/build
-.PHONY : test_function/fast
-
-#=============================================================================
 # Target rules for targets named test_dot_product_posit
 
 # Build rule for target.
@@ -218,58 +205,6 @@ test_dot_product: cmake_check_build_system
 test_dot_product/fast:
 	$(MAKE) -f tests/CMakeFiles/test_dot_product.dir/build.make tests/CMakeFiles/test_dot_product.dir/build
 .PHONY : test_dot_product/fast
-
-#=============================================================================
-# Target rules for targets named test_sum
-
-# Build rule for target.
-test_sum: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_sum
-.PHONY : test_sum
-
-# fast build rule for target.
-test_sum/fast:
-	$(MAKE) -f tests/CMakeFiles/test_sum.dir/build.make tests/CMakeFiles/test_sum.dir/build
-.PHONY : test_sum/fast
-
-#=============================================================================
-# Target rules for targets named test_sum_posit
-
-# Build rule for target.
-test_sum_posit: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_sum_posit
-.PHONY : test_sum_posit
-
-# fast build rule for target.
-test_sum_posit/fast:
-	$(MAKE) -f tests/CMakeFiles/test_sum_posit.dir/build.make tests/CMakeFiles/test_sum_posit.dir/build
-.PHONY : test_sum_posit/fast
-
-#=============================================================================
-# Target rules for targets named test_minima
-
-# Build rule for target.
-test_minima: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_minima
-.PHONY : test_minima
-
-# fast build rule for target.
-test_minima/fast:
-	$(MAKE) -f tests/CMakeFiles/test_minima.dir/build.make tests/CMakeFiles/test_minima.dir/build
-.PHONY : test_minima/fast
-
-#=============================================================================
-# Target rules for targets named test_minima_posit
-
-# Build rule for target.
-test_minima_posit: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_minima_posit
-.PHONY : test_minima_posit
-
-# fast build rule for target.
-test_minima_posit/fast:
-	$(MAKE) -f tests/CMakeFiles/test_minima_posit.dir/build.make tests/CMakeFiles/test_minima_posit.dir/build
-.PHONY : test_minima_posit/fast
 
 src/posit.o: src/posit.c.o
 
@@ -312,13 +247,8 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... install"
-	@echo "... test_function"
 	@echo "... test_dot_product_posit"
 	@echo "... test_dot_product"
-	@echo "... test_sum"
-	@echo "... test_sum_posit"
-	@echo "... test_minima"
-	@echo "... test_minima_posit"
 	@echo "... src/posit.o"
 	@echo "... src/posit.i"
 	@echo "... src/posit.s"

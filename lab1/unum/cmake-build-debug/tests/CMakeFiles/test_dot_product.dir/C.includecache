@@ -6,17 +6,13 @@
 
 #IncludeRegexTransform: 
 
-../src/posit.h
-
-/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/tests/test_dot_product.c
+/cygdrive/d/Study/Innopolis/fourth course/numerical modelling/inno_nummod_fall_2019/lab1/unum/tests/test_dot_product.c
 check.h
 -
 stdio.h
 -
 stdlib.h
 -
-posit.h
-/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/tests/posit.h
 math.h
 -
 

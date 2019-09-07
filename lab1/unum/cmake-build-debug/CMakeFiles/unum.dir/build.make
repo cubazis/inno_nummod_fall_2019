@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/cubazis/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.5728.100/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /cygdrive/c/Users/Timkabor/.CLion2019.2/system/cygwin_cmake/bin/cmake.exe
 
 # The command to remove a file.
-RM = /home/cubazis/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.5728.100/bin/cmake/linux/bin/cmake -E remove -f
+RM = /cygdrive/c/Users/Timkabor/.CLion2019.2/system/cygwin_cmake/bin/cmake.exe -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum
+CMAKE_SOURCE_DIR = "/cygdrive/d/Study/Innopolis/fourth course/numerical modelling/inno_nummod_fall_2019/lab1/unum"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug
+CMAKE_BINARY_DIR = "/cygdrive/d/Study/Innopolis/fourth course/numerical modelling/inno_nummod_fall_2019/lab1/unum/cmake-build-debug"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/unum.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/unum.dir/flags.make
 
 CMakeFiles/unum.dir/src/posit.c.o: CMakeFiles/unum.dir/flags.make
 CMakeFiles/unum.dir/src/posit.c.o: ../src/posit.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/unum.dir/src/posit.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/unum.dir/src/posit.c.o   -c /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/src/posit.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/cygdrive/d/Study/Innopolis/fourth course/numerical modelling/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/unum.dir/src/posit.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/unum.dir/src/posit.c.o   -c "/cygdrive/d/Study/Innopolis/fourth course/numerical modelling/inno_nummod_fall_2019/lab1/unum/src/posit.c"
 
 CMakeFiles/unum.dir/src/posit.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/unum.dir/src/posit.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/src/posit.c > CMakeFiles/unum.dir/src/posit.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/cygdrive/d/Study/Innopolis/fourth course/numerical modelling/inno_nummod_fall_2019/lab1/unum/src/posit.c" > CMakeFiles/unum.dir/src/posit.c.i
 
 CMakeFiles/unum.dir/src/posit.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/unum.dir/src/posit.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/src/posit.c -o CMakeFiles/unum.dir/src/posit.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/cygdrive/d/Study/Innopolis/fourth course/numerical modelling/inno_nummod_fall_2019/lab1/unum/src/posit.c" -o CMakeFiles/unum.dir/src/posit.c.s
 
 # Object files for target unum
 unum_OBJECTS = \
@@ -80,7 +80,7 @@ unum_EXTERNAL_OBJECTS =
 libunum.a: CMakeFiles/unum.dir/src/posit.c.o
 libunum.a: CMakeFiles/unum.dir/build.make
 libunum.a: CMakeFiles/unum.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library libunum.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/cygdrive/d/Study/Innopolis/fourth course/numerical modelling/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library libunum.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/unum.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/unum.dir/link.txt --verbose=$(VERBOSE)
 
@@ -94,6 +94,6 @@ CMakeFiles/unum.dir/clean:
 .PHONY : CMakeFiles/unum.dir/clean
 
 CMakeFiles/unum.dir/depend:
-	cd /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles/unum.dir/DependInfo.cmake --color=$(COLOR)
+	cd "/cygdrive/d/Study/Innopolis/fourth course/numerical modelling/inno_nummod_fall_2019/lab1/unum/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/cygdrive/d/Study/Innopolis/fourth course/numerical modelling/inno_nummod_fall_2019/lab1/unum" "/cygdrive/d/Study/Innopolis/fourth course/numerical modelling/inno_nummod_fall_2019/lab1/unum" "/cygdrive/d/Study/Innopolis/fourth course/numerical modelling/inno_nummod_fall_2019/lab1/unum/cmake-build-debug" "/cygdrive/d/Study/Innopolis/fourth course/numerical modelling/inno_nummod_fall_2019/lab1/unum/cmake-build-debug" "/cygdrive/d/Study/Innopolis/fourth course/numerical modelling/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles/unum.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/unum.dir/depend
 

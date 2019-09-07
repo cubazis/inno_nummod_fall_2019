@@ -6,5 +6,5 @@ C_FLAGS =  -std=c99 -Wall -Wextra -Wshadow -std=c99 -g -O0 -g -Wall -Wshadow -Wp
 
 C_DEFINES = 
 
-C_INCLUDES = -I/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/tests/.. -I/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/src 
+C_INCLUDES = -I"/cygdrive/d/Study/Innopolis/fourth course/numerical modelling/inno_nummod_fall_2019/lab1/unum/tests/.." -I"/cygdrive/d/Study/Innopolis/fourth course/numerical modelling/inno_nummod_fall_2019/lab1/unum/src" 
 

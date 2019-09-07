@@ -1,7 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/test_dot_product.dir/test_dot_product.c.o"
   "test_dot_product.pdb"
-  "test_dot_product"
+  "test_dot_product.exe"
+  "libtest_dot_product.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.

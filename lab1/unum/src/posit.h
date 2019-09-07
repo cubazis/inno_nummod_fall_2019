@@ -6,10 +6,19 @@
 #define UNUM_POSIT_H
 
 typedef struct _posit32 {
-	/** implement your code **/
-
+    unsigned int bits;
 } posit;
 
-int test_function(void);
+posit fromDouble(double a);
+double toDouble(posit a);
+
+posit negate(posit a);
+posit p_abs(posit ap);
+posit add(posit a, posit b);
+posit sub(posit a, posit b);
+posit power(posit a, posit b);
+posit multiply(posit a, posit b);
+
+short is_less(posit rhs, posit lhs);
 
 #endif //UNUM_POSIT_H

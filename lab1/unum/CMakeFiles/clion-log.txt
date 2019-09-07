@@ -1,0 +1,4 @@
+Cannot generate into D:\Study\Innopolis\fourth course\numerical modelling\inno_nummod_fall_2019\lab1\unum
+It was created with incompatible generator 'NMake Makefiles'
+
+Please either delete it manually or select another generation directory

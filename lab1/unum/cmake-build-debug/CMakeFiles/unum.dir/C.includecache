@@ -6,9 +6,17 @@
 
 #IncludeRegexTransform: 
 
-/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/src/posit.c
+/cygdrive/d/Study/Innopolis/fourth course/numerical modelling/inno_nummod_fall_2019/lab1/unum/src/posit.c
 posit.h
-/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/src/posit.h
+/cygdrive/d/Study/Innopolis/fourth course/numerical modelling/inno_nummod_fall_2019/lab1/unum/src/posit.h
+math.h
+-
+stdlib.h
+-
+stdio.h
+-
+stdint.h
+-
 
-/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/src/posit.h
+/cygdrive/d/Study/Innopolis/fourth course/numerical modelling/inno_nummod_fall_2019/lab1/unum/src/posit.h
 
