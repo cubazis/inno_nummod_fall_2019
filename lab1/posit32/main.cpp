@@ -9,7 +9,10 @@ const int SZ = 32;
 const int ES = 4;
 
 int* posit_inf();
+
 int* posit_zero();
+
+bool posit_less(int *a, int *b);
 
 void print_p(int posit[]) {
     for (int i = 0; i < SZ; ++i) {
@@ -21,6 +24,11 @@ void print_p(int posit[]) {
 void set_bit(int *posit, int index) {
     posit[index] = 1;
 }
+
+void reverse_bit(int *posit, int index) {
+    posit[index] ^= 1;
+}
+
 /*
  * Function converts posit(32-bits array) to float
  */
@@ -311,6 +319,53 @@ int* multiply(int *a, int *b) {
     exp %= (1LL << ES);
 
     return collect_posit(sign, regime, exp, frac, fs1 + fs2);
+}
+
+int* sum(int *a, int *b) {
+    if (is_zero(a)) {
+        return b;
+    }
+
+    if (is_zero(b)) {
+        return a;
+    }
+
+    if (is_inf(a) || is_inf(b)) {
+        return posit_inf();
+    }
+
+    if (posit_less(a, b)) {
+        return sum(b, a);
+    }
+
+    int sign = get_sign(a) ^ get_sign(b);
+
+    // subtraction
+    if (sign) {
+        return subtraction(a, b);
+    }
+
+    long long fs1 = get_frac_length(a);
+    long long fs2 = get_frac_length(b);
+    return posit_zero();
+}
+
+// return true if (a < b)
+bool posit_less(int *a, int *b) {
+    int sign_a = get_sign(a);
+    int sign_b = get_sign(b);
+    if (!sign_b && sign_a) {
+        return true;
+    }
+    if (sign_b && !sign_a) {
+        return false;
+    }
+
+    if (sign_a && sign_b) {
+        reverse_bit(a, 0);
+        reverse_bit(b, 0);
+
+    }
 }
 
 int main() {
