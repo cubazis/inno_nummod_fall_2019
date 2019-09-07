@@ -257,27 +257,6 @@ posit multiply(posit ap, posit bp) {
 	return _toPosit(r);
 }
 
-//posit divide(posit ap, posit bp) {
-//	unpacked a = _fromPosit(ap);
-//	unpacked b = _fromPosit(bp);
-//	unpacked r;
-//
-//	_uint64 afrac = HIDDEN_BIT(a.frac);
-//	_uint64 bfrac = HIDDEN_BIT(b.frac);
-//	int exp = a.exp - b.exp;
-//
-//	if (afrac < bfrac) {
-//		exp--;
-//		bfrac = RSHIFT(bfrac, 1);
-//	}
-//
-//	r.neg = a.neg ^ b.neg;
-//	r.exp = exp;
-//	r.frac = LSHIFT(afrac, POSIT_SIZE) / bfrac;
-//
-//	return _toPosit(r);
-//}
-
 posit power(posit a, posit b) {
 	return fromDouble(pow(toDouble(a), toDouble(b)));
 }

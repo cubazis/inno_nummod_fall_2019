@@ -46,8 +46,6 @@ posit sub(posit a, posit b);
 
 posit multiply(posit a, posit b);
 
-//posit divide(posit a, posit b);
-
 posit power(posit a, posit b);
 
 posit negate(posit a);
