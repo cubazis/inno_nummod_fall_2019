@@ -1,42 +1,21 @@
-FLAGS = -O2 -g 
-
-LIB_OBJ = lib/posit.o lib/pack.o lib/util.o lib/op1.o lib/op2.o
-LIB_TARGET = lib/libbfp.a
-
-TARGET=tests/test_dot_product_posit 
-OBJ = tests/test_dot_product_posit.o $(LIB_TARGET)
+CC = cc
+EXEC = tests/test_dot_product_posit
+OBJECT = tests/test_dot_product_posit.o
+TARGET = tests/test_dot_product_posit.c
 
 all: $(TARGET)
-	rm -f lib/*.o 
-	rm -f tests/*.o 
-	rm -f *.o 
-	
+	rm -f src/*.o
+	rm -f *.o
+	rm -f tests/*.o
+
+	$(CC) $(CFLAGS) -c src/posit.c -o src/posit.o
+	$(CC) $(CFLAGS) -c $(TARGET) -o $(OBJECT)
+	$(CC) $(CFLAGS) -o $(EXEC) $(OBJECT) src/posit.o -lcheck
 
 run_tests: 
-	./$(TARGET)
-
-%: %.cpp
-	$(CXX) -std=c++11 -o $@  $^ -lboost_unit_test_framework
-
-# run-%: %
-# 	-./$^ --output_format=XML --log_level=test_suite > $(^)-report.xml
+	./$(EXEC)
 
 clean:
-	rm -f lib/*.o 
-	rm -f *.o 
-	rm $(LIB_TARGET)
-	rm $(TARGET) # *-report.xml
-	
-
-$(LIB_TARGET): $(LIB_OBJ)
-	ar rcs $@ $^
-
-$(TARGET): $(OBJ)
-	$(CXX) -std=c++11 -o $@  $^ -lboost_unit_test_framework
-
-%.o: %.c
-	$(CC) -o $@ $(FLAGS) -c $^
-
-%.o: %.cpp
-	$(CXX) -std=c++11 -o $@ $(FLAGS) -c $^ 
-
+	rm -f src/*.o
+	rm -f *.o
+	rm -f tests/*.o
