@@ -1,0 +1,1 @@
+/usr/bin/cc -g    -rdynamic CMakeFiles/test_dot_product.dir/test_dot_product.o  -o test_dot_product -lunum -lm 
