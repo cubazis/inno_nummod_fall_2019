@@ -1,15 +1,25 @@
-//
-// Created by cubazis on 18.08.2019.
-//
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include <stdint.h>
 
-#ifndef UNUM_POSIT_H
-#define UNUM_POSIT_H
+struct posit {
+    bool sign;
+    int32_t exponent;
+    uint32_t fraction;
+};
 
-typedef struct _posit32 {
-	/** implement your code **/
+struct posit add_posits(struct posit left, struct posit right);
 
-} posit;
+struct posit subtract_posits(struct posit left, struct posit right);
 
-int test_function(void);
+struct posit summa_posits(struct posit left, struct posit right);
 
-#endif //UNUM_POSIT_H
+struct posit multiply_posits(struct posit left, struct posit right);
+
+struct posit dot_product(size_t dim, struct posit *left, struct posit *right);
+
+double to_double(struct posit number);
+
+struct posit to_posit(double number);
