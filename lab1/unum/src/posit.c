@@ -12,6 +12,7 @@ uint32_t from_bits(bool neg, int32_t exp, uint32_t frac) {
     uint32_t expbits;
 
     int maxexp = (1 << ES) * (NBITS - 2);
+
     if (exp < -maxexp)
         exp = -maxexp;
     else if (exp > maxexp)
@@ -56,6 +57,7 @@ posit from_double(double d) {
     } un;
 
     un.d = d;
+
     p.neg = (bool) (un.u >> 63);
     p.exp = (int32_t) ((un.u >> 52) & 0x7FF) - bias;
     p.frac = (uint32_t) ((un.u << 12) >> (64 - NBITS));
@@ -74,18 +76,28 @@ posit add(posit rhs, posit lhs) {
     if (same_opposite(rhs, lhs, 1)) return (posit) {.v = ZERO};
 
     posit result;
-    if (rhs.neg == lhs.neg) result = add_(rhs, lhs, rhs.neg);
-    else result = subtract_(rhs, lhs, rhs.neg);
+
+    if (rhs.neg == lhs.neg)
+        result = add_(rhs, lhs, rhs.neg);
+    else
+        result = subtract_(rhs, lhs, rhs.neg);
+
     result.v = from_bits(result.neg, result.exp, result.frac);
+
     return result;
 }
 
 posit subtract(posit rhs, posit lhs) {
-    if (same_opposite(rhs, lhs, 0)) return (posit) {.v = ZERO};
+    if (same_opposite(rhs, lhs, 0))
+        return (posit) {.v = ZERO};
 
     posit result;
-    if (rhs.neg == lhs.neg) result = subtract_(rhs, lhs, rhs.neg);
-    else result = add_(rhs, lhs, rhs.neg);
+
+    if (rhs.neg == lhs.neg)
+        result = subtract_(rhs, lhs, rhs.neg);
+    else
+        result = add_(rhs, lhs, rhs.neg);
+
     result.v = from_bits(result.neg, result.exp, result.frac);
     return result;
 }
@@ -93,19 +105,20 @@ posit subtract(posit rhs, posit lhs) {
 posit add_(posit a, posit b, bool neg) {
     posit result;
 
-    uint64_t afrac = HIDDEN_BIT(a.frac);
-    uint64_t bfrac = HIDDEN_BIT(b.frac);
+    uint64_t a_frac = HIDDEN_BIT(a.frac);
+    uint64_t b_frac = HIDDEN_BIT(b.frac);
     uint64_t frac;
 
     if (a.exp > b.exp) {
         result.exp = a.exp;
-        bfrac = bfrac >> (a.exp - b.exp);
+        b_frac = b_frac >> (a.exp - b.exp);
     } else {
         result.exp = b.exp;
-        afrac = afrac >> (b.exp - a.exp);
+        a_frac = a_frac >> (b.exp - a.exp);
     }
 
-    frac = afrac + bfrac;
+    frac = a_frac + b_frac;
+
     if ((frac >> NBITS) != 0) {
         result.exp++;
         frac = frac >> 1;
@@ -121,19 +134,19 @@ posit add_(posit a, posit b, bool neg) {
 posit subtract_(posit a, posit b, bool neg) {
     posit result;
 
-    uint32_t afrac = HIDDEN_BIT(a.frac);
-    uint32_t bfrac = HIDDEN_BIT(b.frac);
+    uint32_t a_frac = HIDDEN_BIT(a.frac);
+    uint32_t b_frac = HIDDEN_BIT(b.frac);
     uint32_t frac;
 
     if (a.exp > b.exp || (a.exp == b.exp && a.frac > b.frac)) {
         result.exp = a.exp;
-        bfrac = bfrac >> (a.exp - b.exp);
-        frac = afrac - bfrac;
+        b_frac = b_frac >> (a.exp - b.exp);
+        frac = a_frac - b_frac;
     } else {
         neg = !neg;
         result.exp = b.exp;
-        afrac = afrac >> (b.exp - a.exp);
-        frac = bfrac - afrac;
+        a_frac = a_frac >> (b.exp - a.exp);
+        frac = b_frac - a_frac;
     }
 
     result.neg = neg;
@@ -148,9 +161,9 @@ posit multiply(posit rhs, posit lhs) {
 
     posit result;
 
-    uint64_t afrac = HIDDEN_BIT(rhs.frac);
-    uint64_t bfrac = HIDDEN_BIT(lhs.frac);
-    uint32_t frac = (afrac * bfrac) >> NBITS;
+    uint64_t a_frac = HIDDEN_BIT(rhs.frac);
+    uint64_t b_frac = HIDDEN_BIT(lhs.frac);
+    uint32_t frac = (a_frac * b_frac) >> NBITS;
     int32_t exp = rhs.exp + lhs.exp + 1;
 
     if ((frac & MSB) == 0) {
@@ -162,6 +175,7 @@ posit multiply(posit rhs, posit lhs) {
     result.exp = exp;
     result.frac = frac << 1;
     result.v = from_bits(result.neg, result.exp, result.frac);
+
     return result;
 }
 
@@ -216,14 +230,17 @@ double get_double(posit p) {
     if (fexp > 2046) {
         fexpbits = (uint64_t) 2046 << 53;
         ffracbits = -1;
-    } else if (fexp < 1) {
+    }
+    else if (fexp < 1) {
         fexpbits = 0;
         if (64 - NBITS >= (8 * sizeof(MSB | (p.frac >> 1)))) {
             ffracbits = 0;
-        } else
+        }
+        else
             ffracbits = (uint64_t) ((MSB | (p.frac >> 1)) << (64 - NBITS));
         ffracbits = ffracbits >> -fexp;
-    } else {
+    }
+    else {
         fexpbits = (uint64_t) (fexp & 0x7FF) << 53;
         ffracbits = (uint64_t) p.frac << (64 - NBITS);
     }
