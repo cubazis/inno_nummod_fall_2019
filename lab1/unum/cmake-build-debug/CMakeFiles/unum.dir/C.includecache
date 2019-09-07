@@ -6,9 +6,49 @@
 
 #IncludeRegexTransform: 
 
-/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/src/posit.c
-posit.h
-/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/src/posit.h
+/Users/denisrangulov/Обучение/Numerical Modeling/inno_nummod_fall_2019/lab1/unum/src/op1.c
+op1.h
+/Users/denisrangulov/Обучение/Numerical Modeling/inno_nummod_fall_2019/lab1/unum/src/op1.h
+op2.h
+/Users/denisrangulov/Обучение/Numerical Modeling/inno_nummod_fall_2019/lab1/unum/src/op2.h
+util.h
+/Users/denisrangulov/Обучение/Numerical Modeling/inno_nummod_fall_2019/lab1/unum/src/util.h
 
-/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/src/posit.h
+/Users/denisrangulov/Обучение/Numerical Modeling/inno_nummod_fall_2019/lab1/unum/src/op1.h
+pack.h
+/Users/denisrangulov/Обучение/Numerical Modeling/inno_nummod_fall_2019/lab1/unum/src/pack.h
+
+/Users/denisrangulov/Обучение/Numerical Modeling/inno_nummod_fall_2019/lab1/unum/src/op2.c
+op2.h
+/Users/denisrangulov/Обучение/Numerical Modeling/inno_nummod_fall_2019/lab1/unum/src/op2.h
+util.h
+/Users/denisrangulov/Обучение/Numerical Modeling/inno_nummod_fall_2019/lab1/unum/src/util.h
+
+/Users/denisrangulov/Обучение/Numerical Modeling/inno_nummod_fall_2019/lab1/unum/src/op2.h
+pack.h
+/Users/denisrangulov/Обучение/Numerical Modeling/inno_nummod_fall_2019/lab1/unum/src/pack.h
+
+/Users/denisrangulov/Обучение/Numerical Modeling/inno_nummod_fall_2019/lab1/unum/src/pack.c
+pack.h
+/Users/denisrangulov/Обучение/Numerical Modeling/inno_nummod_fall_2019/lab1/unum/src/pack.h
+util.h
+/Users/denisrangulov/Обучение/Numerical Modeling/inno_nummod_fall_2019/lab1/unum/src/util.h
+
+/Users/denisrangulov/Обучение/Numerical Modeling/inno_nummod_fall_2019/lab1/unum/src/pack.h
+posit_types.h
+/Users/denisrangulov/Обучение/Numerical Modeling/inno_nummod_fall_2019/lab1/unum/src/posit_types.h
+
+/Users/denisrangulov/Обучение/Numerical Modeling/inno_nummod_fall_2019/lab1/unum/src/posit_types.h
+stdint.h
+-
+stdbool.h
+-
+
+/Users/denisrangulov/Обучение/Numerical Modeling/inno_nummod_fall_2019/lab1/unum/src/util.c
+util.h
+/Users/denisrangulov/Обучение/Numerical Modeling/inno_nummod_fall_2019/lab1/unum/src/util.h
+
+/Users/denisrangulov/Обучение/Numerical Modeling/inno_nummod_fall_2019/lab1/unum/src/util.h
+posit_types.h
+/Users/denisrangulov/Обучение/Numerical Modeling/inno_nummod_fall_2019/lab1/unum/src/posit_types.h
 
