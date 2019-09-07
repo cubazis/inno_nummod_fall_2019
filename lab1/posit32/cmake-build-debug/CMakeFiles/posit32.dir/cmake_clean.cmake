@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/posit32.dir/main.cpp.obj"
+  "CMakeFiles/posit32.dir/posit.cpp.obj"
   "posit32.pdb"
   "posit32.exe"
   "posit32.exe.manifest"

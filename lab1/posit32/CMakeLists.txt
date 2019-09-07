@@ -3,4 +3,4 @@ project(posit32)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(posit32 main.cpp)
+add_executable(posit32 main.cpp posit.h posit.cpp)

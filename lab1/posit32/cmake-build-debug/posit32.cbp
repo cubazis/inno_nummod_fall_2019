@@ -83,6 +83,12 @@
 		<Unit filename="C:/Users/ansat/CLionProjects/posit32/main.cpp">
 			<Option target="posit32"/>
 		</Unit>
+		<Unit filename="C:/Users/ansat/CLionProjects/posit32/posit.cpp">
+			<Option target="posit32"/>
+		</Unit>
+		<Unit filename="C:/Users/ansat/CLionProjects/posit32/posit.h">
+			<Option target="posit32"/>
+		</Unit>
 		<Unit filename="C:/Users/ansat/CLionProjects/posit32/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

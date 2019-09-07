@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/ansat/CLionProjects/posit32/main.cpp" "C:/Users/ansat/CLionProjects/posit32/cmake-build-debug/CMakeFiles/posit32.dir/main.cpp.obj"
+  "C:/Users/ansat/CLionProjects/posit32/posit.cpp" "C:/Users/ansat/CLionProjects/posit32/cmake-build-debug/CMakeFiles/posit32.dir/posit.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

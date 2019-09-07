@@ -149,6 +149,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles\posit32.dir\build.make CMakeFiles/posit32.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+posit.obj: posit.cpp.obj
+
+.PHONY : posit.obj
+
+# target to build an object file
+posit.cpp.obj:
+	$(MAKE) -f CMakeFiles\posit32.dir\build.make CMakeFiles/posit32.dir/posit.cpp.obj
+.PHONY : posit.cpp.obj
+
+posit.i: posit.cpp.i
+
+.PHONY : posit.i
+
+# target to preprocess a source file
+posit.cpp.i:
+	$(MAKE) -f CMakeFiles\posit32.dir\build.make CMakeFiles/posit32.dir/posit.cpp.i
+.PHONY : posit.cpp.i
+
+posit.s: posit.cpp.s
+
+.PHONY : posit.s
+
+# target to generate assembly for a file
+posit.cpp.s:
+	$(MAKE) -f CMakeFiles\posit32.dir\build.make CMakeFiles/posit32.dir/posit.cpp.s
+.PHONY : posit.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -161,6 +188,9 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... posit.obj
+	@echo ... posit.i
+	@echo ... posit.s
 .PHONY : help
 
 
