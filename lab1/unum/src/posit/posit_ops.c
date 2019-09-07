@@ -1,20 +1,41 @@
+#include "math.h"
 #include "posit.h"
 #include "posit_utils.h"
+#include "posit_conversion.h"
 #include "../utils.h"
 
-int posit_compare_similar(posit_unpack_t v1, posit_unpack_t v2) {
+int posit_compare(posit_unpack_t v1, posit_unpack_t v2) {
+    if (v1.sign == 0 && v2.sign == 1) {
+        return 1;
+    }
+    if (v1.sign == 1 && v2.sign == 0) {
+        return -1;
+    }
+
     int scale1 = calc_posit_scale(v1);
     int scale2 = calc_posit_scale(v2);
 
-    if (scale1 == scale2 && v1.fraction == v2.fraction) {
-        return 0;
-    }
-
-    if (scale1 > scale2 || (scale1 == scale2 && v1.fraction > v2.fraction)) {
+    if (scale1 > scale2) {
         return 1;
     }
+    if (scale1 < scale2) {
+        return -1;
+    }
 
-    return -1;
+    if (scale1 == scale2) {
+        if (v1.fraction > v2.fraction) {
+            return 1;
+        }
+        if (v1.fraction < v2.fraction) {
+            return -1;
+        }
+    }
+
+    return 0;
+}
+
+int posit_is_less(posit_unpack_t v1, posit_unpack_t v2) {
+    return posit_compare(v1, v2) == -1;
 }
 
 posit_unpack_t __add_similar(posit_unpack_t v1, posit_unpack_t v2) {
@@ -62,7 +83,7 @@ posit_unpack_t __sub_similar(posit_unpack_t v1, posit_unpack_t v2) {
     // Decide on new sign and operands order
     uint8_t sign = v1.sign;
     uint64_t Mn;
-    if (posit_compare_similar(v1, v2) == 1) {
+    if (posit_compare(v1, v2) == 1) {
         Mn = M1 - M2;
     } else {
         sign = INVERT_BOOL(sign);
@@ -109,6 +130,12 @@ posit_unpack_t posit_neg(posit_unpack_t v) {
     }
 
     v.sign = INVERT_BOOL(v.sign);
+
+    return v;
+}
+
+posit_unpack_t posit_abs(posit_unpack_t v) {
+    v.sign = 0;
 
     return v;
 }
@@ -168,10 +195,14 @@ posit_unpack_t posit_div(posit_unpack_t v1, posit_unpack_t v2) {
     return vn;
 }
 
+posit_unpack_t posit_pow(posit_unpack_t v, uint32_t pow) {
+    return from_double(to_double(v), to_double(pow));
+}
+
 posit_unpack_t posit_dot_product(posit_unpack_t *left, posit_unpack_t *right, int size) {
     posit_unpack_t res = get_posit_zero();
 
-    for(int i = 0; i < size; i++) {
+    for (int i = 0; i < size; i++) {
         posit_unpack_t iter_res = posit_mul(left[i], right[i]);
 
         res = posit_add(res, iter_res);
