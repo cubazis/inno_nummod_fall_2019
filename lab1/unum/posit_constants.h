@@ -1,0 +1,14 @@
+//
+// Created by arsee on 9/5/2019.
+//
+
+#ifndef UNUM32_POSIT_CONSTANTS_H
+#define UNUM32_POSIT_CONSTANTS_H
+
+#define POSIT_ZERO  (0x00000000)
+#define POSIT_ONE   (0x40000000)
+#define POSIT_NAR   (0x80000000)
+#define POSIT_WIDTH (32)
+#define POSIT_MSB   (0x80000000)
+#define POSIT_MASK  (0xFFFFFFFF)
+#endif //UNUM32_POSIT_CONSTANTS_H
