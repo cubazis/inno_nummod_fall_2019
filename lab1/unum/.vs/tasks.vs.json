@@ -1,0 +1,10 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "task-test_dot_product",
+      "appliesTo": "tests/test_dot_product.c",
+      "type": "launch"
+    }
+  ]
+}

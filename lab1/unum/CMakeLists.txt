@@ -4,15 +4,16 @@ project(unum LANGUAGES C)
 set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake/")
 
 set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake/")
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -std=c99 -Wall -Wextra -Wshadow")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -std=c99 ")
 set(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG} -O0 -g")
 
-option( BUILD_TESTS			  "Build tests"							OFF )
+option( BUILD_TESTS			  "Build tests"							ON )
+
 
 set(CMAKE_C_FLAGS
         "${CMAKE_C_FLAGS} -std=c99")
 set(CMAKE_C_FLAGS_DEBUG
-        "${CMAKE_C_FLAGS_DEBUG} -Wall -Wshadow -Wpointer-arith -Wcast-qual -Winline -Werror -Wextra -Wfatal-errors -Wstrict-prototypes")
+        "${CMAKE_C_FLAGS_DEBUG} ")
 set(CMAKE_C_FLAGS_RELEASE
         "${CMAKE_C_FLAGS_RELEASE}")
 
