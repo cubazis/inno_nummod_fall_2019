@@ -129,15 +129,15 @@ void set_array(int *posit, string s) {
     }
 }
 
-int get_bit(int *p, int pos) {
+long long get_bit(int *p, int pos) {
     return p[pos];
 }
 
-int get_sign(int *p) {
+long long get_sign(int *p) {
     return get_bit(p, 0);
 }
 
-int get_regime(int *p) {
+long long get_regime(int *p) {
     for (int i = 2; i < 32; i++) {
         if (get_bit(p, i) != get_bit(p, 1)) {
             int m = i - 1;
@@ -147,8 +147,8 @@ int get_regime(int *p) {
     return get_bit(p, 1) == 0 ? -31 : 30;
 }
 
-int get_exp(int *p) {
-    int exp = 0;
+long long get_exp(int *p) {
+    long long exp = 0;
     for (int i = 2; i < 32; i++) {
         if (get_bit(p, i) != get_bit(p, 1)) {
             for (int j = i + 1; j < min(i + 5, 32); j++) {
@@ -160,8 +160,8 @@ int get_exp(int *p) {
     return exp;
 }
 
-int get_frac(int *p) {
-    int frac = 0;
+long long get_frac(int *p) {
+    long long frac = 0;
     for (int i = 2; i < 32; i++) {
         if (get_bit(p, i) != get_bit(p, 1)) {
             for (int j = i + 5; j < 32; j++) {
@@ -173,9 +173,133 @@ int get_frac(int *p) {
     return frac;
 }
 
+long long get_frac_length(int *p) {
+    long long len = 0;
+    for (int i = 2; i < 32; i++) {
+        if (get_bit(p, i) != get_bit(p, 1)) {
+            len = max((31 - (i + 5) + 1), 0);
+            break;
+        }
+    }
+    return len;
+}
+
+int* collect_posit(long long sign, long long regime, long long exp, long long frac, long long fs) {
+    int *p = new int[32];
+    for (int i = 0; i < 32; i++) {
+        p[i] = 0;
+    }
+
+    //sign
+    p[0] = sign;
+
+    //regime
+    int pos = 1;
+    if (regime < 0) {
+        regime = abs(regime);
+        for (int i = 0; i < regime; i++) {
+            if (pos < 32) {
+                p[pos++] = 0;
+            } else {
+                break;
+            }
+        }
+        if (pos < 32) {
+            p[pos++] = 1;
+        }
+    } else {
+        regime++;
+        for (int i = 0; i < regime; i++) {
+            if (pos < 32) {
+                p[pos++] = 1;
+            } else {
+                break;
+            }
+        }
+        if (pos < 32) {
+            p[pos++] = 0;
+        }
+    }
+
+    //exponent
+    for (int i = 3; i >= 0; i--) {
+        if (pos < 32) {
+            p[pos++] = (exp >> i) % 2;
+        } else {
+            break;
+        }
+    }
+
+    //fraction
+    for (int i = fs; i >= 0; i--) {
+        if (pos < 32) {
+            p[pos++] = (frac >> i) % 2;
+        } else {
+            break;
+        }
+    }
+
+    return p;
+}
+
+int* posit_zero() {
+    int *p = new int[32];
+    for (int i = 0; i < 32; i++) {
+        p[i] = 0;
+    }
+    return p;
+}
+
+int* posit_inf() {
+    int *p = new int[32];
+    p[0] = 1;
+    for (int i = 1; i < 32; i++) {
+        p[i] = 0;
+    }
+    return p;
+}
+
+bool is_zero(int *p) {
+    bool all_zeros = true;
+    for (int i = 0; i < 32; i++) {
+        all_zeros &= p[i] == 0;
+    }
+    return all_zeros;
+}
+
+bool is_inf(int *p) {
+    bool inf = p[0] == 1;
+    for (int i = 1; i < 32; i++) {
+        inf &= p[i] == 0;
+    }
+    return inf;
+}
+
 int* multiply(int *a, int *b) {
-    int *result = new int[32];
-    return result;
+    if (is_zero(a) || is_zero(b)) {
+        return posit_zero();
+    }
+
+    if (is_inf(a) || is_inf(b)) {
+        return posit_inf();
+    }
+
+    int sign = get_sign(a) ^ get_sign(b);
+
+    long long fs1 = get_frac_length(a);
+    long long fs2 = get_frac_length(b);
+
+    long long t1 = (1LL << fs1) + get_frac(a);
+    long long t2 = (1LL << fs2) + get_frac(b);
+
+    long long exp = get_exp(a) + get_exp(b) + ((t1 * t2) >> (fs1 + fs2 + 1));
+
+    long long frac = ((t1 * t2) & ((1LL << (fs1 + fs2)) - 1)) << 1;
+
+    long long regime = get_regime(a) + get_regime(b) + (exp / (1LL << 4));
+    exp %= (1LL << 4);
+
+    return collect_posit(sign, regime, exp, frac, fs1 + fs2);
 }
 
 int main() {
@@ -201,6 +325,29 @@ int main() {
     cout << get_regime(posit) << endl;
     cout << get_exp(posit) << endl;
     cout << get_frac(posit) << endl;
+
+    float a = 4.23;
+    float b = -4.0;
+
+    int pa[32] = {0};
+    float2posit(a, pa);
+
+    cout << "a = " << a << endl;
+    print_p(pa);
+
+    int pb[32] = {0};
+    float2posit(b, pb);
+
+    cout << "b = " << b << endl;
+    print_p(pb);
+
+    int* pc = multiply(pa, pb);
+
+    float c;
+    posit2float(pc, c);
+
+    cout << c << endl;
+    print_p(pc);
 
     // float tmp;
     // posit2float(posit, tmp);
