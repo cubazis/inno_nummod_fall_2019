@@ -6,7 +6,7 @@
 using namespace std;
 
 const int SZ = 32;
-const int EXP = 4;
+const int ES = 4;
 
 int* posit_inf();
 int* posit_zero();
@@ -46,7 +46,7 @@ float posit2float(int *posit) {
 
     // Exponent
     long long es = 0, e = 0;
-    while (index < SZ && es < EXP) {
+    while (index < SZ && es < ES) {
         ++es;
         e = e * 2 + posit[index];
         ++index;
@@ -307,8 +307,8 @@ int* multiply(int *a, int *b) {
 
     long long frac = ((t1 * t2) & ((1LL << (fs1 + fs2)) - 1)) << 1;
 
-    long long regime = get_regime(a) + get_regime(b) + (exp / (1LL << EXP));
-    exp %= (1LL << EXP);
+    long long regime = get_regime(a) + get_regime(b) + (exp / (1LL << ES));
+    exp %= (1LL << ES);
 
     return collect_posit(sign, regime, exp, frac, fs1 + fs2);
 }
