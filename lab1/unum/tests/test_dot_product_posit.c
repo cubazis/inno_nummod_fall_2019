@@ -41,7 +41,7 @@ void init_v2(struct vector *v, posit_unpack_t b) {
     v->x6 = posit_power(from_double(10), posit_add(b, from_double(3)));
 }
 
-posit dot(struct vector *v1, struct vector *v2) {
+posit_unpack_t dot(struct vector *v1, struct vector *v2) {
     posit_unpack_t arr1[6] = {v1->x1, v1->x2, v1->x3, v1->x4, v1->x5, v1->x6};
     posit_unpack_t arr2[6] = {v2->x1, v2->x2, v2->x3, v2->x4, v2->x5, v2->x6};
 
