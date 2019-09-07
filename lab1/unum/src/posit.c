@@ -157,6 +157,31 @@ double to_double(posit a) {
     return un.f;
 }
 
+posit_info _subtract(posit_info a, posit_info b, bool neg) {
+    posit_info r;
+
+    uint64 afrac = HIDDEN_BIT(a.frac);
+    uint64 bfrac = HIDDEN_BIT(b.frac);
+    uint64 frac;
+
+    if (a.exp > b.exp || (a.exp == b.exp && a.frac > b.frac)) {
+        r.exp = a.exp;
+        bfrac = RIGHT_SHIFT(bfrac, a.exp - b.exp);
+        frac = afrac - bfrac;
+    } else {
+        neg = !neg;
+        r.exp = b.exp;
+        afrac = RIGHT_SHIFT(afrac, b.exp - a.exp);
+        frac = bfrac - afrac;
+    }
+
+    r.neg = neg;
+    r.exp -= CLZ(frac);
+    r.frac = LEFT_SHIFT(frac, CLZ(frac) + 1);
+
+    return r;
+}
+
 posit_info _add(posit_info a, posit_info b, bool neg) {
     posit_info r;
 
@@ -184,38 +209,6 @@ posit_info _add(posit_info a, posit_info b, bool neg) {
     return r;
 }
 
-posit_info _subtract(posit_info a, posit_info b, bool neg) {
-    posit_info r;
-
-    uint64 afrac = HIDDEN_BIT(a.frac);
-    uint64 bfrac = HIDDEN_BIT(b.frac);
-    uint64 frac;
-
-    if (a.exp > b.exp || (a.exp == b.exp && a.frac > b.frac)) {
-        r.exp = a.exp;
-        bfrac = RIGHT_SHIFT(bfrac, a.exp - b.exp);
-        frac = afrac - bfrac;
-    } else {
-        neg = !neg;
-        r.exp = b.exp;
-        afrac = RIGHT_SHIFT(afrac, b.exp - a.exp);
-        frac = bfrac - afrac;
-    }
-
-    r.neg = neg;
-    r.exp -= CLZ(frac);
-    r.frac = LEFT_SHIFT(frac, CLZ(frac) + 1);
-
-    return r;
-}
-
-bool _is_opposite(posit_info a, posit_info b, bool neg) {
-    if (a.exp == b.exp && a.frac == b.frac)
-        if ((neg && (a.neg == b.neg)) || (!neg && (a.neg != b.neg)) )
-            return 1;
-    return 0;
-}
-
 posit add(posit ap, posit bp) {
     posit_info a = _from_posit(ap);
     posit_info b = _from_posit(bp);
@@ -241,26 +234,11 @@ posit subtract(posit ap, posit bp) {
     }
 }
 
-posit multiply(posit ap, posit bp) {
-    posit_info a = _from_posit(ap);
-    posit_info b = _from_posit(bp);
-    posit_info r;
-
-    uint64 afrac = HIDDEN_BIT(a.frac);
-    uint64 bfrac = HIDDEN_BIT(b.frac);
-    uint32 frac = RIGHT_SHIFT(afrac * bfrac, POSIT_SIZE);
-    int exp = a.exp + b.exp + 1;
-
-    if ((frac & MSB) == 0) {
-        exp--;
-        frac = LEFT_SHIFT(frac, 1);
-    }
-
-    r.neg = a.neg ^ b.neg;
-    r.exp = exp;
-    r.frac = LEFT_SHIFT(frac, 1);
-
-    return _to_posit(r);
+bool _is_opposite(posit_info a, posit_info b, bool neg) {
+    if (a.exp == b.exp && a.frac == b.frac)
+        if ((neg && (a.neg == b.neg)) || (!neg && (a.neg != b.neg)) )
+            return 1;
+    return 0;
 }
 
 posit divide(posit ap, posit bp) {
@@ -284,8 +262,26 @@ posit divide(posit ap, posit bp) {
     return _to_posit(r);
 }
 
-posit power(posit a, posit b) {
-    return from_double(pow(to_double(a), to_double(b)));
+posit multiply(posit ap, posit bp) {
+    posit_info a = _from_posit(ap);
+    posit_info b = _from_posit(bp);
+    posit_info r;
+
+    uint64 afrac = HIDDEN_BIT(a.frac);
+    uint64 bfrac = HIDDEN_BIT(b.frac);
+    uint32 frac = RIGHT_SHIFT(afrac * bfrac, POSIT_SIZE);
+    int exp = a.exp + b.exp + 1;
+
+    if ((frac & MSB) == 0) {
+        exp--;
+        frac = LEFT_SHIFT(frac, 1);
+    }
+
+    r.neg = a.neg ^ b.neg;
+    r.exp = exp;
+    r.frac = LEFT_SHIFT(frac, 1);
+
+    return _to_posit(r);
 }
 
 posit negate(posit a) {
@@ -295,6 +291,10 @@ posit negate(posit a) {
     }
     posit res = {~(a.bits - 1)};
     return res;
+}
+
+posit power(posit a, posit b) {
+    return from_double(pow(to_double(a), to_double(b)));
 }
 
 int test_function() {
