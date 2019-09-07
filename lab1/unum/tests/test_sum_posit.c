@@ -13,11 +13,11 @@ posit eps;
 
 START_TEST(test_sum_posit)
 {
-	printf("test_sum_posit\n");
+  printf("test_sum_posit\n");
 
-	for (int i = 0; i < limit; ++i) {
+  for (int i = 0; i < limit; ++i) {
 
-	}
+  }
 
 }
 END_TEST
@@ -34,25 +34,25 @@ void teardown(void)
 
 Suite* str_suite (void)
 {
-	Suite *suite = suite_create("posit");
-	TCase *tcase = tcase_create("test_sum_posit");
-	tcase_add_checked_fixture(tcase, setup, teardown);
-	tcase_set_timeout(tcase, 60);
+  Suite *suite = suite_create("posit");
+  TCase *tcase = tcase_create("test_sum_posit");
+  tcase_add_checked_fixture(tcase, setup, teardown);
+  tcase_set_timeout(tcase, 60);
 
-	tcase_add_test(tcase, test_sum_posit);
+  tcase_add_test(tcase, test_sum_posit);
 
 
-	suite_add_tcase(suite, tcase);
-	return suite;
+  suite_add_tcase(suite, tcase);
+  return suite;
 }
 
 int main (void) {
-	int number_failed;
-	Suite *suite = str_suite();
-	SRunner *runner = srunner_create(suite);
-	srunner_run_all(runner, CK_NORMAL);
-	//srunner_set_fork_status(runner, CK_NOFORK);
-	number_failed = srunner_ntests_failed(runner);
-	srunner_free(runner);
-	return number_failed;
+  int number_failed;
+  Suite *suite = str_suite();
+  SRunner *runner = srunner_create(suite);
+  srunner_run_all(runner, CK_NORMAL);
+  //srunner_set_fork_status(runner, CK_NOFORK);
+  number_failed = srunner_ntests_failed(runner);
+  srunner_free(runner);
+  return number_failed;
 }
