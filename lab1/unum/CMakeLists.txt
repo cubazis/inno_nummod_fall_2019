@@ -1,65 +1,45 @@
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 3.14)
+project(unum32)
 
-project(unum LANGUAGES C)
-set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake/")
+set(CMAKE_CXX_STANDARD 14)
 
-set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake/")
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -std=c99 -Wall -Wextra -Wshadow")
-set(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG} -O0 -g")
-
-option( BUILD_TESTS			  "Build tests"							OFF )
-
-set(CMAKE_C_FLAGS
-        "${CMAKE_C_FLAGS} -std=c99")
-set(CMAKE_C_FLAGS_DEBUG
-        "${CMAKE_C_FLAGS_DEBUG} -Wall -Wshadow -Wpointer-arith -Wcast-qual -Winline -Werror -Wextra -Wfatal-errors -Wstrict-prototypes")
-set(CMAKE_C_FLAGS_RELEASE
-        "${CMAKE_C_FLAGS_RELEASE}")
-
-file(GLOB UNUM_SOURCES src/*.c)
-file(GLOB UNUM_HEADERS src/*.h)
-
-set(LIB_INSTALL_DIR "lib" CACHE PATH "Where to install libraries to.")
-set(CONFIG_INSTALL_DIR "lib/cmake/${PROJECT_NAME}" CACHE PATH "Where to install configs to.")
-set(INCLUDE_INSTALL_DIR "include" CACHE PATH "Where to install headers to.")
-
-add_library(unum ${UNUM_SOURCES})
-
-target_include_directories(unum PUBLIC
-        "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src>"
-        "$<INSTALL_INTERFACE:${INCLUDE_INSTALL_DIR}>")
-set_target_properties(unum PROPERTIES PUBLIC_HEADER "${UNUM_HEADERS}")
-
-
-include(CMakePackageConfigHelpers)
-
-configure_package_config_file(cmake/unumConfig.cmake.in
-        ${CMAKE_CURRENT_BINARY_DIR}/unum/unumConfig.cmake
-        INSTALL_DESTINATION "${CONFIG_INSTALL_DIR}")
-
-install(TARGETS "unum"
-        EXPORT unumTargets
-        LIBRARY DESTINATION "${LIB_INSTALL_DIR}"
-        ARCHIVE DESTINATION "${LIB_INSTALL_DIR}"
-        PUBLIC_HEADER DESTINATION "${INCLUDE_INSTALL_DIR}/unum"
-        )
-
-install(FILES
-        ${CMAKE_CURRENT_BINARY_DIR}/unum/unumConfig.cmake
-        DESTINATION ${CONFIG_INSTALL_DIR})
-
-install(
-        EXPORT unumTargets
-        FILE unumTargets.cmake
-        DESTINATION ${CONFIG_INSTALL_DIR})
-
-# Testing
-if(BUILD_TESTS)
-    find_package(Check)
-    if(CHECK_FOUND)
-        enable_testing()
-        add_subdirectory(tests)
-    else()
-        message("Could not find Check for testing")
-    endif()
+# Download and unpack googletest at configure time
+configure_file(CMakeLists.txt.in googletest-download/CMakeLists.txt)
+execute_process(COMMAND ${CMAKE_COMMAND} -G "${CMAKE_GENERATOR}" .
+        RESULT_VARIABLE result
+        WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/googletest-download )
+if(result)
+    message(FATAL_ERROR "CMake step for googletest failed: ${result}")
 endif()
+execute_process(COMMAND ${CMAKE_COMMAND} --build .
+        RESULT_VARIABLE result
+        WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/googletest-download )
+if(result)
+    message(FATAL_ERROR "Build step for googletest failed: ${result}")
+endif()
+
+# Prevent overriding the parent project's compiler/linker
+# settings on Windows
+set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
+
+# Add googletest directly to our build. This defines
+# the gtest and gtest_main targets.
+add_subdirectory(${CMAKE_CURRENT_BINARY_DIR}/googletest-src
+        ${CMAKE_CURRENT_BINARY_DIR}/googletest-build
+        EXCLUDE_FROM_ALL)
+
+# The gtest/gtest_main targets carry header search path
+# dependencies automatically when using CMake 2.8.11 or
+# later. Otherwise we have to add them here ourselves.
+if (CMAKE_VERSION VERSION_LESS 2.8.11)
+    include_directories("${gtest_SOURCE_DIR}/include")
+endif()
+
+# Now simply link against gtest or gtest_main as needed. Eg
+add_executable(posit32  util.h util.c  posit_constants.h converter.h converter.c main.cpp posit.h posit.cpp operations.c operations.h)
+
+
+
+add_executable(dot_prod test/dot_product_test.cpp   util.h util.c  posit_constants.h converter.h converter.c posit.h posit.cpp operations.c operations.h)
+target_link_libraries(dot_prod gtest_main)
+add_test(NAME example_test COMMAND dot_prod)

@@ -5,95 +5,93 @@
 		<Option title="just_to_test"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\..\usr\local\;CMake Files\..\..\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\unum\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\Program Files (x86)\;CMake Files\..\..\..\..\..\..\..\Program Files (x86)\unum\;CMake Files\..\..\..\..\..\..\..\Program Files (x86)\unum\lib\;CMake Files\..\..\..\..\..\..\..\Program Files (x86)\unum\lib\cmake\;CMake Files\..\..\..\..\..\..\..\Program Files (x86)\unum\lib\cmake\unum\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/just_to_test/cmake-build-debug"/>
+				<Option working_dir="C:/Users/arsee/Desktop/NM/inno_nummod_fall_2019/lab1/just_to_test/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/just_to_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/just_to_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/just_to_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/just_to_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="rebuild_cache">
-				<Option working_dir="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/just_to_test/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/just_to_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/just_to_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/just_to_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/just_to_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/arsee/Desktop/NM/inno_nummod_fall_2019/lab1/just_to_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/arsee/Desktop/NM/inno_nummod_fall_2019/lab1/just_to_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/arsee/Desktop/NM/inno_nummod_fall_2019/lab1/just_to_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/arsee/Desktop/NM/inno_nummod_fall_2019/lab1/just_to_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="just_to_test">
-				<Option output="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/just_to_test/cmake-build-debug/just_to_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/just_to_test/cmake-build-debug"/>
+				<Option output="C:/Users/arsee/Desktop/NM/inno_nummod_fall_2019/lab1/just_to_test/cmake-build-debug/just_to_test.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/arsee/Desktop/NM/inno_nummod_fall_2019/lab1/just_to_test/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/local/lib/cmake/unum/../../../include/unum"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
+					<Add directory="C:/Program Files (x86)/unum/lib/cmake/unum/../../../include/unum"/>
+					<Add directory="C:/Program Files (x86)/unum/include"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/../../../../i686-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/just_to_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 just_to_test"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/just_to_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/just_to_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/just_to_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/arsee/Desktop/NM/inno_nummod_fall_2019/lab1/just_to_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 just_to_test"/>
+					<CompileFile command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/arsee/Desktop/NM/inno_nummod_fall_2019/lab1/just_to_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/arsee/Desktop/NM/inno_nummod_fall_2019/lab1/just_to_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/arsee/Desktop/NM/inno_nummod_fall_2019/lab1/just_to_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="just_to_test/fast">
-				<Option output="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/just_to_test/cmake-build-debug/just_to_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/just_to_test/cmake-build-debug"/>
+				<Option output="C:/Users/arsee/Desktop/NM/inno_nummod_fall_2019/lab1/just_to_test/cmake-build-debug/just_to_test.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/arsee/Desktop/NM/inno_nummod_fall_2019/lab1/just_to_test/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/local/lib/cmake/unum/../../../include/unum"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
+					<Add directory="C:/Program Files (x86)/unum/lib/cmake/unum/../../../include/unum"/>
+					<Add directory="C:/Program Files (x86)/unum/include"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/../../../../i686-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/just_to_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 just_to_test/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/just_to_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/just_to_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/just_to_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/arsee/Desktop/NM/inno_nummod_fall_2019/lab1/just_to_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 just_to_test/fast"/>
+					<CompileFile command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/arsee/Desktop/NM/inno_nummod_fall_2019/lab1/just_to_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/arsee/Desktop/NM/inno_nummod_fall_2019/lab1/just_to_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/arsee/Desktop/NM/inno_nummod_fall_2019/lab1/just_to_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/just_to_test/cmake-build-debug"/>
+				<Option working_dir="C:/Users/arsee/Desktop/NM/inno_nummod_fall_2019/lab1/just_to_test/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/just_to_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/just_to_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/just_to_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/cubazis/Projects/inno_nummod_fall_2019/lab1/just_to_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/arsee/Desktop/NM/inno_nummod_fall_2019/lab1/just_to_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/arsee/Desktop/NM/inno_nummod_fall_2019/lab1/just_to_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/arsee/Desktop/NM/inno_nummod_fall_2019/lab1/just_to_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/arsee/Desktop/NM/inno_nummod_fall_2019/lab1/just_to_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/arsee/Desktop/NM/inno_nummod_fall_2019/lab1/just_to_test/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/arsee/Desktop/NM/inno_nummod_fall_2019/lab1/just_to_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/arsee/Desktop/NM/inno_nummod_fall_2019/lab1/just_to_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/arsee/Desktop/NM/inno_nummod_fall_2019/lab1/just_to_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/arsee/Desktop/NM/inno_nummod_fall_2019/lab1/just_to_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/just_to_test/main.c">
+		<Unit filename="C:/Users/arsee/Desktop/NM/inno_nummod_fall_2019/lab1/just_to_test/main.c">
 			<Option target="just_to_test"/>
 		</Unit>
-		<Unit filename="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/just_to_test/CMakeLists.txt">
+		<Unit filename="C:/Users/arsee/Desktop/NM/inno_nummod_fall_2019/lab1/just_to_test/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/just_to_test/../../../../../../usr/local/lib/cmake/unum/unumConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\unum\"/>
+		<Unit filename="C:/Users/arsee/Desktop/NM/inno_nummod_fall_2019/lab1/just_to_test/../../../../../../../Program Files (x86)/unum/lib/cmake/unum/unumConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\Program Files (x86)\unum\lib\cmake\unum\"/>
 		</Unit>
-		<Unit filename="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/just_to_test/../../../../../../usr/local/lib/cmake/unum/unumTargets-noconfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\unum\"/>
+		<Unit filename="C:/Users/arsee/Desktop/NM/inno_nummod_fall_2019/lab1/just_to_test/../../../../../../../Program Files (x86)/unum/lib/cmake/unum/unumTargets-debug.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\Program Files (x86)\unum\lib\cmake\unum\"/>
 		</Unit>
-		<Unit filename="/home/cubazis/Projects/inno_nummod_fall_2019/lab1/just_to_test/../../../../../../usr/local/lib/cmake/unum/unumTargets.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\unum\"/>
+		<Unit filename="C:/Users/arsee/Desktop/NM/inno_nummod_fall_2019/lab1/just_to_test/../../../../../../../Program Files (x86)/unum/lib/cmake/unum/unumTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\Program Files (x86)\unum\lib\cmake\unum\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>
