@@ -1,114 +1,47 @@
 #include "posit.h"
-#include "util.h"
-#include "pack.h"
-#include "op1.h"
-#include "op2.h"
 
-#include <cstdio>
 #include <cmath>
 
 using namespace std;
 
-Posit::Posit(POSIT_UTYPE bits, int nbits, int es) :
+posit::posit(uint32_t bits, int nbits, int es) :
     mBits(bits),
     mNbits(nbits),
     mEs(es)
+{}
+
+posit::posit() : posit(0x00000000, 32, 2) {}
+
+bool posit::isZero() const
 {
+    return is_zero(mBits);
 }
 
-Posit::Posit(int nbits, int es) :
-    Posit(POSIT_ZERO, nbits, es)
+bool posit::isNar() const
 {
+    return is_nan(mBits);
 }
 
-bool Posit::isZero() const
+posit posit::zero() const
 {
-    return util_is_zero(mBits);
+    return posit(0x00000000, mNbits, mEs);
 }
 
-bool Posit::isNar() const
+posit posit::nar() const
 {
-    return util_is_nar(mBits);
+    return posit(0x80000000, mNbits, mEs);
 }
 
-bool Posit::isNeg() const
-{
-    return util_is_neg(mBits);
-}
-
-int Posit::nbits() const
-{
-    return mNbits;
-}
-
-int Posit::ss() const
-{
-    return util_ss();
-}
-
-int Posit::rs() const
-{
-    return util_rs(mBits, mNbits);
-}
-
-int Posit::es() const
-{
-    return util_es(mBits, mNbits, mEs);
-}
-
-int Posit::fs() const
-{
-    return util_fs(mBits, mNbits, mEs);
-}
-
-Posit Posit::zero() const
-{
-    return Posit(POSIT_ZERO, mNbits, mEs);
-}
-
-Posit Posit::one() const
-{
-    return Posit(POSIT_ONE, mNbits, mEs);
-}
-
-Posit Posit::nar() const
-{
-    return Posit(POSIT_NAR, mNbits, mEs);
-}
-
-Posit Posit::neg() const
+posit posit::neg() const
 {
     if (isNar()) {
         return nar();
     }
 
-    return Posit(util_neg(mBits, mNbits), mNbits, mEs);
+    return posit(util_neg(mBits, mNbits), mNbits, mEs);
 }
 
-Posit Posit::rec() const
-{
-    if (isNar() || isZero()) {
-        return nar();
-    }
-
-    return one().div(*this);
-}
-
-Posit Posit::sqrt() const
-{
-    if (isNar() || isNeg()) {
-        return nar();
-    } else if (isZero()) {
-        return zero();
-    }
-
-    unpacked_t aup = unpack_posit(mBits, mNbits, mEs);
-    unpacked_t up = op1_sqrt(aup);
-
-    return Posit(pack_posit(up, mNbits, mEs), mNbits, mEs);
-}
-
-Posit Posit::add(const Posit& p) const
+posit posit::add(const posit& p) const
 {
     if (isNar() || p.isNar()) {
         return nar();
@@ -122,31 +55,12 @@ Posit Posit::add(const Posit& p) const
 
     unpacked_t aup = unpack_posit(mBits, mNbits, mEs);
     unpacked_t bup = unpack_posit(p.mBits, p.mNbits, p.mEs);
-    unpacked_t up = op2_add(aup, bup);
+    unpacked_t up = unpack_add(aup, bup);
 
-    return Posit(pack_posit(up, mNbits, mEs), mNbits, mEs);
+    return posit(pack_posit(up, mNbits, mEs), mNbits, mEs);
 }
 
-Posit Posit::sub(const Posit& p) const
-{
-    if (isNar() || p.isNar()) {
-        return nar();
-    } else if (isZero()) {
-        return p.neg();
-    } else if (p.isZero()) {
-        return *this;
-    } else if (eq(p)) {
-        return zero();
-    }
-
-    unpacked_t aup = unpack_posit(mBits, mNbits, mEs);
-    unpacked_t bup = unpack_posit(p.mBits, p.mNbits, p.mEs);
-    unpacked_t up = op2_sub(aup, bup);
-
-    return Posit(pack_posit(up, mNbits, mEs), mNbits, mEs);
-}
-
-Posit Posit::mul(const Posit& p) const
+posit posit::mul(const posit& p) const
 {
     if (isNar() || p.isNar()) {
         return nar();
@@ -156,81 +70,20 @@ Posit Posit::mul(const Posit& p) const
 
     unpacked_t aup = unpack_posit(mBits, mNbits, mEs);
     unpacked_t bup = unpack_posit(p.mBits, p.mNbits, p.mEs);
-    unpacked_t up = op2_mul(aup, bup);
+    unpacked_t up = unpack_mul(aup, bup);
 
-    return Posit(pack_posit(up, mNbits, mEs), mNbits, mEs);
+    return posit(pack_posit(up, mNbits, mEs), mNbits, mEs);
 }
 
-Posit Posit::div(const Posit& p) const
-{
-    if (isNar() || p.isNar() || p.isZero()) {
-        return nar();
-    } else if (isZero()) {
-        return zero();
-    }
-
-    unpacked_t aup = unpack_posit(mBits, mNbits, mEs);
-    unpacked_t bup = unpack_posit(p.mBits, p.mNbits, p.mEs);
-    unpacked_t up = op2_div(aup, bup);
-
-    return Posit(pack_posit(up, mNbits, mEs), mNbits, mEs);
-}
-
-bool Posit::eq(const Posit& p) const
-{
-    return mBits == p.mBits;
-}
-
-bool Posit::gt(const Posit& p) const
-{
-    return (POSIT_STYPE)mBits > (POSIT_STYPE)p.mBits;
-}
-
-bool Posit::ge(const Posit& p) const
-{
-    return gt(p) || eq(p);
-}
-
-bool Posit::lt(const Posit& p) const
-{
-    return !gt(p) && !eq(p);
-}
-
-bool Posit::le(const Posit& p) const
-{
-    return !gt(p);
-}
-
-void Posit::set(Posit p)
-{
-    mBits = pack_posit(unpack_posit(p.mBits, p.mNbits, p.mEs), mNbits, mEs);
-}
-
-void Posit::set(float n)
+void posit::set(double n)
 {
     switch (fpclassify(n)) {
     case FP_INFINITE:
     case FP_NAN:
-        mBits = POSIT_NAR;
+        mBits = 0x80000000;
         break;
     case FP_ZERO:
-        mBits = POSIT_ZERO;
-        break;
-    default:
-        mBits = pack_posit(unpack_float(n), mNbits, mEs);
-        break;
-    }
-}
-
-void Posit::set(double n)
-{
-    switch (fpclassify(n)) {
-    case FP_INFINITE:
-    case FP_NAN:
-        mBits = POSIT_NAR;
-        break;
-    case FP_ZERO:
-        mBits = POSIT_ZERO;
+        mBits = 0x00000000;
         break;
     default:
         mBits = pack_posit(unpack_double(n), mNbits, mEs);
@@ -238,18 +91,7 @@ void Posit::set(double n)
     }
 }
 
-float Posit::getFloat() const
-{
-    if (isZero()) {
-        return 0.f;
-    } else if (isNar()) {
-        return 0.f / 0.f;
-    }
-
-    return pack_float(unpack_posit(mBits, mNbits, mEs));
-}
-
-double Posit::getDouble() const
+double posit::getDouble() const
 {
     if (isZero()) {
         return 0.0;
@@ -260,169 +102,264 @@ double Posit::getDouble() const
     return pack_double(unpack_posit(mBits, mNbits, mEs));
 }
 
-void Posit::setBits(POSIT_UTYPE bits)
-{
-    mBits = LSHIFT(bits, POSIT_WIDTH - mNbits);
+bool posit::eq(const posit &a) const {
+    return this->mBits == a.mBits;
 }
 
-POSIT_UTYPE Posit::getBits()
-{
-    return RSHIFT(mBits, POSIT_WIDTH - mNbits);
-}
-
-void Posit::print()
-{
-    Posit p = (isNeg() ? neg() : *this);
-
-    printf("{%d, %d} ", mNbits, mEs);
-
-    if (isNar()) {
-        printf("NaR\n");
-        return;
-    }
-
-    for (int i = POSIT_WIDTH - 1; i >= POSIT_WIDTH - mNbits; i--) {
-        printf("%d", RSHIFT(mBits, i) & 1);
-    }
-
-    printf(" -> ");
-    printf(isNeg() ? "-" : "+");
-
-    for (int i = POSIT_WIDTH - ss() - 1; i >= POSIT_WIDTH - mNbits; i--) {
-        printf("%d", RSHIFT(p.mBits, i) & 1);
-
-        if (i != POSIT_WIDTH - mNbits &&
-            ((i == POSIT_WIDTH - ss() - p.rs()) ||
-             (i == POSIT_WIDTH - ss() - p.rs() - mEs))) {
-            printf(" ");
-        }
-    }
-
-    printf(" = %lg\n", getDouble());
-}
-
-Posit8::Posit8() :
-    Posit(8, 0)
-{
-
-}
-
-Posit8::Posit8(Posit v) :
-    Posit8()
-{
-    set(v);
-}
-
-Posit8::Posit8(float v) :
-    Posit8()
-{
-    set(v);
-}
-
-Posit8::Posit8(double v) :
-    Posit8()
-{
-    set(v);
-}
-
-Posit16::Posit16() :
-    Posit(16, 1)
-{
-
-}
-
-Posit16::Posit16(Posit v) :
-    Posit16()
-{
-    set(v);
-}
-
-Posit16::Posit16(float v) :
-    Posit16()
-{
-    set(v);
-}
-
-Posit16::Posit16(double v) :
-    Posit16()
-{
-    set(v);
-}
-
-Posit32::Posit32() :
-    Posit(32, 2)
-{
-
-}
-
-Posit32::Posit32(Posit v) :
-    Posit32()
-{
-    set(v);
-}
-
-Posit32::Posit32(float v) :
-    Posit32()
-{
-    set(v);
-}
-
-Posit32::Posit32(double v) :
-    Posit32()
-{
-    set(v);
-}
-
-Posit operator+(const Posit& a, const Posit& b)
+posit operator+(const posit& a, const posit& b)
 {
     return a.add(b);
 }
 
-Posit operator-(const Posit& a, const Posit& b)
-{
-    return a.sub(b);
-}
-
-Posit operator*(const Posit& a, const Posit& b)
+posit operator*(const posit& a, const posit& b)
 {
     return a.mul(b);
 }
 
-Posit operator/(const Posit& a, const Posit& b)
-{
-    return a.div(b);
-}
-
-Posit operator-(const Posit& a)
+posit operator-(const posit& a)
 {
     return a.neg();
 }
 
-bool operator<(const Posit&a , const Posit& b)
+uint32_t pack_posit(struct unpacked_t up, int nbits, int es)
 {
-    return a.lt(b);
+    uint32_t p;
+    uint32_t regbits;
+    uint32_t expbits;
+
+    int maxexp = POW2(es) * (nbits - 2);
+    if (up.exp < -maxexp) {
+        up.exp = -maxexp;
+    } else if (up.exp > maxexp) {
+        up.exp = maxexp;
+    }
+
+    int reg = FLOORDIV(up.exp, POW2(es));
+    int ss = 1;
+    int rs = MAX(-reg + 1, reg + 2);
+
+    // FIXME: round exponent up if needed
+    if (ss + rs + es >= nbits && up.frac >= 0x80000000) {
+        up.exp++;
+        reg = FLOORDIV(up.exp, POW2(es));
+        rs = MAX(-reg + 1, reg + 2);
+    }
+
+    uint32_t exp = up.exp - POW2(es) * reg;
+
+    if (reg < 0) {
+        regbits = RSHIFT(0x80000000, -reg);
+    } else {
+        regbits = LMASK(0xFFFFFFFF, reg + 1);
+    }
+    expbits = LMASK(LSHIFT(exp, 32 - es), es);
+
+    p = up.frac;
+    p = expbits | RSHIFT(p, es);
+    p = regbits | RSHIFT(p, rs);
+    p = RSHIFT(p, ss);
+
+    if (up.neg) {
+        return util_neg(p, nbits);
+    } else {
+        return LMASK(p, nbits);
+    }
 }
 
-bool operator<=(const Posit&a , const Posit& b)
+double pack_double(struct unpacked_t up)
 {
-    return a.le(b);
+    int fexp = up.exp + 1023;
+
+    uint64_t fexpbits;
+    uint64_t ffracbits;
+
+    if (fexp > 2046) {
+        fexpbits = LSHIFT((uint64_t)2046, 53);
+        ffracbits = -1;
+    } else if (fexp < 1) {
+        fexpbits = 0;
+        ffracbits = LSHIFT((uint64_t)(0x80000000 | RSHIFT(up.frac, 1)), 64 - 32);
+        ffracbits = RSHIFT(ffracbits, -fexp);
+    } else {
+        fexpbits = LSHIFT((uint64_t)(fexp & 0x7FF), 53);
+        ffracbits = LSHIFT((uint64_t)up.frac, 64 - 32);
+    }
+
+    union {
+        double f;
+        uint64_t u;
+    } un;
+
+    un.u = ffracbits;
+    un.u = fexpbits | RSHIFT(un.u, 11);
+    un.u = LSHIFT((uint64_t)up.neg, 63) | RSHIFT(un.u, 1);
+
+    if (LSHIFT(un.u, 1) == 0) {
+        un.u++;
+    }
+
+    return un.f;
 }
 
-bool operator>(const Posit&a , const Posit& b)
+struct unpacked_t unpack_posit(uint32_t p, int nbits, int es)
 {
-    return a.gt(b);
+    struct unpacked_t up;
+
+    bool neg = is_neg(p);
+    if (neg) {
+        p = util_neg(p, nbits);
+    }
+
+    int ss = 1;
+    int rs = get_rs(p, nbits);
+
+    int lz = CLZ(LSHIFT(p, ss));
+    int lo = CLZ(LSHIFT(~p, ss) | 1);
+
+    int reg = (lz == 0 ? lo - 1 : -lz);
+    uint32_t exp = RSHIFT(LSHIFT(p, ss + rs), 32 - es);
+
+    up.neg = neg;
+    up.exp = POW2(es) * reg + exp;
+    up.frac = LSHIFT(p, ss + rs + es);
+
+    return up;
 }
 
-bool operator>=(const Posit&a , const Posit& b)
+struct unpacked_t unpack_double(double f)
 {
-    return a.ge(b);
-}
-bool operator==(const Posit&a , const Posit& b)
-{
-    return a.eq(b);
+    struct unpacked_t up;
+    int bias = 1023;
+
+    union {
+        double f;
+        uint64_t u;
+    } un;
+
+    un.f = f;
+
+    up.neg = RSHIFT(un.u, 63);
+    up.exp = (RSHIFT(un.u, 52) & 0x7FF) - bias;
+    up.frac = RSHIFT(LSHIFT(un.u, 12), 64 - 32);
+
+    if (up.exp == -bias) {
+        up.exp -= CLZ(up.frac);
+        up.frac = LSHIFT(up.frac, CLZ(up.frac) + 1);
+    }
+
+    return up;
 }
 
-bool operator!=(const Posit&a , const Posit& b)
+static struct unpacked_t add(struct unpacked_t a, struct unpacked_t b, bool neg)
 {
-    return !a.eq(b);
+    struct unpacked_t r;
+
+    uint64_t afrac = HIDDEN_BIT(a.frac);
+    uint64_t bfrac = HIDDEN_BIT(b.frac);
+    uint64_t frac;
+
+    if (a.exp > b.exp) {
+        r.exp = a.exp;
+        bfrac = RSHIFT(bfrac, a.exp - b.exp);
+    } else {
+        r.exp = b.exp;
+        afrac = RSHIFT(afrac, b.exp - a.exp);
+    }
+
+    frac = afrac + bfrac;
+    if (RSHIFT(frac, 32) != 0) {
+        r.exp++;
+        frac = RSHIFT(frac, 1);
+    }
+
+    r.neg = neg;
+    r.frac = LSHIFT(frac, 1);
+
+    return r;
+}
+
+static struct unpacked_t sub(struct unpacked_t a, struct unpacked_t b, bool neg)
+{
+    struct unpacked_t r;
+
+    uint32_t afrac = HIDDEN_BIT(a.frac);
+    uint32_t bfrac = HIDDEN_BIT(b.frac);
+    uint32_t frac;
+
+    if (a.exp > b.exp || (a.exp == b.exp && a.frac > b.frac)) {
+        r.exp = a.exp;
+        bfrac = RSHIFT(bfrac, a.exp - b.exp);
+        frac = afrac - bfrac;
+    } else {
+        neg = !neg;
+        r.exp = b.exp;
+        afrac = RSHIFT(afrac, b.exp - a.exp);
+        frac = bfrac - afrac;
+    }
+
+    r.neg = neg;
+    r.exp -= CLZ(frac);
+    r.frac = LSHIFT(frac, CLZ(frac) + 1);
+
+    return r;
+}
+
+struct unpacked_t unpack_mul(struct unpacked_t a, struct unpacked_t b)
+{
+    struct unpacked_t r;
+
+    uint64_t afrac = HIDDEN_BIT(a.frac);
+    uint64_t bfrac = HIDDEN_BIT(b.frac);
+    uint32_t frac = RSHIFT(afrac * bfrac, 32);
+    int32_t exp = a.exp + b.exp + 1;
+
+    if ((frac & 0x80000000) == 0) {
+        exp--;
+        frac = LSHIFT(frac, 1);
+    }
+
+    r.neg = a.neg ^ b.neg;
+    r.exp = exp;
+    r.frac = LSHIFT(frac, 1);
+
+    return r;
+}
+
+struct unpacked_t unpack_add(struct unpacked_t a, struct unpacked_t b)
+{
+    if (a.neg == b.neg) {
+        return add(a, b, a.neg);
+    } else {
+        return sub(a, b, a.neg);
+    }
+}
+
+bool is_zero(uint32_t p)
+{
+    return p == 0x00000000;
+}
+
+bool is_nan(uint32_t p)
+{
+    return p == 0x80000000;
+}
+
+bool is_neg(uint32_t p)
+{
+    return (int32_t)p < 0 && !is_nan(p);
+}
+
+int get_rs(uint32_t p, int nbits)
+{
+    int ss = 1;
+    int lz = CLZ(LSHIFT(p, ss));
+    int lo = CLZ(LSHIFT(~p, ss));
+    int rs = MAX(lz, lo) + 1;
+
+    return MIN(rs, nbits - ss);
+}
+
+uint32_t util_neg(uint32_t p, int nbits)
+{
+    return LMASK(-LMASK(p, nbits), nbits);
 }

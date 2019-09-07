@@ -5,30 +5,27 @@
 #include "../src/posit.h"
 
 struct vector {
-    Posit x1;
-    Posit x2;
-    Posit x3;
-    Posit x4;
-    Posit x5;
-    Posit x6;
+    posit x1;
+    posit x2;
+    posit x3;
+    posit x4;
+    posit x5;
+    posit x6;
 };
 
 double bs[5] = {1, 2, 3, 4, 5};
 double res = 8799;
-double eps = 10e-8;
+double eps = 10e-3;
 
-int bits = 32;
-int es = 2;
-
-vector init_v1(Posit a)
+vector init_v1(posit a)
 {
     vector v{
-        Posit(bits, es),
-        Posit(bits, es),
-        Posit(bits, es),
-        Posit(bits, es),
-        Posit(bits, es),
-        Posit(bits, es)
+        posit(),
+        posit(),
+        posit(),
+        posit(),
+        posit(),
+        posit()
     };
     v.x1.set(double(pow(10, a.getDouble())));
     v.x2.set(double(1233));
@@ -39,15 +36,15 @@ vector init_v1(Posit a)
     return v;
 }
 
-vector init_v2(Posit b)
+vector init_v2(posit b)
 {
     vector v{
-            Posit(bits, es),
-            Posit(bits, es),
-            Posit(bits, es),
-            Posit(bits, es),
-            Posit(bits, es),
-            Posit(bits, es)
+            posit(),
+            posit(),
+            posit(),
+            posit(),
+            posit(),
+            posit()
     };
     v.x1.set(double(pow(10, b.getDouble())));
     v.x2.set(double(2));
@@ -58,7 +55,7 @@ vector init_v2(Posit b)
     return v;
 }
 
-Posit dot(struct vector *v1, struct vector *v2)
+posit dot(struct vector *v1, struct vector *v2)
 {
     return v1->x1*v2->x1+v1->x2*v2->x2+v1->x3*v2->x3+v1->x4*v2->x4+v1->x5*v2->x5+v1->x6*v2->x6;
 }
@@ -70,18 +67,18 @@ void print_vec(struct vector *v)
 }
 
 BOOST_AUTO_TEST_CASE(test_dot_product) {
-    Posit a = Posit(bits, es);
+    posit a = posit();
     a.set(double(2));
     double a_d = a.getDouble();
     auto v1 = init_v1(a);
     for (int i = 0; i < 5; ++i) {
-        Posit b = Posit(bits, es);
+        posit b = posit();
         b.set(bs[i]);
         auto v2 = init_v2(b);
         print_vec(&v1);
         print_vec(&v2);
         double output = dot(&v1, &v2).getDouble();
         printf("%lf\n", output);
-        BOOST_CHECK(abs(res - output) < eps);
+        BOOST_CHECK(fabs(res - output) < eps);
     }
 }

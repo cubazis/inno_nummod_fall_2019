@@ -1,99 +1,100 @@
 #ifndef __POSIT_H
 #define __POSIT_H
 
-#include "posit_types.h"
+#include <stdint.h>
+#include <stdbool.h>
 
-struct Posit {
+#define CLZ(n) \
+    ((n) == 0 ? 8 * sizeof(n) : __builtin_clz(n))
+
+#define LSHIFT(bits, shift) \
+    ((shift) >= (int)(8 * sizeof(bits)) ? 0 : (bits) << (shift))
+
+#define RSHIFT(bits, shift) \
+    ((shift) >= (int)(8 * sizeof(bits)) ? 0 : (bits) >> (shift))
+
+#define POW2(n) \
+    (LSHIFT(1, (n)))
+
+#define FLOORDIV(a, b) \
+    ((a) / (b) - ((a) % (b) < 0))
+
+#define MIN(a, b) \
+    ((a) < (b) ? (a) : (b))
+
+#define MAX(a, b) \
+    ((a) > (b) ? (a) : (b))
+
+#define LMASK(bits, size) \
+    ((bits) & LSHIFT(0xFFFFFFFF, 32 - (size)))
+
+#define HIDDEN_BIT(frac) \
+    (0x80000000 | RSHIFT((frac), 1))
+
+class posit {
 private:
-    POSIT_UTYPE mBits;
+    uint32_t mBits;
     int mNbits;
     int mEs;
 
+    posit(uint32_t bits, int nbits, int es);
+
 public:
-    Posit(POSIT_UTYPE bits, int nbits, int es);
-    Posit(int nbits, int es);
+    posit();
 
-    bool isZero() const;                  // check for 0
-    bool isNar() const;                   // check for NaR
-    bool isNeg() const;                   // check for negative
+    bool isZero() const;
+    bool isNar() const;
 
-    int nbits() const;                    // size in bits
-    int ss() const;                       // sign size in bits
-    int rs() const;                       // regime size in bits
-    int es() const;                       // exponent size in bits
-    int fs() const;                       // fraction size in bits
+    posit zero() const;
+    posit nar() const;
 
-    Posit zero() const;                   // 0
-    Posit one() const;                    // 1
-    Posit nar() const;                    // NaR
+    posit neg() const;
 
-    Posit neg() const;                    // -x
-    Posit rec() const;                    // 1 / x
-    Posit sqrt() const;                   // sqrt(x)
+    posit add(const posit& p) const;
+    posit mul(const posit& p) const;
 
-    Posit add(const Posit& p) const;      // x + p
-    Posit sub(const Posit& p) const;      // x - p
-    Posit mul(const Posit& p) const;      // x * p
-    Posit div(const Posit& p) const;      // x / p
+    void set(double n);
 
-    bool eq(const Posit& p) const;        // x == p
-    bool gt(const Posit& p) const;        // x > p
-    bool ge(const Posit& p) const;        // x >= p
-    bool lt(const Posit& p) const;        // x < p
-    bool le(const Posit& p) const;        // x <= p
-
-    void set(Posit p);                    // x = p
-    void set(float n);                    // x = n
-    void set(double n);                   // x = n
-
-    float getFloat() const;               // n = x
-    double getDouble() const;             // n = x
-
-    // debug
-    void setBits(POSIT_UTYPE bits);
-    POSIT_UTYPE getBits();
-    void print();
+    double getDouble() const;
+    bool eq(const posit &posit) const;
 };
 
-class Posit8 : public Posit
+struct unpacked_t
 {
-public:
-    Posit8();
-    Posit8(Posit v);
-    Posit8(float v);
-    Posit8(double v);
+    bool neg;
+    int32_t exp;
+    uint32_t frac;
 };
 
-class Posit16 : public Posit
-{
-public:
-    Posit16();
-    Posit16(Posit v);
-    Posit16(float v);
-    Posit16(double v);
-};
+posit operator+(const posit& a, const posit& b);
+posit operator-(const posit& a, const posit& b);
+posit operator*(const posit& a, const posit& b);
+posit operator/(const posit& a, const posit& b);
 
-class Posit32 : public Posit
-{
-public:
-    Posit32();
-    Posit32(Posit v);
-    Posit32(float v);
-    Posit32(double v);
-};
+posit operator-(const posit& a);
 
-Posit operator+(const Posit& a, const Posit& b);
-Posit operator-(const Posit& a, const Posit& b);
-Posit operator*(const Posit& a, const Posit& b);
-Posit operator/(const Posit& a, const Posit& b);
+bool operator<(const posit&a , const posit& b);
+bool operator<=(const posit&a , const posit& b);
+bool operator>(const posit&a , const posit& b);
+bool operator>=(const posit&a , const posit& b);
+bool operator==(const posit&a , const posit& b);
+bool operator!=(const posit&a , const posit& b);
 
-Posit operator-(const Posit& a);
+uint32_t pack_posit(struct unpacked_t up, int nbits, int es);
+double pack_double(struct unpacked_t up);
 
-bool operator<(const Posit&a , const Posit& b);
-bool operator<=(const Posit&a , const Posit& b);
-bool operator>(const Posit&a , const Posit& b);
-bool operator>=(const Posit&a , const Posit& b);
-bool operator==(const Posit&a , const Posit& b);
-bool operator!=(const Posit&a , const Posit& b);
+struct unpacked_t unpack_posit(uint32_t p, int nbits, int es);
+struct unpacked_t unpack_double(double f);
+
+struct unpacked_t unpack_mul(struct unpacked_t a, struct unpacked_t b);
+struct unpacked_t unpack_add(struct unpacked_t a, struct unpacked_t b);
+
+bool is_zero(uint32_t p);
+bool is_nan(uint32_t p);
+bool is_neg(uint32_t p);
+
+int get_rs(uint32_t p, int nbits);
+
+uint32_t util_neg(uint32_t p, int nbits);
 
 #endif
