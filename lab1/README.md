@@ -1,23 +1,28 @@
-### Задание
+### Cmake Options (ctrl+alt+s)
+```
+-DCMAKE_BUILD_TYPE=Debug
+-DBUILD_TESTS=YES
+```
 
-1. Статическая библиотека unum с поддержкой интервальной арифметики и базовых операции (posit32). 
- - Стандарт GCC C99
- - CMake 3.0
- - К имплементации пишем три теста (check) по аналогии с теми что даны для double/long double
+### Сборка статической библиотеки
 
-2. Биндинг к numpy с поддержкой аккамулятора numpy.ndarray в виде dtype=myPosit. Решение должно проходить тесты assert:
- - скалярное умножение векторов
- - сумма ряда дающего аппроксимацию пи в квадрате на 6 (первый замечательный предел)
- - поиск минимума функции простым итеррационным методом бисекции
+```
+> mkdir build && cd build
+> cmake ..
+> sudo make && sudo make install
+```
 
-### Критерии оценки
-- Пул реквест + tar архив в moodle
-- Тест 1:  `test_dot_product_posit.c` - 10 points, `Потеря значимости` - 15 points (25 points)
-- Тест 2: `test_sum_posit.c` - 10 points, `Закон ассоциативности` - 25 points (35 points)
-- Тест 3: `test_minima_posit.c` - 10 points, `Half divide method` - 30 points (40 points)
+### При успешной сборке файлы лежат по путям
 
-*При условии что имплементация честная*
+- **include** in `/usr/local/include`
+- **lib** in `/usr/local/lib`
+- **cmake configs** in `/usr/local/lib/cmake`
 
-### Deadline
+### Тест статической либы
 
-**05.09.2019 10:00 MSK**
+проект **just_to_test**
+
+- открываем
+- читаем README.md
+- билдим
+- запускаем
