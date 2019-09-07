@@ -61,7 +61,7 @@ fn test_from_f64() {
         is_negative: false,
         regime: Regime::ZERO,
         exp: 1,
-        frac: BitVec::new()
+        frac: BitVec::new(),
     };
 
     assert_eq!(MQPosit::from(a), expected);
@@ -75,24 +75,24 @@ fn test_from_f64_2() {
         is_negative: false,
         regime: Regime::ZERO,
         exp: 0,
-        frac: bitvec![BigEndian, u32; 1]
+        frac: bitvec![BigEndian, u32; 1],
     };
 
     assert_eq!(MQPosit::from(a), expected);
 }
-#[test]
-fn test_from_f64_3() {
-    let a = 3.5f64;
 
-    let expected = MQPosit {
+#[test]
+fn test_to_f64() {
+    let expected = 1.5f64;
+
+    let a = MQPosit {
         is_negative: false,
         regime: Regime::ZERO,
-        exp: 1,
-        frac: bitvec![BigEndian, u32; 1, 1]
+        exp: 0,
+        frac: bitvec![BigEndian, u32; 1],
     };
 
-    assert_eq!(MQPosit::from(a), expected);
+    let res: f64 = a.into();
+
+    assert_eq!(res, expected);
 }
-
-
-

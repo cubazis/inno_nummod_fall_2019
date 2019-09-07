@@ -1,7 +1,7 @@
-use nalgebra::Vector6;
-use std::cmp::Ordering;
 use bitvec::cursor::BigEndian;
 use bitvec::vec::BitVec;
+use nalgebra::Vector6;
+use std::cmp::Ordering;
 
 use crate::posit::QPosit;
 use crate::regime::*;
@@ -21,10 +21,10 @@ impl Ord for Posit {
             _ => match self.regime.cmp(&other.regime) {
                 Ordering::Equal => match self.exp.cmp(&other.exp) {
                     Ordering::Equal => self.frac.cmp(&other.frac),
-                    x => x
+                    x => x,
                 },
-                x => x
-            }
+                x => x,
+            },
         }
     }
 }
@@ -54,7 +54,7 @@ fn from_slice(slice: &BitSlice) -> Posit {
         is_negative,
         regime,
         exp,
-        frac
+        frac,
     }
 }
 
@@ -68,23 +68,23 @@ fn pow(pos: Posit, power: u32) -> Posit {
 
 fn init_v1(a: f64) -> Vector {
     vec![
-        Posit::from(10f64.powf(a)),
-        Posit::from(1223f64),
-        Posit::from(10f64.powf(a - 1.0)),
-        Posit::from(10f64.powf(a - 2.0)),
-        Posit::from(3f64),
-        Posit::from(-(10f64.powf(a - 5.0))),
+        Posit::from(10_f64.powf(a)),          // 100_000
+        Posit::from(1223_f64),                // 1223
+        Posit::from(10_f64.powf(a - 1.0)),    // 10_000
+        Posit::from(10_f64.powf(a - 2.0)),    // 1_000
+        Posit::from(3_f64),                   // 3
+        Posit::from(-(10_f64.powf(a - 5.0))), // -1
     ]
 }
 
 fn init_v2(a: f64) -> Vector {
     vec![
-        Posit::from(10f64.powf(a)),
-        Posit::from(2f64),
-        Posit::from(-(10f64.powf(a + 1.0))),
-        Posit::from(10f64.powf(a)),
-        Posit::from(2111f64),
-        Posit::from(10f64.powf(a + 3.0)),
+        Posit::from(10_f64.powf(a)),          // 100_000
+        Posit::from(2_f64),                   // 2
+        Posit::from(-(10_f64.powf(a + 1.0))), // -1_000_000
+        Posit::from(10_f64.powf(a)),          // 100_000
+        Posit::from(2111_f64),                // 2111
+        Posit::from(10_f64.powf(a + 3.0)),    // 100_000_000
     ]
 }
 
@@ -93,23 +93,29 @@ fn one() -> Posit {
         is_negative: false,
         regime: Regime::ONE,
         exp: 0,
-        frac: BitVec::new()
+        frac: BitVec::new(),
     }
 }
 
 fn dot(v1: Vector, v2: Vector) -> Posit {
-    let mut sum = one();
-    for i in 0..6 {
+    let mut sum = {
+        let a = v1[0].clone();
+        let b = v2[0].clone();
+        let res = a * b;
+
+        let res_round = from_slice(res.pack(128).as_bitslice());
+        res_round
+    };
+    for i in 1..6 {
         let a = v1[i].clone();
         let b = v2[i].clone();
-        println!("A {:?}", &a);
-        println!("B {:?}", &b);
         let res = a * b;
-        println!("DIFF {:?}", &res);
-        println!("SUM {:?}", &sum);
-        sum = sum + res;
+        let res_round = from_slice(res.pack(128).as_bitslice());
+        let sum_res = sum + res_round;
+        let sum_res_round = from_slice(sum_res.pack(128).as_bitslice());
+        sum = sum_res_round;
     }
-    sum - one()
+    sum
 }
 
 #[test]
@@ -119,9 +125,11 @@ fn test_a5() {
         let EPS: Posit = Posit::from(10e-8f64);
         let RES: Posit = Posit::from(8779.0f64);
         let y: Vector = init_v2(i);
-        let dot_res = dot(x.clone(),y);
+        let dot_res = dot(x.clone(), y);
         println!("BS {:?} DOT_RES {:?}", i, dot_res);
         println!("RES {:?}", RES);
+        println!("DIFF {:?}", dot_res.clone() - RES.clone());
+        println!("EPS {:?}", EPS);
         assert!((dot_res - RES) < EPS);
     }
 }
@@ -133,9 +141,11 @@ fn test_a10() {
         let EPS: Posit = Posit::from(10e-8f64);
         let RES: Posit = Posit::from(8779.0f64);
         let y = init_v2(i);
-        let dot_res = dot(x.clone(),y);
+        let dot_res = dot(x.clone(), y);
         println!("BS {:?} {:?}", i, dot_res);
-        println!("{:?}", RES);
+        println!("RES {:?}", RES);
+        println!("DIFF {:?}", dot_res.clone() - RES.clone());
+        println!("EPS {:?}", EPS);
         assert!((dot_res - RES) < EPS);
     }
 }

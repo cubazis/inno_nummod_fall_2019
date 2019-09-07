@@ -25,8 +25,17 @@ fn dummy_2() {
 #[test]
 fn dummy_3() {
     let a: i16 = -5;
-    let b: u16 =  5;
+    let b: u16 = 5;
     assert_eq!(a.abs() as u16, b);
+}
+
+#[test]
+fn dummy_4() {
+    let a = bitvec![0, 1, 0];
+
+    let expected = bitvec![0, 0, 1, 0];
+
+    assert_eq!(a >> 1, expected);
 }
 
 #[test]

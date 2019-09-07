@@ -163,3 +163,28 @@ fn test_mul_frac_overflow_neg() {
     assert_eq!(a * b, expected);
 }
 
+#[test]
+fn test_na_ebanost() {
+    let a = MQPosit {
+        is_negative: false,
+        regime: Regime::new(3),
+        exp: 1,
+        frac: bitvec![BigEndian, u32; 0,0,1,1,1,0,0,0,1],
+    };
+
+    let b = MQPosit {
+        is_negative: true,
+        regime: Regime::new(4),
+        exp: 3,
+        frac: bitvec![BigEndian, u32; 1,1,1,0,1,0,0,0,0,1,0,0,1],
+    };
+
+    let expected = MQPosit {
+        is_negative: true,
+        regime: Regime::new(8),
+        exp: 1,
+        frac: bitvec![BigEndian, u32; 0,0,1,0,1,0,1,0,0,0,0,0,0,1,0,1,1,1,1,1,0,0,1],
+    };
+
+    assert_eq!(a * b, expected);
+}

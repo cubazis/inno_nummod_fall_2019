@@ -7,6 +7,7 @@ use bitvec::vec::BitVec;
 use std::ops::Add;
 
 use crate::regime::*;
+use std::fmt::{Error, Formatter};
 
 #[derive(Clone, Debug, Eq, PartialEq)]
 pub struct QPosit<C, T>
@@ -51,7 +52,11 @@ where
     }
 }
 
-impl<C, T> From<f64> for QPosit<C,T> where C: Cursor, T: BitStore {
+impl<C, T> From<f64> for QPosit<C, T>
+where
+    C: Cursor,
+    T: BitStore,
+{
     fn from(x: f64) -> Self {
         let mut bits: u64 = unsafe { std::mem::transmute(x) };
         let sign: bool = bits >> 63 == 0;
@@ -70,7 +75,7 @@ impl<C, T> From<f64> for QPosit<C,T> where C: Cursor, T: BitStore {
         let fraction: BitVec<C, T> = {
             let mut vec = BitVec::new();
             for i in (0..64u64).rev() {
-                let bit = mantissa & (1 << i)  != 0;
+                let bit = mantissa & (1 << i) != 0;
                 vec.push(bit);
             }
             vec
@@ -80,14 +85,13 @@ impl<C, T> From<f64> for QPosit<C,T> where C: Cursor, T: BitStore {
             is_negative: !sign,
             regime: Regime {
                 is_negative: exponent < 0,
-                num: regime_num
+                num: regime_num,
             },
             exp: exp,
-            frac: QPosit::<C,T>::truncate_zeros(fraction)
+            frac: QPosit::<C, T>::truncate_zeros(fraction),
         }
     }
 }
-
 
 impl<C, T> QPosit<C, T>
 where
@@ -99,18 +103,42 @@ where
     const MAX_EXP: usize = 1 << QPosit::<C, T>::ES;
     const USEED: usize = 1 << QPosit::<C, T>::MAX_EXP;
 
+    pub fn max_pos() -> QPosit<C, T> {
+        QPosit {
+            is_negative: false,
+            regime: Regime {
+                is_negative: false,
+                num: std::usize::MAX
+            },
+            exp: 0,
+            frac: BitVec::<C, T>::new()
+        }
+    }
+
+    pub fn min_pos(is_negative: bool) -> QPosit<C, T> {
+        QPosit {
+            is_negative,
+            regime: Regime {
+                is_negative: true,
+                num: std::usize::MAX
+            },
+            exp: 0,
+            frac: BitVec::<C, T>::new()
+        }
+    }
+
     pub fn truncate_zeros(frac: BitVec<C, T>) -> BitVec<C, T> {
         let mut new_frac = frac.clone();
         while !new_frac.is_empty() {
             match new_frac.last() {
                 Some(l) if !l => new_frac.pop(),
-                _ => return new_frac
+                _ => return new_frac,
             };
         }
         new_frac
     }
 
-    pub fn exp_to_bitvec(exp: usize) -> BitVec<C,T> {
+    pub fn exp_to_bitvec(exp: usize) -> BitVec<C, T> {
         let mut out = BitVec::new();
 
         let mut mask = 1;
@@ -129,8 +157,7 @@ where
         out
     }
 
-    pub fn pack(self, limit: usize) -> BitVec<C,T> {
-
+    pub fn pack(self, limit: usize) -> BitVec<C, T> {
         let mut out = BitVec::<C, T>::new();
 
         let mut count: usize = 1;
@@ -138,8 +165,8 @@ where
 
         out.extend(self.regime.to_slice());
 
-        let mut exp = QPosit::<C,T>::exp_to_bitvec(self.exp);
-        exp.truncate(QPosit::<C,T>::ES);
+        let mut exp = QPosit::<C, T>::exp_to_bitvec(self.exp);
+        exp.truncate(QPosit::<C, T>::ES);
 
         out.extend(exp);
         out.extend(self.frac);
@@ -161,7 +188,10 @@ where
         let mut right_frac = rhs.frac.clone();
 
         // Summed length of fraction bits
-        let length = left_frac.len().saturating_add(right_frac.len()).saturating_add(1);
+        let length = left_frac
+            .len()
+            .saturating_add(right_frac.len())
+            .saturating_add(1);
 
         // Add hidden bits
         left_frac.insert(0, true);
@@ -256,17 +286,17 @@ where
 
         // Fraction shift calculation
         let regime_diff = left_max.regime - right_min.regime;
-        let offset = regime_diff.num * (1 << QPosit::<C, T>::ES) +
-            if left_max.exp < right_min.exp { right_min.exp - left_max.exp } else { left_max.exp - right_min.exp };
+
+        let regime_num = regime_diff.num.saturating_mul(1 << QPosit::<C, T>::ES);
+
+        let offset = if left_max.exp < right_min.exp {
+            regime_num - (right_min.exp - left_max.exp)
+        } else {
+            regime_num.saturating_add(left_max.exp - right_min.exp)
+        };
 
         let mut left_frac = left_max.frac.clone();
         let mut right_frac = right_min.frac.clone();
-
-        if left_frac.len() < right_frac.len() {
-            for _ in 0..(right_frac.len() - left_frac.len()) {
-                left_frac.push(false);
-            }
-        }
 
         // Add hidden bits
         left_frac.insert(0, true);
@@ -275,9 +305,17 @@ where
         // Shift smaller fraction to the right
         for _ in 0..offset {
             right_frac.insert(0, false);
-            left_frac.push(false);
         }
 
+        if left_frac.len() < right_frac.len() {
+            for _ in 0..(right_frac.len() - left_frac.len()) {
+                left_frac.push(false);
+            }
+        } else {
+            for _ in 0..(left_frac.len() - right_frac.len()) {
+                right_frac.push(false);
+            }
+        }
         let frac_length = right_frac.len();
 
         if sign_equal {
@@ -300,28 +338,24 @@ where
                 frac: final_frac,
             }
         } else {
-            left_frac.insert(0, false);
-            right_frac.insert(0, false);
-
             let mut final_frac = left_frac - right_frac;
 
-
-            let mut one = bitvec![BigEndian, u32; 1];
-            for _ in 0..(frac_length - 1) {
+            let mut one = BitVec::<C, T>::new();
+            one.push(true);
+            for _ in 0..=(frac_length - 1) {
                 one.push(false);
                 final_frac.push(false);
             }
 
-            let sign = final_frac.remove(0);
-
-            final_frac = if !sign { final_frac } else { -final_frac };
+            if final_frac.count_zeros() == final_frac.len() {
+                return QPosit::<C, T>::min_pos(left_max.is_negative);
+            }
 
             let mut carry_exp = 0;
-            while final_frac < one {
+            while final_frac < one  {
                 final_frac <<= 1;
                 carry_exp += 1;
             }
-
             final_frac.remove(0);
 
             let mut exp = left_max.exp;
@@ -342,9 +376,31 @@ where
     }
 }
 
-//impl<C, T> Into<f64> for QPosit<C, T> where C: Cursor, T: BitStore {
-//    fn into(self) -> f64 {
-//        let sign: u64 = self.is_negative << 63;
-//        let exponent: i16 = (self.regime.is_negative as i16)
-//    }
-//}
+fn slice_to_u64<C, T>(s: &BitSlice<C, T>) -> u64
+where
+    C: Cursor,
+    T: BitStore,
+{
+    let mut s = BitVec::from_bitslice(s);
+    s.reverse();
+    let mut out = 0;
+    for (i, l) in s.iter().enumerate() {
+        out += (l as u64) << (i as u64);
+    }
+    out
+}
+
+impl<C, T> Into<f64> for QPosit<C, T>
+where
+    C: Cursor,
+    T: BitStore,
+{
+    fn into(self) -> f64 {
+        (if self.is_negative { -1.0 } else { 1.0 })
+            * (QPosit::<C, T>::USEED as f64)
+                .powf((if self.regime.is_negative { -1.0 } else { 1.0 }) * (self.regime.num as f64))
+            * ((1 << self.exp) as f64)
+            * (1.0
+                + (slice_to_u64(self.frac.as_bitslice()) as f64) / ((1 << self.frac.len()) as f64))
+    }
+}

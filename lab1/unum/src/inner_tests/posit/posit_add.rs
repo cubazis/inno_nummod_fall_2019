@@ -146,7 +146,6 @@ fn test_add_5() {
     assert_eq!(b + a, expected);
 }
 
-
 #[test]
 fn test_add_reverse() {
     let a = MQPosit {
@@ -250,3 +249,51 @@ fn test_add_neg_double() {
 
     assert_eq!(a + b, expected);
 }
+
+#[test]
+fn test_add_na_ebanost() {
+    let a = MQPosit {
+        is_negative: false,
+        regime: Regime::new(8),
+        exp: 1,
+        frac: bitvec![BigEndian, u32; 0,0,1,0,1,0,1,0,0,0,0,0,0,1,0,1,1,1,1,1,0,0,1],
+    };
+
+    let b = MQPosit {
+        is_negative: false,
+        regime: Regime::new(2),
+        exp: 3,
+        frac: bitvec![BigEndian, u32; 0,0,1,1,0,0,0,1,1,1],
+    };
+
+    let expected = MQPosit {
+        is_negative: false,
+        regime: Regime::new(8),
+        exp: 1,
+        frac: bitvec![BigEndian, u32; 0,0,1,0,1,0,1,0,0,0,0,0,0,1,0,1,1,1,1,1,0,1,1,0,1,1,0,0,0,1,1,1],
+    };
+
+    assert_eq!(a + b, expected);
+}
+
+#[test]
+fn test_add_na_ebanost_2() {
+    let a = MQPosit {
+        is_negative: false,
+        regime: Regime::new(2),
+        exp: 3,
+        frac: bitvec![BigEndian, u32; 0,0,1,1,0,0,0,1,1,1],
+    };
+
+    let b = MQPosit {
+        is_negative: false,
+        regime: Regime::new(2),
+        exp: 3,
+        frac: bitvec![BigEndian, u32; 0,0,1,1,0,0,0,1,1,1],
+    };
+
+    let expected = MQPosit::min_pos(false);
+
+    assert_eq!(a - b, expected);
+}
+

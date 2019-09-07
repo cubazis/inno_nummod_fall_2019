@@ -15,7 +15,11 @@ pub struct Regime {
 impl Ord for Regime {
     fn cmp(&self, other: &Self) -> Ordering {
         if self.is_negative == other.is_negative {
-            self.num.cmp(&other.num)
+            if self.is_negative {
+                other.num.cmp(&self.num)
+            } else {
+                self.num.cmp(&other.num)
+            }
         } else {
             if self.is_negative {
                 Ordering::Less
