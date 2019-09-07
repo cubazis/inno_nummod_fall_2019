@@ -23,11 +23,9 @@ extern "C" {
     ((n) == 0 ? 8 * sizeof(n) : __builtin_clz(n))
 #endif
 
-// shift count wraps around on x86: https://stackoverflow.com/q/3871650
 #define LSHIFT(bits, shift) \
     ((shift) >= (int)(8 * sizeof(bits)) ? 0 : (bits) << (shift))
 
-// shift count wraps around on x86: https://stackoverflow.com/q/3871650
 #define RSHIFT(bits, shift) \
     ((shift) >= (int)(8 * sizeof(bits)) ? 0 : (bits) >> (shift))
 

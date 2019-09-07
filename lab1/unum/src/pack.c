@@ -103,16 +103,13 @@ double pack_double(struct unpacked_t up)
 {
     int fexp = up.exp + 1023;
 
-    // left aligned
     uint64_t fexpbits;
     uint64_t ffracbits;
 
     if (fexp > 2046) {
-        // overflow, set maximum value
         fexpbits = LSHIFT((uint64_t)2046, 53);
         ffracbits = -1;
     } else if (fexp < 1) {
-        // underflow, pack as denormal
         fexpbits = 0;
 #if POSIT_WIDTH <= 64
         ffracbits = LSHIFT((uint64_t)(POSIT_MSB | RSHIFT(up.frac, 1)), 64 - POSIT_WIDTH);
@@ -138,7 +135,6 @@ double pack_double(struct unpacked_t up)
     un.u = fexpbits | RSHIFT(un.u, 11);
     un.u = LSHIFT((uint64_t)up.neg, 63) | RSHIFT(un.u, 1);
 
-    // don't underflow to zero
     if (LSHIFT(un.u, 1) == 0) {
         un.u++;
     }
@@ -159,7 +155,7 @@ struct unpacked_t unpack_posit(uint32_t p, int nbits, int es)
     int rs = util_rs(p, nbits);
 
     int lz = CLZ(LSHIFT(p, ss));
-    int lo = CLZ(LSHIFT(~p, ss) | 1); // add LSB to compensate for sign bit
+    int lo = CLZ(LSHIFT(~p, ss) | 1);
 
     int reg = (lz == 0 ? lo - 1 : -lz);
     uint32_t exp = RSHIFT(LSHIFT(p, ss + rs), POSIT_WIDTH - es);
