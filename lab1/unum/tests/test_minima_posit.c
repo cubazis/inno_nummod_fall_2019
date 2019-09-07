@@ -7,25 +7,45 @@
 
 int limit = 10000000;
 
-/** 1.3333333333333333 */
-posit res;
-
-/** 10e-8 */
-posit eps;
-
-double half_divide_method(posit a, posit b, posit stop, posit (*f)(posit x), int iterations)
+posit half_divide_method(posit a, posit b, posit stop, posit (*f)(posit x), int iterations)
 {
-
+	posit e = double2posit(0.5);
+	posit x = posit_divide(sum(a,b),2);
+	int i = 0;
+	while(beq(f(x), stop) && (i < iterations)) {
+		x = posit_divide(sum(a,b),2);
+		posit f1 = f(diff(x,e));
+		posit f2 = f(sum(x,e));
+		if (lessthan(f1, f2)) {
+			b = x;
+		} else {
+			a = x;
+		}
+		i += 1;
+	}
+	return posit_divide(sum(a,b),2);
 }
 
 posit parabola(posit x)
 {
-
+  return posit_pow(diff(x, double2posit(1.333333333333)), 2);
 }
 
 START_TEST(test_minima_posit)
 {
-
+//	double minima = half_divide_method(-2, 4.65,  0.0001, parabola, 10000000);
+//	printf("%.16lf\n", minima);
+//	printf("%.16lf\n", res);
+//	printf("%.16lf\n", fabs(res - minima));
+//	ck_assert(fabs(res - minima) < eps);
+	posit minima = half_divide_method(double2posit(-2), double2posit(4.65), double2posit(0.0001), parabola,2000000);
+	posit res = double2posit(1.3333333333333333);
+	posit diff_res = posit_abs(diff(res, minima));
+	posit eps = double2posit(10e-8);
+	printf("%.16f\n", posit2float(minima));
+	printf("%.16f\n",  posit2float(res));
+	printf("%.16f\n",  posit2float(diff_res));
+	ck_assert(lessthan(diff_res, eps));
 }
 END_TEST
 
