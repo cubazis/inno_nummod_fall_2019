@@ -1,0 +1,9 @@
+/home/ed/CLionProjects/unum/tests/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/ed/CLionProjects/unum/tests/cmake-build-debug/CMakeFiles/test_function.dir
+/home/ed/CLionProjects/unum/tests/cmake-build-debug/CMakeFiles/test_dot_product_posit.dir
+/home/ed/CLionProjects/unum/tests/cmake-build-debug/CMakeFiles/test_dot_product.dir
+/home/ed/CLionProjects/unum/tests/cmake-build-debug/CMakeFiles/test_sum.dir
+/home/ed/CLionProjects/unum/tests/cmake-build-debug/CMakeFiles/test_sum_posit.dir
+/home/ed/CLionProjects/unum/tests/cmake-build-debug/CMakeFiles/test_minima.dir
+/home/ed/CLionProjects/unum/tests/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/ed/CLionProjects/unum/tests/cmake-build-debug/CMakeFiles/test_minima_posit.dir
