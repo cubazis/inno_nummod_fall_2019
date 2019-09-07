@@ -8,7 +8,7 @@
 
 ../src/posit.h
 
-/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/tests/test_dot_product_posit.c
+/home/sentenced210/NM/inno_nummod_fall_2019/lab1/unum/tests/test_dot_product_posit.c
 check.h
 -
 stdio.h
@@ -16,7 +16,7 @@ stdio.h
 stdlib.h
 -
 posit.h
-/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/tests/posit.h
+/home/sentenced210/NM/inno_nummod_fall_2019/lab1/unum/tests/posit.h
 math.h
 -
 

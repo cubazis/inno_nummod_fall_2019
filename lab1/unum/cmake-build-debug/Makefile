@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/cubazis/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.5728.100/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /snap/clion/82/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/cubazis/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.5728.100/bin/cmake/linux/bin/cmake -E remove -f
+RM = /snap/clion/82/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum
+CMAKE_SOURCE_DIR = /home/sentenced210/NM/inno_nummod_fall_2019/lab1/unum
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug
+CMAKE_BINARY_DIR = /home/sentenced210/NM/inno_nummod_fall_2019/lab1/unum/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,19 +59,19 @@ CMAKE_BINARY_DIR = /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/home/cubazis/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.5728.100/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+	/snap/clion/82/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local
 
 # Special rule for the target install/local
 install/local/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/home/cubazis/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.5728.100/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+	/snap/clion/82/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
 # Special rule for the target test
 test:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/home/cubazis/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.5728.100/bin/cmake/linux/bin/ctest --force-new-ctest-process $(ARGS)
+	/snap/clion/82/bin/cmake/linux/bin/ctest --force-new-ctest-process $(ARGS)
 .PHONY : test
 
 # Special rule for the target test
@@ -92,19 +92,19 @@ list_install_components/fast: list_install_components
 # Special rule for the target install/strip
 install/strip: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/home/cubazis/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.5728.100/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+	/snap/clion/82/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip
 
 # Special rule for the target install/strip
 install/strip/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/home/cubazis/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.5728.100/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+	/snap/clion/82/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/cubazis/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.5728.100/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/snap/clion/82/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -115,7 +115,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/cubazis/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.5728.100/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/snap/clion/82/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -126,20 +126,20 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/home/cubazis/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.5728.100/bin/cmake/linux/bin/cmake -P cmake_install.cmake
+	/snap/clion/82/bin/cmake/linux/bin/cmake -P cmake_install.cmake
 .PHONY : install
 
 # Special rule for the target install
 install/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/home/cubazis/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.5728.100/bin/cmake/linux/bin/cmake -P cmake_install.cmake
+	/snap/clion/82/bin/cmake/linux/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sentenced210/NM/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles /home/sentenced210/NM/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sentenced210/NM/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -181,19 +181,6 @@ unum/fast:
 .PHONY : unum/fast
 
 #=============================================================================
-# Target rules for targets named test_function
-
-# Build rule for target.
-test_function: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_function
-.PHONY : test_function
-
-# fast build rule for target.
-test_function/fast:
-	$(MAKE) -f tests/CMakeFiles/test_function.dir/build.make tests/CMakeFiles/test_function.dir/build
-.PHONY : test_function/fast
-
-#=============================================================================
 # Target rules for targets named test_dot_product_posit
 
 # Build rule for target.
@@ -206,70 +193,59 @@ test_dot_product_posit/fast:
 	$(MAKE) -f tests/CMakeFiles/test_dot_product_posit.dir/build.make tests/CMakeFiles/test_dot_product_posit.dir/build
 .PHONY : test_dot_product_posit/fast
 
-#=============================================================================
-# Target rules for targets named test_dot_product
+src/op.o: src/op.c.o
 
-# Build rule for target.
-test_dot_product: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_dot_product
-.PHONY : test_dot_product
+.PHONY : src/op.o
 
-# fast build rule for target.
-test_dot_product/fast:
-	$(MAKE) -f tests/CMakeFiles/test_dot_product.dir/build.make tests/CMakeFiles/test_dot_product.dir/build
-.PHONY : test_dot_product/fast
+# target to build an object file
+src/op.c.o:
+	$(MAKE) -f CMakeFiles/unum.dir/build.make CMakeFiles/unum.dir/src/op.c.o
+.PHONY : src/op.c.o
 
-#=============================================================================
-# Target rules for targets named test_sum
+src/op.i: src/op.c.i
 
-# Build rule for target.
-test_sum: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_sum
-.PHONY : test_sum
+.PHONY : src/op.i
 
-# fast build rule for target.
-test_sum/fast:
-	$(MAKE) -f tests/CMakeFiles/test_sum.dir/build.make tests/CMakeFiles/test_sum.dir/build
-.PHONY : test_sum/fast
+# target to preprocess a source file
+src/op.c.i:
+	$(MAKE) -f CMakeFiles/unum.dir/build.make CMakeFiles/unum.dir/src/op.c.i
+.PHONY : src/op.c.i
 
-#=============================================================================
-# Target rules for targets named test_sum_posit
+src/op.s: src/op.c.s
 
-# Build rule for target.
-test_sum_posit: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_sum_posit
-.PHONY : test_sum_posit
+.PHONY : src/op.s
 
-# fast build rule for target.
-test_sum_posit/fast:
-	$(MAKE) -f tests/CMakeFiles/test_sum_posit.dir/build.make tests/CMakeFiles/test_sum_posit.dir/build
-.PHONY : test_sum_posit/fast
+# target to generate assembly for a file
+src/op.c.s:
+	$(MAKE) -f CMakeFiles/unum.dir/build.make CMakeFiles/unum.dir/src/op.c.s
+.PHONY : src/op.c.s
 
-#=============================================================================
-# Target rules for targets named test_minima
+src/pack.o: src/pack.c.o
 
-# Build rule for target.
-test_minima: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_minima
-.PHONY : test_minima
+.PHONY : src/pack.o
 
-# fast build rule for target.
-test_minima/fast:
-	$(MAKE) -f tests/CMakeFiles/test_minima.dir/build.make tests/CMakeFiles/test_minima.dir/build
-.PHONY : test_minima/fast
+# target to build an object file
+src/pack.c.o:
+	$(MAKE) -f CMakeFiles/unum.dir/build.make CMakeFiles/unum.dir/src/pack.c.o
+.PHONY : src/pack.c.o
 
-#=============================================================================
-# Target rules for targets named test_minima_posit
+src/pack.i: src/pack.c.i
 
-# Build rule for target.
-test_minima_posit: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_minima_posit
-.PHONY : test_minima_posit
+.PHONY : src/pack.i
 
-# fast build rule for target.
-test_minima_posit/fast:
-	$(MAKE) -f tests/CMakeFiles/test_minima_posit.dir/build.make tests/CMakeFiles/test_minima_posit.dir/build
-.PHONY : test_minima_posit/fast
+# target to preprocess a source file
+src/pack.c.i:
+	$(MAKE) -f CMakeFiles/unum.dir/build.make CMakeFiles/unum.dir/src/pack.c.i
+.PHONY : src/pack.c.i
+
+src/pack.s: src/pack.c.s
+
+.PHONY : src/pack.s
+
+# target to generate assembly for a file
+src/pack.c.s:
+	$(MAKE) -f CMakeFiles/unum.dir/build.make CMakeFiles/unum.dir/src/pack.c.s
+.PHONY : src/pack.c.s
 
 src/posit.o: src/posit.c.o
 
@@ -298,6 +274,33 @@ src/posit.c.s:
 	$(MAKE) -f CMakeFiles/unum.dir/build.make CMakeFiles/unum.dir/src/posit.c.s
 .PHONY : src/posit.c.s
 
+src/util.o: src/util.c.o
+
+.PHONY : src/util.o
+
+# target to build an object file
+src/util.c.o:
+	$(MAKE) -f CMakeFiles/unum.dir/build.make CMakeFiles/unum.dir/src/util.c.o
+.PHONY : src/util.c.o
+
+src/util.i: src/util.c.i
+
+.PHONY : src/util.i
+
+# target to preprocess a source file
+src/util.c.i:
+	$(MAKE) -f CMakeFiles/unum.dir/build.make CMakeFiles/unum.dir/src/util.c.i
+.PHONY : src/util.c.i
+
+src/util.s: src/util.c.s
+
+.PHONY : src/util.s
+
+# target to generate assembly for a file
+src/util.c.s:
+	$(MAKE) -f CMakeFiles/unum.dir/build.make CMakeFiles/unum.dir/src/util.c.s
+.PHONY : src/util.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -312,16 +315,19 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... install"
-	@echo "... test_function"
 	@echo "... test_dot_product_posit"
-	@echo "... test_dot_product"
-	@echo "... test_sum"
-	@echo "... test_sum_posit"
-	@echo "... test_minima"
-	@echo "... test_minima_posit"
+	@echo "... src/op.o"
+	@echo "... src/op.i"
+	@echo "... src/op.s"
+	@echo "... src/pack.o"
+	@echo "... src/pack.i"
+	@echo "... src/pack.s"
 	@echo "... src/posit.o"
 	@echo "... src/posit.i"
 	@echo "... src/posit.s"
+	@echo "... src/util.o"
+	@echo "... src/util.i"
+	@echo "... src/util.s"
 .PHONY : help
 
 

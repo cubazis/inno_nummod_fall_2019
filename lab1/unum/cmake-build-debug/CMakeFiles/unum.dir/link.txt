@@ -1,2 +1,2 @@
-/usr/bin/ar qc libunum.a  CMakeFiles/unum.dir/src/posit.c.o
+/usr/bin/ar qc libunum.a  CMakeFiles/unum.dir/src/op.c.o CMakeFiles/unum.dir/src/pack.c.o CMakeFiles/unum.dir/src/posit.c.o CMakeFiles/unum.dir/src/util.c.o
 /usr/bin/ranlib libunum.a

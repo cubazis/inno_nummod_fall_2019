@@ -1,4 +1,4 @@
-# Install script for directory: /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/tests
+# Install script for directory: /home/sentenced210/NM/inno_nummod_fall_2019/lab1/unum/tests
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

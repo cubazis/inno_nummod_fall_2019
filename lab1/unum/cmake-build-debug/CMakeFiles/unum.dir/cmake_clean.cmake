@@ -1,5 +1,8 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/unum.dir/src/op.c.o"
+  "CMakeFiles/unum.dir/src/pack.c.o"
   "CMakeFiles/unum.dir/src/posit.c.o"
+  "CMakeFiles/unum.dir/src/util.c.o"
   "libunum.pdb"
   "libunum.a"
 )
