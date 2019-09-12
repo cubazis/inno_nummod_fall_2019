@@ -29,8 +29,8 @@ double bs[N] = {1,2,3,4,5};
 double expected_res = 8779;
 double eps = 1e-8;
 
-int bits = 64;
-int es = 5;
+int bits = 32;
+int es = 2;
 
 
 // void print_vec(struct vector *v)
@@ -91,7 +91,7 @@ BOOST_AUTO_TEST_CASE(positDotTest)
     x = (vector*)calloc(1, sizeof(struct vector));
     y = (vector*)calloc(1, sizeof(struct vector));
 
-    init_a(x, 2);
+    init_a(x, 5);
 
     for(int i=0; i < N; ++i){
         init_b(y, bs[i]);
@@ -127,7 +127,7 @@ BOOST_AUTO_TEST_CASE(positDotMixedTest)
     x = (vector*)calloc(1, sizeof(struct vector));
     y = (vector*)calloc(1, sizeof(struct vector));
 
-    init_a(x, 2);
+    init_a(x, 5);
 
     for(int i=0; i < N; ++i){
         init_b(y, bs[i]);
@@ -146,6 +146,43 @@ BOOST_AUTO_TEST_CASE(positDotMixedTest)
     BOOST_CHECK(number_passed == N);
 }
 
+
+
+double dotDoubles(struct vector *v1, struct vector *v2)
+{
+    return  v1->x1.getDouble() * (v2->x1).getDouble() + 
+            v1->x2.getDouble() * (v2->x2).getDouble() + 
+            v1->x3.getDouble() * (v2->x3).getDouble() + 
+            v1->x4.getDouble() * (v2->x4).getDouble() + 
+            v1->x5.getDouble() * (v2->x5).getDouble() + 
+            v1->x6.getDouble() * (v2->x6).getDouble();
+}
+
+BOOST_AUTO_TEST_CASE(positDotDoublesTest)
+{
+    int number_passed = 0;
+
+    x = (vector*)calloc(1, sizeof(struct vector));
+    y = (vector*)calloc(1, sizeof(struct vector));
+
+    init_a(x, 5);
+
+    for(int i=0; i < N; ++i){
+        init_b(y, bs[i]);
+        double res = dotDoubles(x,y);
+        if(fabs(res - expected_res) < eps){
+            ++number_passed;
+        }
+        printf("Check if %.8lf == %.8lf\n", res, expected_res);
+    }
+
+    free(x);
+    free(y);
+
+    printf("Passed %d of %d test cases.\n\n", number_passed, N);
+
+    BOOST_CHECK(number_passed == N);
+}
 // BOOST_AUTO_TEST_CASE(multipleCheckFailures)
 // {
 //     BOOST_CHECK(add(2, 2) == 1);
