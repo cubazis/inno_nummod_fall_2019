@@ -19,7 +19,7 @@ POSIT_UTYPE pack_posit(struct unpacked_t up, int nbits, int es)
     int reg = FLOORDIV(up.exp, POW2(es));
     int ss = util_ss();
     int rs = MAX(-reg + 1, reg + 2);
-    
+
     if (ss + rs + es >= nbits && up.frac >= POSIT_MSB) {
         up.exp++;
         reg = FLOORDIV(up.exp, POW2(es));

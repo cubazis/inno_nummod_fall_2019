@@ -1,0 +1,5 @@
+/cygdrive/c/Users/Kamilla/Documents/GitHub/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/cygdrive/c/Users/Kamilla/Documents/GitHub/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles/edit_cache.dir
+/cygdrive/c/Users/Kamilla/Documents/GitHub/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles/unum.dir
+/cygdrive/c/Users/Kamilla/Documents/GitHub/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles/test.dir
+/cygdrive/c/Users/Kamilla/Documents/GitHub/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles/test_dot_product_posit.dir

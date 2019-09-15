@@ -1,0 +1,1 @@
+/usr/bin/c++.exe  -std=c++17 -g  -Wl,--enable-auto-import CMakeFiles/test_dot_product_posit.dir/tests/test_dot_product_posit.cpp.o  -o test_dot_product_posit.exe -Wl,--out-implib,libtest_dot_product_posit.dll.a -Wl,--major-image-version,0,--minor-image-version,0 libunum.a /usr/lib/libboost_unit_test_framework.dll.a 

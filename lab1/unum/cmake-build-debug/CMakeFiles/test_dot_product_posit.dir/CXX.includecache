@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/cygdrive/c/Users/Kamilla/Documents/GitHub/inno_nummod_fall_2019/lab1/unum/src/posit.h
+posit_types.h
+/cygdrive/c/Users/Kamilla/Documents/GitHub/inno_nummod_fall_2019/lab1/unum/src/posit_types.h
+
+/cygdrive/c/Users/Kamilla/Documents/GitHub/inno_nummod_fall_2019/lab1/unum/src/posit_types.h
+stdint.h
+-
+stdbool.h
+-
+
+/cygdrive/c/Users/Kamilla/Documents/GitHub/inno_nummod_fall_2019/lab1/unum/tests/test_dot_product_posit.cpp
+boost/test/unit_test.hpp
+-
+cmath
+-
+../src/posit.h
+/cygdrive/c/Users/Kamilla/Documents/GitHub/inno_nummod_fall_2019/lab1/unum/src/posit.h
+
