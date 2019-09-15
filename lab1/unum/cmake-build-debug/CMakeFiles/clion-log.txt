@@ -1,0 +1,7 @@
+C:\cygwin64\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /cygdrive/c/Users/Kamilla/Documents/GitHub/inno_nummod_fall_2019/lab1/unum
+-- Boost version: 1.66.0
+-- Found the following Boost libraries:
+--   unit_test_framework
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /cygdrive/c/Users/Kamilla/Documents/GitHub/inno_nummod_fall_2019/lab1/unum/cmake-build-debug
