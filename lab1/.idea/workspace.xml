@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated />
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7bcf4a20-3fb8-44cb-800c-2661f55d719d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/just_to_test/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/just_to_test/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/just_to_test/cmake-build-debug/CMakeFiles/3.14.5/CMakeCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/just_to_test/cmake-build-debug/CMakeFiles/3.14.5/CMakeCCompiler.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/just_to_test/cmake-build-debug/CMakeFiles/3.14.5/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/just_to_test/cmake-build-debug/CMakeFiles/3.14.5/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/just_to_test/cmake-build-debug/CMakeFiles/3.14.5/CMakeSystem.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/just_to_test/cmake-build-debug/CMakeFiles/3.14.5/CMakeSystem.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/just_to_test/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/just_to_test/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/just_to_test/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/just_to_test/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/just_to_test/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/just_to_test/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/just_to_test/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/just_to_test/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/just_to_test/cmake-build-debug/CMakeFiles/feature_tests.bin" beforeDir="false" afterPath="$PROJECT_DIR$/just_to_test/cmake-build-debug/CMakeFiles/feature_tests.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/just_to_test/cmake-build-debug/CMakeFiles/just_to_test.dir/C.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/just_to_test/cmake-build-debug/CMakeFiles/just_to_test.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/just_to_test/cmake-build-debug/CMakeFiles/just_to_test.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/just_to_test/cmake-build-debug/CMakeFiles/just_to_test.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/just_to_test/cmake-build-debug/CMakeFiles/just_to_test.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/just_to_test/cmake-build-debug/CMakeFiles/just_to_test.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/just_to_test/cmake-build-debug/CMakeFiles/just_to_test.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/just_to_test/cmake-build-debug/CMakeFiles/just_to_test.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/just_to_test/cmake-build-debug/CMakeFiles/just_to_test.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/just_to_test/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/CMakeFiles/3.14.5/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/CMakeFiles/3.14.5/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/CMakeFiles/3.14.5/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/CMakeFiles/3.14.5/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/CMakeFiles/feature_tests.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/CMakeFiles/feature_tests.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/CMakeFiles/unum.dir/C.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/CMakeFiles/unum.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/CMakeFiles/unum.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/CMakeFiles/unum.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/CMakeFiles/unum.dir/cmake_clean_target.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/CMakeFiles/unum.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/CMakeFiles/unum.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/CMakeFiles/unum.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/CMakeFiles/unum.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/CMakeFiles/unum.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/CTestTestfile.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/tests/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/tests/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/tests/CMakeFiles/test_dot_product.dir/C.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/tests/CMakeFiles/test_dot_product.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/tests/CMakeFiles/test_dot_product.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/tests/CMakeFiles/test_dot_product.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/tests/CMakeFiles/test_dot_product.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/tests/CMakeFiles/test_dot_product.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/tests/CMakeFiles/test_dot_product.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/tests/CMakeFiles/test_dot_product.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/tests/CMakeFiles/test_dot_product.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/tests/CMakeFiles/test_dot_product_posit.dir/C.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/tests/CMakeFiles/test_dot_product_posit.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/tests/CMakeFiles/test_dot_product_posit.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/tests/CMakeFiles/test_dot_product_posit.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/tests/CMakeFiles/test_dot_product_posit.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/tests/CMakeFiles/test_dot_product_posit.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/tests/CMakeFiles/test_dot_product_posit.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/tests/CMakeFiles/test_dot_product_posit.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/tests/CMakeFiles/test_dot_product_posit.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/tests/CMakeFiles/test_function.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/tests/CMakeFiles/test_function.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/tests/CMakeFiles/test_function.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/tests/CMakeFiles/test_function.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/tests/CMakeFiles/test_function.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/tests/CMakeFiles/test_function.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/tests/CMakeFiles/test_function.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/tests/CMakeFiles/test_minima.dir/C.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/tests/CMakeFiles/test_minima.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/tests/CMakeFiles/test_minima.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/tests/CMakeFiles/test_minima.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/tests/CMakeFiles/test_minima.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/tests/CMakeFiles/test_minima.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/tests/CMakeFiles/test_minima.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/tests/CMakeFiles/test_minima.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/tests/CMakeFiles/test_minima.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/tests/CMakeFiles/test_minima_posit.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/tests/CMakeFiles/test_minima_posit.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/tests/CMakeFiles/test_minima_posit.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/tests/CMakeFiles/test_minima_posit.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/tests/CMakeFiles/test_minima_posit.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/tests/CMakeFiles/test_minima_posit.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/tests/CMakeFiles/test_minima_posit.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/tests/CMakeFiles/test_sum.dir/C.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/tests/CMakeFiles/test_sum.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/tests/CMakeFiles/test_sum.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/tests/CMakeFiles/test_sum.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/tests/CMakeFiles/test_sum.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/tests/CMakeFiles/test_sum.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/tests/CMakeFiles/test_sum.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/tests/CMakeFiles/test_sum.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/tests/CMakeFiles/test_sum.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/tests/CMakeFiles/test_sum_posit.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/tests/CMakeFiles/test_sum_posit.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/tests/CMakeFiles/test_sum_posit.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/tests/CMakeFiles/test_sum_posit.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/tests/CMakeFiles/test_sum_posit.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/tests/CMakeFiles/test_sum_posit.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/tests/CMakeFiles/test_sum_posit.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/tests/CTestTestfile.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/tests/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/tests/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/tests/test_dot_product" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/tests/test_minima" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/tests/test_sum" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/unum.cbp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unum/cmake-build-debug/unum/unumConfig.cmake" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="C:\Users\gridm\Desktop\inno_nummod_fall_2019\lab1\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1Q9EEpWnKRcgUv78goEEaoPSKCz" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/unum" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7bcf4a20-3fb8-44cb-800c-2661f55d719d" name="Default Changelist" comment="" />
+      <created>1567174302440</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1567174302440</updated>
+      <workItem from="1567174303936" duration="1547000" />
+      <workItem from="1567179067366" duration="64000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
