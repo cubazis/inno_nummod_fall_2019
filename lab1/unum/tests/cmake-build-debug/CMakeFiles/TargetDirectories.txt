@@ -1,0 +1,4 @@
+/cygdrive/d/Study/Innopolis/fourth course/numerical modelling/inno_nummod_fall_2019/lab1/unum/tests/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/cygdrive/d/Study/Innopolis/fourth course/numerical modelling/inno_nummod_fall_2019/lab1/unum/tests/cmake-build-debug/CMakeFiles/edit_cache.dir
+/cygdrive/d/Study/Innopolis/fourth course/numerical modelling/inno_nummod_fall_2019/lab1/unum/tests/cmake-build-debug/CMakeFiles/test_dot_product.dir
+/cygdrive/d/Study/Innopolis/fourth course/numerical modelling/inno_nummod_fall_2019/lab1/unum/tests/cmake-build-debug/CMakeFiles/test_dot_product_posit.dir
