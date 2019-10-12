@@ -1,13 +1,8 @@
-#----------------------------------------#
-version: '2'
-#----------------------------------------#
+version: '3'
 services:
-#----------------------------------------#
-    ansic:
-        image: cubazis/gccpy:ha
-        container_name: ha3
+    nm:
+        image: ig
         volumes:
             - ./example/:/workdir
-        entrypoint: bash
+        entrypoint: sh
         tty: true
-#----------------------------------------#
