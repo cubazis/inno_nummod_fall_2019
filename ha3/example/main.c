@@ -6,7 +6,7 @@ int main() {
 	scanf("%d", &n);
 	blackbox_init(n);
 
-	const size_t num_steps = 1e8;
+	const size_t num_steps = 1e7;
 	const double h = 2.0 / num_steps;
 
 	double sum = 0;

@@ -1,6 +1,6 @@
-FROM alpine
+FROM n0madic/alpine-gcc:7.4.0
 
-RUN apk add --no-cache cmake gcc g++ python3 make
+RUN apk add --no-cache cmake python3 make
 
 WORKDIR /workdir
 COPY example .
