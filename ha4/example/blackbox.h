@@ -7,7 +7,7 @@ static double *__a;
 static double *__b;
 
 #define __A(i,j) __a[(i)*10+(j)]
-
+// &__A(0,0)
 int blackbox_size();
 
 void blackbox_init() {
