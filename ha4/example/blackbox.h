@@ -11,7 +11,7 @@ static double *__b;
 int blackbox_size();
 
 void blackbox_init() {
-    scanf("%d", &__n);
+//    scanf("%d", &__n);
     
     __a = (double*) malloc(100 * sizeof(double));
     int row, col;

@@ -1,7 +1,7 @@
 ### Сборка артефакта
 
 1. Сборка силами Clion
-
+ 
 - Edit configuration
 - Add new configuration
 - Cmake Application
