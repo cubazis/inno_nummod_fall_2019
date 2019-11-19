@@ -13,109 +13,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d2895dd-46ae-41f4-94e3-377472b03aaf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/CMakeFiles/3.14.5/CMakeCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/CMakeFiles/3.14.5/CMakeCCompiler.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/CMakeFiles/3.14.5/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/CMakeFiles/3.14.5/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/CMakeFiles/3.14.5/CMakeSystem.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/CMakeFiles/3.14.5/CMakeSystem.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/CMakeFiles/feature_tests.bin" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/CMakeFiles/feature_tests.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/CMakeFiles/feature_tests.c" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/CMakeFiles/feature_tests.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/CMakeFiles/unum.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/CMakeFiles/unum.dir/C.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/CMakeFiles/unum.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/CMakeFiles/unum.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/CMakeFiles/unum.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/CMakeFiles/unum.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/CMakeFiles/unum.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/CMakeFiles/unum.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/CMakeFiles/unum.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/CMakeFiles/unum.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/CMakeFiles/unum.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/CMakeFiles/unum.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/CMakeFiles/unum.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/CMakeFiles/unum.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/CMakeFiles/unum.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/CMakeFiles/unum.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/CMakeFiles/unum.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/CMakeFiles/unum.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/CTestTestfile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/CTestTestfile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/tests/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/tests/CMakeFiles/progress.marks" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/tests/CMakeFiles/test_dot_product.dir/C.includecache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/tests/CMakeFiles/test_dot_product.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/tests/CMakeFiles/test_dot_product.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/tests/CMakeFiles/test_dot_product.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/tests/CMakeFiles/test_dot_product.dir/depend.internal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/tests/CMakeFiles/test_dot_product.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/tests/CMakeFiles/test_dot_product.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/tests/CMakeFiles/test_dot_product.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/tests/CMakeFiles/test_dot_product.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/tests/CMakeFiles/test_dot_product_posit.dir/C.includecache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/tests/CMakeFiles/test_dot_product_posit.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/tests/CMakeFiles/test_dot_product_posit.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/tests/CMakeFiles/test_dot_product_posit.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/tests/CMakeFiles/test_dot_product_posit.dir/depend.internal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/tests/CMakeFiles/test_dot_product_posit.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/tests/CMakeFiles/test_dot_product_posit.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/tests/CMakeFiles/test_dot_product_posit.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/tests/CMakeFiles/test_dot_product_posit.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/tests/CMakeFiles/test_function.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/tests/CMakeFiles/test_function.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/tests/CMakeFiles/test_function.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/tests/CMakeFiles/test_function.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/tests/CMakeFiles/test_function.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/tests/CMakeFiles/test_function.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/tests/CMakeFiles/test_function.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/tests/CMakeFiles/test_minima.dir/C.includecache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/tests/CMakeFiles/test_minima.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/tests/CMakeFiles/test_minima.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/tests/CMakeFiles/test_minima.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/tests/CMakeFiles/test_minima.dir/depend.internal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/tests/CMakeFiles/test_minima.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/tests/CMakeFiles/test_minima.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/tests/CMakeFiles/test_minima.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/tests/CMakeFiles/test_minima.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/tests/CMakeFiles/test_minima_posit.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/tests/CMakeFiles/test_minima_posit.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/tests/CMakeFiles/test_minima_posit.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/tests/CMakeFiles/test_minima_posit.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/tests/CMakeFiles/test_minima_posit.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/tests/CMakeFiles/test_minima_posit.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/tests/CMakeFiles/test_minima_posit.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/tests/CMakeFiles/test_sum.dir/C.includecache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/tests/CMakeFiles/test_sum.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/tests/CMakeFiles/test_sum.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/tests/CMakeFiles/test_sum.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/tests/CMakeFiles/test_sum.dir/depend.internal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/tests/CMakeFiles/test_sum.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/tests/CMakeFiles/test_sum.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/tests/CMakeFiles/test_sum.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/tests/CMakeFiles/test_sum.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/tests/CMakeFiles/test_sum_posit.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/tests/CMakeFiles/test_sum_posit.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/tests/CMakeFiles/test_sum_posit.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/tests/CMakeFiles/test_sum_posit.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/tests/CMakeFiles/test_sum_posit.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/tests/CMakeFiles/test_sum_posit.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/tests/CMakeFiles/test_sum_posit.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/tests/CTestTestfile.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/tests/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/tests/cmake_install.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/tests/test_dot_product" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/tests/test_minima" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/tests/test_sum" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/unum.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/unum.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake-build-debug/unum/unumConfig.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake/FindCheck.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/cmake/unumConfig.cmake.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/src/posit.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/tests/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/tests/test_dot_product.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/tests/test_dot_product_posit.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/tests/test_function.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/tests/test_minima.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/tests/test_minima_posit.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/tests/test_sum.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/unum/tests/test_sum_posit.c" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/ha5/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -126,7 +25,13 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
@@ -134,6 +39,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="IgnoredFileRootStore">
     <option name="generatedRoots">
@@ -143,8 +49,10 @@
     </option>
   </component>
   <component name="ProjectId" id="1QVYCbLmONJ9qAOOesPczQyXATQ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -158,7 +66,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="CMake Application.test_dot_product_posit">
+  <component name="RunManager" selected="Python.main">
     <configuration name="test_dot_product_posit" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="unum" TARGET_NAME="test_dot_product_posit" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="unum" RUN_TARGET_NAME="test_dot_product_posit">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -169,10 +77,36 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="inno_nummod_fall_2019" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ha5" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ha5/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
-      <item itemvalue="CMake Application.test_dot_product_posit" />
-      <item itemvalue="CMake Application.unum" />
+      <item itemvalue="Python.main" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -186,6 +120,7 @@
       <updated>1567857103114</updated>
       <workItem from="1567857104338" duration="49000" />
       <workItem from="1567857160396" duration="307000" />
+      <workItem from="1574189433696" duration="6267000" />
     </task>
     <servers />
   </component>
@@ -204,5 +139,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/inno_nummod_fall_2019$main.coverage" NAME="main Coverage Results" MODIFIED="1574207176305" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ha5" />
   </component>
 </project>
