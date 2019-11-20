@@ -1,0 +1,3 @@
+C:/Users/pavel/projects/inno_nummod_fall_2019/ha5/example/cmake-build-debug/CMakeFiles/example.dir
+C:/Users/pavel/projects/inno_nummod_fall_2019/ha5/example/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/pavel/projects/inno_nummod_fall_2019/ha5/example/cmake-build-debug/CMakeFiles/rebuild_cache.dir
