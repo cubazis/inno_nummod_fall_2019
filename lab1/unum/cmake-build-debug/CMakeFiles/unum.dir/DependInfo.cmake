@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/src/posit.c" "/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles/unum.dir/src/posit.c.o"
+  "/cygdrive/c/Projects/IU/NM/inno_nummod_fall_2019/lab1/unum/src/posit.c" "/cygdrive/c/Projects/IU/NM/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles/unum.dir/src/posit.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
