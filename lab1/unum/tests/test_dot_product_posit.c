@@ -5,86 +5,125 @@
 #include <math.h>
 
 struct vector {
-	posit x1;
-	posit x2;
-	posit x3;
-	posit x4;
-	posit x5;
-	posit x6;
+    struct posit x1;
+    struct posit x2;
+    struct posit x3;
+    struct posit x4;
+    struct posit x5;
+    struct posit x6;
 };
 
 struct vector* x;
 struct vector* y;
 
-posit bs[5];
-posit res;
-posit eps;
+double bs[5] = {5, 8, 12, 15, 20};
+double res = 8779;
+double eps = 10e-8;
 
-void init_v1(struct vector *v, posit a)
+
+void init_v1(struct vector *v, double a)
 {
-
+    v->x1 = to_posit(pow(10, a));
+    v->x2 = to_posit(1223);
+    v->x3 = to_posit(pow(10, a-1));
+    v->x4 = to_posit(pow(10, a-2));
+    v->x5 = to_posit(3);
+    v->x6 = to_posit(-pow(10, a-5));
 }
 
-void init_v2(struct vector *v, posit b)
+void init_v2(struct vector *v, double b)
 {
-
+    v->x1 = to_posit(pow(10, b));
+    v->x2 = to_posit(2);
+    v->x3 = to_posit(-pow(10, b+1));
+    v->x4 = to_posit(pow(10, b));
+    v->x5 = to_posit(2111);
+    v->x6 = to_posit(pow(10, b+3));
 }
 
-posit dot(struct vector *v1, struct vector *v2)
+struct posit dot(struct vector *v1, struct vector *v2)
 {
+    struct posit *vec1, *vec2;
+    vec1 = calloc(6, sizeof(struct posit));
+    vec1[0] = v1->x1;
+    vec1[1] = v1->x2;
+    vec1[2] = v1->x3;
+    vec1[3] = v1->x4;
+    vec1[4] = v1->x5;
+    vec1[5] = v1->x6;
 
-}
+    vec2 = calloc(6, sizeof(struct posit));
+    vec2[0] = v2->x1;
+    vec2[1] = v2->x2;
+    vec2[2] = v2->x3;
+    vec2[3] = v2->x4;
+    vec2[4] = v2->x5;
+    vec2[5] = v2->x6;
 
-void print_vec(struct vector *v)
-{
-
+    return dot_product(6, vec1, vec2);
 }
 
 START_TEST(test_a5)
 {
-	printf("test_double_a5\n");
+    printf("test_double_a5\n");
+    init_v1(x, 5);
+    double result = NAN;
+    for (int i = 0; i < 5; ++i) {
+        init_v2(y, bs[i]);
+        result = to_double(dot(x, y));
+        printf("%lf\n", result);
+        ck_assert(fabs(res - result) < eps);
+    }
 }
 END_TEST
 
 START_TEST(test_a10)
 {
-	printf("test_double_a10\n");
+    printf("test_double_a10\n");
+    init_v1(x, 10);
+    double result = NAN;
+    for (int i = 0; i < 5; ++i) {
+        init_v2(y, bs[i]);
+        result = to_double(dot(x, y));
+        printf("%lf\n", result);
+        ck_assert(fabs(res - result) < eps);
+    }
 }
 END_TEST
 
 void setup(void)
 {
-	x = calloc(1, sizeof(struct vector));
-	y = calloc(1, sizeof(struct vector));
+    x = calloc(1, sizeof(struct vector));
+    y = calloc(1, sizeof(struct vector));
 }
 
 void teardown(void)
 {
-	free(x);
-	free(y);
+    free(x);
+    free(y);
 }
 
 Suite* str_suite (void)
 {
-	Suite *suite = suite_create("posit");
-	TCase *tcase = tcase_create("test_dot_product_posit");
-	tcase_add_checked_fixture(tcase, setup, teardown);
-	tcase_set_timeout(tcase, 60);
+    Suite *suite = suite_create("posit");
+    TCase *tcase = tcase_create("test_dot_product_posit");
+    tcase_add_checked_fixture(tcase, setup, teardown);
+    tcase_set_timeout(tcase, 60);
 
-	tcase_add_test(tcase, test_a5);
-	tcase_add_test(tcase, test_a10);
+    tcase_add_test(tcase, test_a5);
+    tcase_add_test(tcase, test_a10);
 
 
-	suite_add_tcase(suite, tcase);
-	return suite;
+    suite_add_tcase(suite, tcase);
+    return suite;
 }
 
 int main (void) {
-	int number_failed;
-	Suite *suite = str_suite();
-	SRunner *runner = srunner_create(suite);
-	srunner_run_all(runner, CK_NORMAL);
-	number_failed = srunner_ntests_failed(runner);
-	srunner_free(runner);
-	return number_failed;
+    int number_failed;
+    Suite *suite = str_suite();
+    SRunner *runner = srunner_create(suite);
+    srunner_run_all(runner, CK_NORMAL);
+    number_failed = srunner_ntests_failed(runner);
+    srunner_free(runner);
+    return number_failed;
 }

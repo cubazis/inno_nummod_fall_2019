@@ -166,3 +166,6 @@ dkms.conf
 
 # Compiled Static libraries
 *.lai
+
+.idea/
+.DS_Store
