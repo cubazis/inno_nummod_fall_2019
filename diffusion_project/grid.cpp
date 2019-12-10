@@ -1,11 +1,12 @@
 #include <iostream>
 #include <fstream>
+#include "grid.h"
+
+#define BM 100
 
 using namespace std;
 
-#define M 100
-
-void pasteLike100(int grid[M][M], int x, int y ){
+void pasteLike100(int grid[BM][BM], int x, int y ){
     int h1 = 26;
     int w1 = 10;
     int w2 = 6;
@@ -24,7 +25,7 @@ void pasteLike100(int grid[M][M], int x, int y ){
     }
 }
 
-void pasteLike110(int grid[M][M], int x, int y ){
+void pasteLike110(int grid[BM][BM], int x, int y ){
     int h1 = 26;
     int w1 = 10;
     int w2 = 6;
@@ -43,7 +44,7 @@ void pasteLike110(int grid[M][M], int x, int y ){
     }
 }
 
-void pasteLike108(int grid[M][M], int x, int y ){
+void pasteLike108(int grid[BM][BM], int x, int y ){
     for (int i = x; i < x+6; i++) {
         for (int j = y; j < y+6; j++) {
             grid[i][j] = 0;
@@ -51,8 +52,8 @@ void pasteLike108(int grid[M][M], int x, int y ){
     }
 }
 
-void getGrid(int grid[100][100]) {
-//    double e = 1e-5;
+void getGrid(int final_grid[M][M]) {
+    int grid[BM][BM];
     for (int i = 0; i < 100; i++) {
         for (int j = 0; j < 100; j++) {
             grid[i][j] = 1;
@@ -76,15 +77,21 @@ void getGrid(int grid[100][100]) {
     pasteLike108(grid, 64, 55+33);
     pasteLike108(grid, 64+19+4, 55);
 
-    //cin >> e;
+    int coef = M/BM;
+
+    for (int i = 0; i < M; i++) {
+        for (int j = 0; j < M; j++) {
+            final_grid[i][j] = grid[i/coef][j/coef];
+        }
+    }
+
 //    ofstream gridfile;
-//    gridfile.open("../grid.txt");
-//    for (int j = 99; j >= 0; j--) {
-//        for (int i = 0; i < 100; i++) {
-//            gridfile << grid[i][j] << " ";
+//    gridfile.open("grid.txt");
+//    for (int j = M-1; j >= 0; j--) {
+//        for (int i = 0; i < M; i++) {
+//            gridfile << final_grid[i][j] << " ";
 //        }
 //        gridfile << "\n";
 //    }
 //    gridfile.close();
-    return;
 }
