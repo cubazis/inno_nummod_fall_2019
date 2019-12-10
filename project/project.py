@@ -46,61 +46,65 @@ def is_in_house(x, y):
     return False
 
 
-n = 300
-N = n * n
-ans = np.zeros((N, 1))
+def run(max_number_of_steps=50000, eps=1e-10):
+    n = 300
+    N = n * n
+    ans = np.zeros((N, 1))
 
-for i in range(0, N, 300):
-    ans[i, 0] = 1
+    for i in range(0, N, 300):
+        ans[i, 0] = 1
 
-a = np.zeros(N)
-d = [(1, 0), (-1, 0), (0, 1), (0, -1)]
-k, lambda1, lambda2 = 0.5, 1, 0
-h = 1 / n
-t = h ** 2 / (4 * k)
-cfs = [
-    1 - 4 * (t * k) / (h ** 2),
-    t * (k / (h ** 2) - lambda1 / (2 * h)),
-    t * (k / (h ** 2) + lambda1 / (2 * h)),
-    t * (k / (h ** 2) - lambda2 / (2 * h)),
-    t * (k / (h ** 2) + lambda2 / (2 * h))
-]
+    a = np.zeros(N)
+    d = [(1, 0), (-1, 0), (0, 1), (0, -1)]
+    k, lambda1, lambda2 = 0.5, 1, 0
+    h = 1 / n
+    tau = h ** 2 / (4 * k)
+    cfs = [
+        1 - 4 * (tau * k) / (h ** 2),
+        tau * (k / (h ** 2) - lambda1 / (2 * h)),
+        tau * (k / (h ** 2) + lambda1 / (2 * h)),
+        tau * (k / (h ** 2) - lambda2 / (2 * h)),
+        tau * (k / (h ** 2) + lambda2 / (2 * h))
+    ]
 
-A = scipy.sparse.lil_matrix((N, N))
+    A = scipy.sparse.lil_matrix((N, N))
 
-for i in range(0, N):
-    x_i = int(i / 300)
-    y_i = i % 300
-    A[i, i] = cfs[0]
-    for j in range(0, 4):
-        cf = cfs[j + 1]
-        x1 = x_i + d[j][0]
-        if x1 == 0:
-            a[i] -= cf
-            continue
+    for i in range(0, N):
+        x_i = int(i / 300)
+        y_i = i % 300
+        A[i, i] = cfs[0]
+        for j in range(0, 4):
+            cf = cfs[j + 1]
+            x1 = x_i + d[j][0]
+            if x1 == 0:
+                a[i] -= cf
+                continue
 
-        y1 = y_i + d[j][1]
-        if not is_in_house(x1, y1) and x1 <= 299 and 0 < y1 <= 299:
-            A[i, x1 * 300 + y1] += cf
-        else:
-            A[i, i] += cf
+            y1 = y_i + d[j][1]
+            if not is_in_house(x1, y1) and x1 <= 299 and 0 < y1 <= 299:
+                A[i, x1 * 300 + y1] += cf
+            else:
+                A[i, i] += cf
 
-A = scipy.sparse.csr_matrix(A)
-a = a.reshape(N, -1)
+    A = scipy.sparse.csr_matrix(A)
+    a = a.reshape(N, -1)
 
-for i in range(50000):
-    next_ans = A * ans + a
-    if np.max(np.abs(next_ans - ans)/max(1, len(ans))) < 1e-10:
-        print('Amount of iterations: ' + str(i))
-        break
+    for i in range(max_number_of_steps):
+        next_ans = A * ans + a
+        if np.max(np.abs(next_ans - ans)/max(1, len(ans))) < eps:
+            print('Amount of iterations: ' + str(i))
+            break
 
-    ans = next_ans
+        ans = next_ans
 
 
-fig = plt.figure()
-grid = axes_grid1.AxesGrid(
-    fig, 111, nrows_ncols=(1, 1), axes_pad = 0.5, cbar_location = "right",
-    cbar_mode="each", cbar_size="15%", cbar_pad="5%",)
-im = grid[0].imshow(-np.rot90(ans.reshape((300, 300))), cmap="hot")
-grid.cbar_axes[0].colorbar(im)
-plt.show()
+    fig = plt.figure()
+    grid = axes_grid1.AxesGrid(
+        fig, 111, nrows_ncols=(1, 1), axes_pad = 0.5, cbar_location = "right",
+        cbar_mode="each", cbar_size="15%", cbar_pad="5%",)
+    im = grid[0].imshow(-np.rot90(ans.reshape((300, 300))), cmap="hot")
+    grid.cbar_axes[0].colorbar(im)
+    plt.show()
+
+
+run(max_number_of_steps=50000, eps=1e-10)
