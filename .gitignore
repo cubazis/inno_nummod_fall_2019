@@ -166,3 +166,13 @@ dkms.conf
 
 # Compiled Static libraries
 *.lai
+
+lab1/i_tried_unum/.idea/
+
+lab1/i_tried_unum/cmake-build-debug/
+
+lab1/unum/cmake-build-debug/
+
+lab1/unum/cmake/
+
+lab1/unum/.idea/
