@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/unum.dir/src/posit.c.o"
-  "libunum.pdb"
   "libunum.a"
+  "libunum.pdb"
 )
 
 # Per-language clean rules from dependency scanning.
