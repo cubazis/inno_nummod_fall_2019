@@ -4,10 +4,10 @@ include_directories(${CHECK_INCLUDE_DIRS})
 set(tests
   test_dot_product
   test_dot_product_posit
-  test_sum
-  test_sum_posit
-  test_minima
-  test_minima_posit
+#  test_sum
+#  test_sum_posit
+#  test_minima
+#  test_minima_posit
   test_function
 )
 

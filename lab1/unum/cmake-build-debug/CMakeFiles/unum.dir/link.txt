@@ -1,2 +1,2 @@
-/usr/bin/ar qc libunum.a  CMakeFiles/unum.dir/src/posit.c.o
-/usr/bin/ranlib libunum.a
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar qc libunum.a  CMakeFiles/unum.dir/src/posit.c.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib libunum.a

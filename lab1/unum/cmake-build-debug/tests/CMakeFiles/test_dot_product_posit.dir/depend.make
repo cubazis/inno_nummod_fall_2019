@@ -3,4 +3,6 @@
 
 tests/CMakeFiles/test_dot_product_posit.dir/test_dot_product_posit.c.o: ../src/posit.h
 tests/CMakeFiles/test_dot_product_posit.dir/test_dot_product_posit.c.o: ../tests/test_dot_product_posit.c
+tests/CMakeFiles/test_dot_product_posit.dir/test_dot_product_posit.c.o: /usr/local/Cellar/check/0.12.0/include/check.h
+tests/CMakeFiles/test_dot_product_posit.dir/test_dot_product_posit.c.o: /usr/local/Cellar/check/0.12.0/include/check_stdint.h
 

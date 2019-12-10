@@ -4,19 +4,20 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/tests/test_minima_posit.c" "/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/CMakeFiles/test_minima_posit.dir/test_minima_posit.c.o"
+  "/Users/katya/CLionProjects/inno_nummod_fall_2019/lab1/unum/tests/test_minima_posit.c" "/Users/katya/CLionProjects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/CMakeFiles/test_minima_posit.dir/test_minima_posit.c.o"
   )
-set(CMAKE_C_COMPILER_ID "GNU")
+set(CMAKE_C_COMPILER_ID "AppleClang")
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
+  "/usr/local/Cellar/check/0.12.0/include"
   "../tests/.."
   "../src"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles/unum.dir/DependInfo.cmake"
+  "/Users/katya/CLionProjects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles/unum.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/cubazis/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.5728.100/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /home/cubazis/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.5728.100/bin/cmake/linux/bin/cmake -E remove -f
+RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum
+CMAKE_SOURCE_DIR = /Users/katya/CLionProjects/inno_nummod_fall_2019/lab1/unum
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/katya/CLionProjects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include tests/CMakeFiles/test_sum.dir/depend.make
@@ -59,16 +59,16 @@ include tests/CMakeFiles/test_sum.dir/flags.make
 
 tests/CMakeFiles/test_sum.dir/test_sum.c.o: tests/CMakeFiles/test_sum.dir/flags.make
 tests/CMakeFiles/test_sum.dir/test_sum.c.o: ../tests/test_sum.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object tests/CMakeFiles/test_sum.dir/test_sum.c.o"
-	cd /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/test_sum.dir/test_sum.c.o   -c /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/tests/test_sum.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/katya/CLionProjects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object tests/CMakeFiles/test_sum.dir/test_sum.c.o"
+	cd /Users/katya/CLionProjects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/test_sum.dir/test_sum.c.o   -c /Users/katya/CLionProjects/inno_nummod_fall_2019/lab1/unum/tests/test_sum.c
 
 tests/CMakeFiles/test_sum.dir/test_sum.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/test_sum.dir/test_sum.c.i"
-	cd /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/tests/test_sum.c > CMakeFiles/test_sum.dir/test_sum.c.i
+	cd /Users/katya/CLionProjects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/katya/CLionProjects/inno_nummod_fall_2019/lab1/unum/tests/test_sum.c > CMakeFiles/test_sum.dir/test_sum.c.i
 
 tests/CMakeFiles/test_sum.dir/test_sum.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/test_sum.dir/test_sum.c.s"
-	cd /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/tests/test_sum.c -o CMakeFiles/test_sum.dir/test_sum.c.s
+	cd /Users/katya/CLionProjects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/katya/CLionProjects/inno_nummod_fall_2019/lab1/unum/tests/test_sum.c -o CMakeFiles/test_sum.dir/test_sum.c.s
 
 # Object files for target test_sum
 test_sum_OBJECTS = \
@@ -80,9 +80,10 @@ test_sum_EXTERNAL_OBJECTS =
 tests/test_sum: tests/CMakeFiles/test_sum.dir/test_sum.c.o
 tests/test_sum: tests/CMakeFiles/test_sum.dir/build.make
 tests/test_sum: libunum.a
+tests/test_sum: /usr/local/lib/libcheck.dylib
 tests/test_sum: tests/CMakeFiles/test_sum.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable test_sum"
-	cd /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test_sum.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/katya/CLionProjects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable test_sum"
+	cd /Users/katya/CLionProjects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test_sum.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 tests/CMakeFiles/test_sum.dir/build: tests/test_sum
@@ -90,10 +91,10 @@ tests/CMakeFiles/test_sum.dir/build: tests/test_sum
 .PHONY : tests/CMakeFiles/test_sum.dir/build
 
 tests/CMakeFiles/test_sum.dir/clean:
-	cd /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests && $(CMAKE_COMMAND) -P CMakeFiles/test_sum.dir/cmake_clean.cmake
+	cd /Users/katya/CLionProjects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests && $(CMAKE_COMMAND) -P CMakeFiles/test_sum.dir/cmake_clean.cmake
 .PHONY : tests/CMakeFiles/test_sum.dir/clean
 
 tests/CMakeFiles/test_sum.dir/depend:
-	cd /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/tests /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests /home/cubazis/Projects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/CMakeFiles/test_sum.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/katya/CLionProjects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/katya/CLionProjects/inno_nummod_fall_2019/lab1/unum /Users/katya/CLionProjects/inno_nummod_fall_2019/lab1/unum/tests /Users/katya/CLionProjects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug /Users/katya/CLionProjects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests /Users/katya/CLionProjects/inno_nummod_fall_2019/lab1/unum/cmake-build-debug/tests/CMakeFiles/test_sum.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : tests/CMakeFiles/test_sum.dir/depend
 
