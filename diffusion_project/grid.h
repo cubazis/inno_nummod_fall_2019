@@ -1,0 +1,1 @@
+void getGrid(int grid[100][100]);
