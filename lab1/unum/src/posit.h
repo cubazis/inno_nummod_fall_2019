@@ -1,15 +1,26 @@
-//
-// Created by cubazis on 18.08.2019.
-//
-
 #ifndef UNUM_POSIT_H
 #define UNUM_POSIT_H
 
 typedef struct _posit32 {
-	/** implement your code **/
-
+    unsigned int bits;
 } posit;
 
-int test_function(void);
+posit toPosit(double a);
 
-#endif //UNUM_POSIT_H
+double toDouble(posit a);
+
+posit add(posit a, posit b);
+
+posit subtract(posit a, posit b);
+
+posit multiply(posit a, posit b);
+
+posit power(posit a, posit b);
+
+posit negate(posit a);
+
+posit posit_abs(posit a);
+
+short is_less(posit rhs, posit lhs);
+
+#endif
